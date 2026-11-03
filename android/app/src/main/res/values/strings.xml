@@ -952,4 +952,6 @@
     <string name="cart">Cart</string>
 
     <string name="agentic_assistant">Agentic Assistant</string>
+    <string name="agentic_gateway_url">Agentic gateway URL</string>
+    <string name="agentic_gateway_url_hint">http://192.168.1.42:8443</string>
 </resources>

@@ -27,8 +27,21 @@ public final class AgenticEngine {
     private AgenticEngine() {
     }
 
+    /**
+     * Where the gateway lives.
+     *
+     * A stored override wins over the compiled-in default, so the same APK can be pointed at
+     * a tester's laptop, a hotel LAN or a deployed environment. Without it every environment
+     * needs its own build, which is how testers end up running something nobody can reproduce.
+     *
+     * Set from Settings -> Engine. Deliberately not an exported broadcast receiver: that
+     * would let any app on the device repoint the assistant at a server of its choosing.
+     */
     public static String baseUrl() {
-        String configured = BuildConfig.AGENTIC_BASE_URL;
+        String configured = override();
+        if (configured == null || configured.trim().isEmpty()) {
+            configured = BuildConfig.AGENTIC_BASE_URL;
+        }
         if (configured == null) {
             return "";
         }
@@ -39,6 +52,23 @@ public final class AgenticEngine {
             trimmed = trimmed.substring(0, trimmed.length() - 1);
         }
         return trimmed;
+    }
+
+    /** Stored override, or null when none is set. */
+    public static String override() {
+        if (WooHooApp.getSharedPrefsHelper() == null) {
+            return null;
+        }
+        return WooHooApp.getSharedPrefsHelper().get(SharedPrefsKey.PREF_KEY_AGENTIC_BASE_URL, "");
+    }
+
+    /** Persist a gateway URL for this device. Empty clears it back to the built-in default. */
+    public static void setOverride(String url) {
+        if (WooHooApp.getSharedPrefsHelper() == null) {
+            return;
+        }
+        WooHooApp.getSharedPrefsHelper()
+                .put(SharedPrefsKey.PREF_KEY_AGENTIC_BASE_URL, url == null ? "" : url.trim());
     }
 
     public static boolean isConfigured() {

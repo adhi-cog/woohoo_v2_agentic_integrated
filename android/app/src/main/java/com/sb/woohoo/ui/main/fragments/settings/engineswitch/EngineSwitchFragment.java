@@ -98,6 +98,38 @@ public class EngineSwitchFragment extends FeatureFragment<MainActivity> {
         binding.dialogFlowRadio.setOnClickListener(view -> dialogFlowClicked());
         binding.smartFlowRadio.setOnClickListener(view -> smartFlowClicked());
         binding.agenticRadio.setOnClickListener(view -> agenticClicked());
+
+        initGatewayUrlField();
+    }
+
+    /**
+     * Gateway URL, so one build can be pointed anywhere.
+     *
+     * Shows whatever is in effect, including the compiled-in default, rather than an empty
+     * box: a tester needs to see where turns are going before deciding to change it. Saved on
+     * focus loss, which is the only moment a part-typed URL is likely to be complete.
+     */
+    private void initGatewayUrlField() {
+        binding.agenticUrlRow.setVisibility(
+                binding.agentic.getVisibility() == View.VISIBLE ? View.VISIBLE : View.GONE);
+        binding.agenticUrl.setText(AgenticEngine.baseUrl());
+        binding.agenticUrl.setOnFocusChangeListener((v, hasFocus) -> {
+            if (!hasFocus) {
+                saveGatewayUrl();
+            }
+        });
+    }
+
+    private void saveGatewayUrl() {
+        String typed = binding.agenticUrl.getText().toString().trim();
+        // Storing the built-in value as an override would freeze this device on today's
+        // default, so an unchanged field clears the override instead.
+        if (typed.equals(com.sb.woohoo.BuildConfig.AGENTIC_BASE_URL.trim())) {
+            AgenticEngine.setOverride("");
+        } else {
+            AgenticEngine.setOverride(typed);
+        }
+        binding.agenticUrl.setText(AgenticEngine.baseUrl());
     }
 
     /**
@@ -119,6 +151,12 @@ public class EngineSwitchFragment extends FeatureFragment<MainActivity> {
         if (currentFragment instanceof SettingsFragment) {
             ((SettingsFragment) currentFragment).onEngineChanged(label);
         }
+    }
+
+    @Override
+    public void onPause() {
+        saveGatewayUrl();
+        super.onPause();
     }
 
     private void agenticClicked() {

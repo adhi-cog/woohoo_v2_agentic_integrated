@@ -21,6 +21,13 @@ public interface SharedPrefsKey {
     String PREF_KEY_TIME_ZONE_PLACE = "time_zone_place";
     String PREF_KEY_DEVICE_ID = "device_id";
     String PREF_KEY_ENGINE = "engine";
+    /**
+     * Gateway URL for the agentic engine, overriding the compiled-in default.
+     *
+     * Exists so one build can be pointed at a laptop, a hotel LAN or a deployed environment
+     * without a rebuild. A URL baked into the APK means a new APK for every tester.
+     */
+    String PREF_KEY_AGENTIC_BASE_URL = "agentic_base_url";
     String PREF_KEY_WAKEWORD = "wakeword";
     String PREF_KEY_IP = "wifi_ip";
     String PREF_USER_ID_TYPE = "user_type";

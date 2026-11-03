@@ -128,8 +128,11 @@ android {
         applicationId "com.sb.woohoo"
         minSdkVersion 21
         targetSdkVersion 34
-        versionCode 227
-        versionName "v2.2.7"
+        // 233, not a larger jump: it is one above the 232 currently on test devices, so this
+        // pilot installs over them AND the next official build still supersedes this one.
+        // A vanity number like 1240 would quietly strand every device it was installed on.
+        versionCode 233
+        versionName "v2.3.3-agentic-pilot"
         compileOptions.incremental = false
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled = true
