@@ -2,6 +2,7 @@ import {
   EventType,
   makeEvent,
   TOOLS,
+  isHubTool,
   type EventBus,
   type PropertyConfig,
   type TurnContext,
@@ -365,7 +366,12 @@ export class Orchestrator {
     session.history.push({ role: 'guest', text: forModel.text, at: startedAt });
     session.history.push({ role: 'assistant', text: speech, at: Date.now() });
     for (const c of calls) {
-      if (c.verdict.kind === 'ALLOW' && c.result?.ok) {
+      // Hub tools are excluded deliberately. `recentActuations` feeds the burst rule, which
+      // exists to stop rapid physical cycling of hotel hardware and to spare the vendor head
+      // end. Changing the hub's own speaker volume is neither: it is local, instant, and
+      // costs nothing. Counting it meant a guest adjusting volume a few times exhausted the
+      // room's actuation budget and was then refused an actual light.
+      if (c.verdict.kind === 'ALLOW' && c.result?.ok && !isHubTool(c.tool)) {
         session.recentActuations.push({ tool: c.tool, at: Date.now() });
       }
     }

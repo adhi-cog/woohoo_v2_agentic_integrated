@@ -10,6 +10,7 @@ import {
   type Scope,
 } from '@woohoo/contracts';
 import { DeviceCommandError, DeviceCommandService } from './device-commands.js';
+import { buildApp } from '../app.js';
 
 /**
  * The hub command contract - integration review R2, R3.
@@ -234,5 +235,58 @@ describe('the vocabulary matches the Android app', () => {
 
   it.each(HUB_INTENTS)('%s exists in the Android app', (intent) => {
     expect(androidIntentNames().has(intent)).toBe(true);
+  });
+});
+
+/**
+ * Hub work must not consume the room's actuation budget - found while testing the live
+ * integration, where six volume adjustments in a minute left the guest unable to change a
+ * light.
+ *
+ * The burst rule exists to stop rapid physical cycling of hotel hardware and to spare the
+ * vendor head end. The hub's own speaker is neither: local, instant, and free. The rule still
+ * has to bite for real room devices, which is the second test here and the more important one.
+ */
+describe('the room actuation budget counts room work only', () => {
+  it('does not charge hub commands against it', async () => {
+    const app = await buildApp();
+    for (let i = 0; i < 8; i += 1) {
+      await app.orchestrator.handleTurn({ deviceId: 'd_412a', transcript: 'turn up the volume' });
+    }
+    const scope = (await app.catalog.resolveDevice('d_412a')).scope;
+    expect(
+      app.sessions.get(scope.roomId).recentActuations,
+      'hub commands must not land in the room budget',
+    ).toEqual([]);
+  });
+
+  it('still charges room devices, so the burst rule keeps working', async () => {
+    const app = await buildApp();
+    for (let i = 0; i < 3; i += 1) {
+      await app.orchestrator.handleTurn({
+        deviceId: 'd_412a',
+        transcript: 'turn on the bedroom lights',
+      });
+    }
+    const scope = (await app.catalog.resolveDevice('d_412a')).scope;
+    const recorded = app.sessions.get(scope.roomId).recentActuations;
+    expect(recorded.length).toBeGreaterThan(0);
+    expect(recorded.every((a) => !a.tool.startsWith('hub.'))).toBe(true);
+  });
+
+  it('refuses a room device once the budget is spent, hub traffic notwithstanding', async () => {
+    const app = await buildApp();
+    // Volume first. If these counted, the light below would be denied.
+    for (let i = 0; i < 6; i += 1) {
+      await app.orchestrator.handleTurn({ deviceId: 'd_412a', transcript: 'turn up the volume' });
+    }
+    const light = await app.orchestrator.handleTurn({
+      deviceId: 'd_412a',
+      transcript: 'turn on the bedroom lights',
+    });
+    expect(
+      light.calls.some((c) => c.verdict.kind === 'ALLOW'),
+      'volume adjustments must not have exhausted the room budget',
+    ).toBe(true);
   });
 });
