@@ -8,7 +8,13 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: 'org.jetbrains.kotlin.android'
 
 repositories {
+    // SNSR_REPOSITORY in gradle.properties points at whichever machine last set it. Fall
+    // back to the copy vendored in this repo so a fresh clone builds without anyone having
+    // to find the Sensory SDK first.
     def sensoryRepoPath = resolveSensoryRepoPath(SNSR_REPOSITORY)
+    if (sensoryRepoPath == null || !file(sensoryRepoPath).exists()) {
+        sensoryRepoPath = "${project.rootDir}/sensory-m2repository"
+    }
     google()
     maven { url "https://jitpack.io" }
     maven { url "https://download.linphone.org/releases/android/maven_repository/" }
@@ -63,6 +69,15 @@ if (localPropertiesFile.exists()) {
 def geminiIntentBaseUrl = (project.findProperty("GEMINI_INTENT_BASE_URL")
         ?: System.getenv("GEMINI_INTENT_BASE_URL")
         ?: localProperties.getProperty("geminiIntentBaseUrl")
+        ?: "")
+
+// Base URL of the agentic gateway. Same resolution order as the Gemini one above, so a
+// developer can point a build at a laptop from local.properties without touching git.
+// Empty means the agentic engine is not available in this build and the device falls back
+// to whichever NLP engine it used before.
+def agenticBaseUrl = (project.findProperty("AGENTIC_BASE_URL")
+        ?: System.getenv("AGENTIC_BASE_URL")
+        ?: localProperties.getProperty("agenticBaseUrl")
         ?: "")
         .toString()
 
@@ -121,6 +136,7 @@ android {
         manifestPlaceholders.screenOrientation = "unspecified"
         buildConfigField "boolean", "USE_CHIRP3_ASR", useChirp3Asr.toString()
         buildConfigField "String", "GEMINI_INTENT_BASE_URL", buildConfigString(geminiIntentBaseUrl)
+        buildConfigField "String", "AGENTIC_BASE_URL", buildConfigString(agenticBaseUrl)
        /* ndk {
             abiFilters "armeabi", "arm64-v8a", "armeabi-v7a", "x86", "x86_64", "mips"
         }*/

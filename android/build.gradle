@@ -22,15 +22,31 @@ buildscript {
     }
 }
 
+/**
+ * A Windows path written into gradle.properties arrives escaped ("C\:/Users/..."), and a
+ * leading-slash drive form ("/C:/...") is not a path Java can stat. Normalising both in one
+ * place keeps the existence check and the maven url agreeing with each other.
+ */
+static String normalizeRepoPath(String raw) {
+    def normalized = raw.trim().replace('\\:', ':').replace('\\', '/')
+    if (normalized ==~ '^/[A-Za-z]:/.*') {
+        normalized = normalized.substring(1)
+    }
+    return normalized
+}
+
 allprojects {
     repositories {
         def sensoryRepoPath = project.findProperty("SNSR_REPOSITORY")
+        // SNSR_REPOSITORY in gradle.properties points at whichever machine last set it, so
+        // fall back to the copy vendored in this repo. A fresh clone then builds without
+        // anyone having to locate the Sensory SDK first.
+        if (sensoryRepoPath == null
+                || !new File(normalizeRepoPath(sensoryRepoPath.toString())).exists()) {
+            sensoryRepoPath = new File(rootDir, "sensory-m2repository").absolutePath
+        }
         if (sensoryRepoPath != null) {
-            def normalizedSensoryRepoPath = sensoryRepoPath.toString().trim().replace('\\:', ':').replace('\\', '/')
-            if (normalizedSensoryRepoPath ==~ '^/[A-Za-z]:/.*') {
-                normalizedSensoryRepoPath = normalizedSensoryRepoPath.substring(1)
-            }
-            maven { url uri(normalizedSensoryRepoPath) }
+            maven { url uri(normalizeRepoPath(sensoryRepoPath.toString())) }
         }
         google()
         mavenCentral()

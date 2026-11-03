@@ -40,6 +40,12 @@ import com.sb.woohoo.ui.main.pojo.StatsDumpResponse;
 import com.sb.woohoo.ui.main.pojo.nlp.IntentData;
 import com.sb.woohoo.ui.main.pojo.nlp.NLPData;
 import com.sb.woohoo.ui.main.pojo.nlp.NLPResponse;
+import com.sb.woohoo.ui.main.agentic.AgenticCommandDispatcher;
+import com.sb.woohoo.ui.main.agentic.AgenticEngine;
+import com.sb.woohoo.ui.main.pojo.agentic.AgenticAckRequest;
+import com.sb.woohoo.ui.main.pojo.agentic.AgenticDeviceCommand;
+import com.sb.woohoo.ui.main.pojo.agentic.AgenticTurnRequest;
+import com.sb.woohoo.ui.main.pojo.agentic.AgenticTurnResponse;
 import com.sb.woohoo.ui.main.pojo.nlp.SpeechData;
 import com.sb.woohoo.ui.main.pojo.nlp.SpeechResponse;
 import com.sb.woohoo.ui.main.pojo.template.TemplateData;
@@ -66,6 +72,13 @@ import retrofit2.HttpException;
 
 public class
 MainRepository extends BaseRepository<MainPresenter> implements LightControl.LightControlCallback {
+
+    /**
+     * Duplicate and expiry rules for commands the agentic platform hands back. Held per
+     * repository instance, which is per session: a command id only has to be remembered long
+     * enough to catch the retry that follows it seconds later.
+     */
+    private final AgenticCommandDispatcher agenticDispatcher = new AgenticCommandDispatcher();
     private final String TAG = MainRepository.class.getSimpleName();
     private final String INTENT_CANCEL = "hub.controls.navigation.home";
     private final String FOLLOWUP_EXPLICIT = "followup";
@@ -128,7 +141,9 @@ MainRepository extends BaseRepository<MainPresenter> implements LightControl.Lig
         String localNlpUrl = BuildConfig.LOCAL_NLP_BASE_URL + "flow/conversation";
         String geminiIntentUrl = buildGeminiIntentUrl();
 
-        if (!BuildConfig.GEMINI_INTENT_BASE_URL.isEmpty()) {
+        if (AgenticEngine.isActive()) {
+            processQueryWithAgentic(query, lang);
+        } else if (!BuildConfig.GEMINI_INTENT_BASE_URL.isEmpty()) {
             LoggerWrapper.d(TAG, "Routing NLP request to Gemini intent API: " + geminiIntentUrl);
             compositeDisposable.add(
                     wooHooApiCall.geminiIntentRequest(geminiIntentUrl, postQuery)
@@ -228,6 +243,225 @@ MainRepository extends BaseRepository<MainPresenter> implements LightControl.Lig
                             })
             );
         }
+    }
+
+    /**
+     * One turn against the agentic platform.
+     *
+     * Replaces intent classification, not the microphone: the wake word and ASR above this
+     * are untouched, and what changes is who decides what the words meant and who carries
+     * the action out.
+     *
+     * Retries mirror the legacy engines (up to three) because the failure being retried is
+     * the same one: a dropped request on a hotel network. Retrying is safe here for the same
+     * reason it is safe there, with one addition - a repeated turn mints the same command
+     * ids, so a hub that ends up seeing a response twice executes it once.
+     */
+    private void processQueryWithAgentic(String query, String lang) {
+        String url = AgenticEngine.turnUrl();
+        LoggerWrapper.d(TAG, "Routing turn to the agentic gateway: " + url);
+
+        AgenticTurnRequest request = new AgenticTurnRequest(getDeviceID(), query, 0.95d);
+        compositeDisposable.add(
+                wooHooApiCall.agenticTurn(url, request)
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribeWith(new DisposableSingleObserver<AgenticTurnResponse>() {
+
+                            @Override
+                            public void onSuccess(AgenticTurnResponse response) {
+                                handleAgenticResponse(response);
+                            }
+
+                            @Override
+                            public void onError(Throwable e) {
+                                if (count < 3) {
+                                    count++;
+                                    processQuery(querySend, count, queryLang);
+                                    return;
+                                }
+                                if (e instanceof HttpException) {
+                                    LoggerWrapper.e(TAG, "AGENTIC ERROR CODE : " + ((HttpException) e).code());
+                                } else if (e.getMessage() != null) {
+                                    LoggerWrapper.e(TAG, "AGENTIC ERROR : " + e.getMessage());
+                                }
+                                // The guest is told, rather than left with silence that looks
+                                // identical to the assistant ignoring them.
+                                getActions().onResponseToUser(
+                                        "I could not reach the assistant just then. Please try again.");
+                                getActions().stopWakeWordAnimation();
+                                getActions().runWakeWord();
+                            }
+                        })
+        );
+    }
+
+    /**
+     * Turn an agentic response into speech and device work.
+     *
+     * Order matters. Device commands are dispatched first so a screen is already opening as
+     * the guest hears about it, which is how the legacy fragment intents behaved. Speech
+     * comes second, and the microphone decision last.
+     *
+     * Nothing in {@code calls} is executed here, ever. Those ran server-side before this
+     * response was written; re-dispatching them is how a light turns off and straight back on.
+     */
+    private void handleAgenticResponse(AgenticTurnResponse response) {
+        if (response == null) {
+            LoggerWrapper.e(TAG, "Empty agentic response");
+            getActions().unprocessableIntent();
+            return;
+        }
+
+        LoggerWrapper.d(TAG, "Agentic turn " + response.getTurnId()
+                + " lane=" + response.getLane()
+                + " calls=" + response.getCalls().size()
+                + " deviceCommands=" + response.getDeviceCommands().size());
+
+        if (response.hasFailedCall()) {
+            // Speech already says so. Logged because a turn that sounds fine to the guest and
+            // failed at the head-end is otherwise invisible.
+            LoggerWrapper.e(TAG, "Agentic turn " + response.getTurnId() + " had a failed call");
+        }
+
+        for (AgenticDeviceCommand command : response.getDeviceCommands()) {
+            dispatchAgenticCommand(command, response);
+        }
+
+        String speech = response.getSpeech();
+        boolean hasSpeech = speech != null && !speech.trim().isEmpty();
+
+        // A turn that asked the guest something has to reopen the microphone. Returning to
+        // the wake word instead would make the assistant ask a question and then refuse to
+        // hear the answer without being woken again.
+        if (response.isAwaitingConfirmation() || isFollowUpLane(response.getLane())) {
+            if (hasSpeech) {
+                getActions().followUpForFulfillment(speech);
+                return;
+            }
+        }
+
+        if (hasSpeech) {
+            getActions().onResponseToUser(speech);
+        }
+        getActions().stopWakeWordAnimation();
+        getActions().runWakeWord();
+    }
+
+    private static boolean isFollowUpLane(String lane) {
+        return "clarify".equals(lane) || "confirm".equals(lane);
+    }
+
+    /**
+     * Run one device command, or decline it and say why.
+     *
+     * Most intents go through IntentProcessor exactly as an NLP intentAction did, which is
+     * what keeps alarms, media and the rest working unchanged. A handful open a fragment
+     * directly, because MainRepository always special-cased them.
+     */
+    private void dispatchAgenticCommand(AgenticDeviceCommand command, AgenticTurnResponse turn) {
+        AgenticCommandDispatcher.Outcome outcome =
+                agenticDispatcher.evaluate(command, System.currentTimeMillis());
+
+        if (!outcome.shouldDispatch()) {
+            LoggerWrapper.d(TAG, "Skipping device command "
+                    + (command == null ? "null" : command.getCommandId())
+                    + ": " + outcome.reason);
+            if (command != null) {
+                ackAgenticCommand(
+                        command.getCommandId(),
+                        outcome.decision == AgenticCommandDispatcher.Decision.SKIP_EXPIRED
+                                ? "expired" : "unsupported",
+                        outcome.reason);
+            }
+            return;
+        }
+
+        agenticDispatcher.markExecuted(command.getCommandId());
+        String intent = command.getIntent();
+        HashMap<String, Object> slots = command.getSlots();
+        LoggerWrapper.d(TAG, "Dispatching device command " + command.getCommandId() + " -> " + intent);
+
+        String screen = AgenticCommandDispatcher.directScreenFor(intent);
+        try {
+            if (screen == null) {
+                // The ordinary path: the app's own registry resolves this to a fragment.
+                getActions().processIntent(intent, slots, null, querySend, null, false);
+            } else {
+                openAgenticScreen(screen, slots);
+            }
+            ackAgenticCommand(command.getCommandId(), "applied", null);
+        } catch (Exception dispatchFailure) {
+            LoggerWrapper.e(TAG, "Device command " + command.getCommandId() + " failed: "
+                    + dispatchFailure.getMessage());
+            ackAgenticCommand(command.getCommandId(), "failed", dispatchFailure.getMessage());
+        }
+    }
+
+    /** Screens the app opens directly rather than through the intent registry. */
+    private void openAgenticScreen(String screen, HashMap<String, Object> slots) {
+        switch (screen) {
+            case AgenticCommandDispatcher.SCREEN_FNB:
+                getActions().openFnBFragment(slots);
+                break;
+            case AgenticCommandDispatcher.SCREEN_FAQ:
+                getActions().openFaqFragment();
+                break;
+            case AgenticCommandDispatcher.SCREEN_HOUSEKEEPING:
+                getActions().openAmenitiesFragment();
+                break;
+            case AgenticCommandDispatcher.SCREEN_HOTEL_INFO:
+                getActions().openHotelInfoFragment();
+                break;
+            case AgenticCommandDispatcher.SCREEN_BOOK_SERVICE:
+                getActions().openBookServiceFragment();
+                break;
+            case AgenticCommandDispatcher.SCREEN_FEEDBACK:
+                getActions().openFeedbackFragment();
+                break;
+            case AgenticCommandDispatcher.SCREEN_RESTAURANTS:
+                getActions().openDiningRestaurantsFragment();
+                break;
+            case AgenticCommandDispatcher.SCREEN_RELAXATION_MUSIC:
+                getActions().openRelaxationMusicFragment(slots);
+                break;
+            case AgenticCommandDispatcher.SCREEN_BUY_SIM:
+                getActions().openBuySimFragment(slots);
+                break;
+            case AgenticCommandDispatcher.SCREEN_TRANSLATE:
+                getActions().openTranlationFragment();
+                break;
+            case AgenticCommandDispatcher.SCREEN_MUSIC_SOURCE:
+                // No screen of its own; the platform's speech asks which source to use.
+                break;
+            default:
+                LoggerWrapper.e(TAG, "No screen mapped for " + screen);
+                break;
+        }
+    }
+
+    /**
+     * Tell the platform what happened to a command.
+     *
+     * Failures are logged and swallowed. This is diagnostics: the guest has already been
+     * answered, and letting a failed acknowledgement surface would turn a reporting problem
+     * into a visible one.
+     */
+    private void ackAgenticCommand(String commandId, String status, String detail) {
+        if (commandId == null || commandId.isEmpty() || !AgenticEngine.isActive()) {
+            return;
+        }
+        compositeDisposable.add(
+                wooHooApiCall.agenticCommandAck(
+                                AgenticEngine.ackUrl(commandId),
+                                new AgenticAckRequest(status, detail, null))
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(
+                                () -> LoggerWrapper.d(TAG, "Acked " + commandId + " as " + status),
+                                e -> LoggerWrapper.d(TAG, "Ack for " + commandId
+                                        + " did not reach the platform: " + e.getMessage()))
+        );
     }
 
     private String buildGeminiIntentUrl() {

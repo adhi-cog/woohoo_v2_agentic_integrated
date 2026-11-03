@@ -11,6 +11,9 @@ import com.sb.woohoo.ui.main.fragments.buysim.phonenumber.pojo.GetAllPhoneNumber
 import com.sb.woohoo.ui.main.fragments.overview.saudidestinations.pojo.SaudiTourismDestinationsResponse;
 import com.sb.woohoo.ui.main.fragments.overview.saudipackages.pojo.SaudiTourismPackagesResponse;
 import com.google.gson.JsonObject;
+import com.sb.woohoo.ui.main.pojo.agentic.AgenticAckRequest;
+import com.sb.woohoo.ui.main.pojo.agentic.AgenticTurnRequest;
+import com.sb.woohoo.ui.main.pojo.agentic.AgenticTurnResponse;
 import com.sb.woohoo.ui.main.fragments.alarm.pojo.GetAlarm;
 import com.sb.woohoo.ui.main.fragments.alarm.pojo.PostAlarm;
 import com.sb.woohoo.ui.main.fragments.amadeusServices.pojo.AmadeusDynamicOrderRequest;
@@ -292,6 +295,31 @@ public interface WooHooApiCall {
 
     @POST
     Single<NLPResponse> geminiIntentRequest(@Url String url, @Body PostQuery postQuery);
+
+    /*------------------------------------------------ API : Agentic platform ------------------------------------------------*/
+
+    /**
+     * One conversational turn against the agentic gateway.
+     *
+     * The response carries speech plus two arrays that must not be confused: `calls` is work
+     * already executed server-side, `deviceCommands` is work for this device. See
+     * {@link AgenticTurnResponse}.
+     *
+     * No credential is attached here on purpose. Device identity is the verified client
+     * certificate, which the TLS terminator turns into a header the gateway trusts; a token
+     * the app could set would be a token an attacker could set.
+     */
+    @POST
+    Single<AgenticTurnResponse> agenticTurn(@Url String url, @Body AgenticTurnRequest request);
+
+    /**
+     * Report what this device did with a dispatched command.
+     *
+     * Fire and forget. The guest was answered long before this is sent, and its only purpose
+     * is to make a device that silently failed visible to operations.
+     */
+    @POST
+    Completable agenticCommandAck(@Url String url, @Body AgenticAckRequest request);
 
     @FormUrlEncoded
     @POST("dialogFlow/reset")

@@ -120,6 +120,77 @@ function plan(u: string, available: Set<string>, state: ParsedState): LlmToolCal
     }
   }
 
+  // ── work only the hub can do ────────────────────────────────────────
+  // Patterns for the device-executed tools, so the whole path is demonstrable without a
+  // model key. The real provider reasons about these; this just has to reach them.
+
+  if (/volume|louder|quieter|turn it (up|down)|mute|unmute/.test(u) && can('hub.device_settings')) {
+    const intent = /mute/.test(u) && !/unmute/.test(u)
+      ? 'hub.controls.system.volume.mute'
+      : /unmute/.test(u)
+        ? 'hub.controls.system.volume.unmute'
+        : /down|quiet|lower|softer/.test(u)
+          ? 'hub.controls.system.volume.down'
+          : 'hub.controls.system.volume.up';
+    calls.push({ tool: 'hub.device_settings', args: { intent, slots: {} } });
+  }
+
+  if (/brightness|dim the screen|screen brighter/.test(u) && can('hub.device_settings')) {
+    calls.push({
+      tool: 'hub.device_settings',
+      args: {
+        intent: /down|dim|lower/.test(u)
+          ? 'hub.controls.system.brightness.down'
+          : 'hub.controls.system.brightness.up',
+        slots: {},
+      },
+    });
+  }
+
+  // Alarms live on the device; a wake-up call is a request to the front desk. Different
+  // things, and the distinction is the guest's words, so keep them apart.
+  if (/set an? alarm|alarm for|wake me/.test(u) && can('hub.reminders')) {
+    const t = u.match(/(\d{1,2})[:.]?(\d{2})?\s*(am|pm)?/);
+    const slots: Record<string, unknown> = {};
+    if (t) {
+      let h = Number(t[1]);
+      if (t[3] === 'pm' && h < 12) h += 12;
+      if (t[3] === 'am' && h === 12) h = 0;
+      slots.time = String(h).padStart(2, '0') + ':' + (t[2] ?? '00');
+    }
+    calls.push({ tool: 'hub.reminders', args: { intent: 'hub.skills.alarms.add', slots } });
+  }
+
+  if (/timer/.test(u) && can('hub.reminders')) {
+    const intent = /stop|cancel/.test(u)
+      ? 'hub.skills.timer.stop'
+      : /show|how long/.test(u)
+        ? 'hub.skills.timer.show'
+        : 'hub.skills.timer.set';
+    const m = u.match(/(\d+)\s*(minute|min|second|sec|hour)/);
+    calls.push({
+      tool: 'hub.reminders',
+      args: { intent, slots: m ? { duration: m[0] } : {} },
+    });
+  }
+
+  if (/play (some )?music|put on music|play a song/.test(u) && can('hub.media')) {
+    calls.push({ tool: 'hub.media', args: { intent: 'hub.skills.music.play', slots: {} } });
+  }
+  if (/^(pause|stop)( the)? (music|song|it)|pause it/.test(u) && can('hub.media')) {
+    calls.push({ tool: 'hub.media', args: { intent: 'hub.controls.player.pause', slots: {} } });
+  }
+  if (/next (song|track)|skip/.test(u) && can('hub.media')) {
+    calls.push({ tool: 'hub.media', args: { intent: 'hub.skills.music.controls.next', slots: {} } });
+  }
+
+  if (/faq|frequently asked/.test(u) && can('hub.show')) {
+    calls.push({ tool: 'hub.show', args: { intent: 'hub.skills.faq', slots: {} } });
+  }
+  if (/what time is it|the time/.test(u) && can('hub.show')) {
+    calls.push({ tool: 'hub.show', args: { intent: 'hub.skills.qna.currenttime', slots: {} } });
+  }
+
   if (/do not disturb|dnd|privacy/.test(u) && can('dnd.set')) {
     calls.push({ tool: 'dnd.set', args: { state: /off|cancel|clear/.test(u) ? 'off' : 'dnd' } });
   }
@@ -165,7 +236,10 @@ function plan(u: string, available: Set<string>, state: ParsedState): LlmToolCal
     calls.push({ tool: 'stay.get_info', args: {} });
   }
 
-  if (/wake me|wake-?up call|alarm/.test(u) && can('stay.set_wakeup_call')) {
+  // A wake-up call is a service the front desk performs. An alarm is the device's own,
+  // and is handled by hub.reminders above. Matching "alarm" here too made one utterance
+  // do both: the guest got a device alarm AND a call booked at reception.
+  if (/wake-?up call/.test(u) && can('stay.set_wakeup_call')) {
     const t = u.match(/(\d{1,2})[:.]?(\d{2})?\s*(am|pm)?/);
     if (t) {
       let h = Number(t[1]);

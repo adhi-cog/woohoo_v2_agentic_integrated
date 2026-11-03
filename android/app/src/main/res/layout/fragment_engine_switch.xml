@@ -70,4 +70,35 @@
 
     </RelativeLayout>
 
+
+    <RelativeLayout
+        android:id="@+id/agentic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_84">
+
+        <TextView
+            android:id="@+id/agentic_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_40"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24" />
+
+        <RadioButton
+            android:id="@+id/agentic_radio"
+            style="@style/MyRadioButton"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:buttonTint="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_alignParentBottom="true"
+            android:background="?divider" />
+
+    </RelativeLayout>
+
 </LinearLayout>
