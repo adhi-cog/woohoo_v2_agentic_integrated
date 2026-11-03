@@ -1,0 +1,11 @@
+package com.sb.woohoo.ui.main.fragments.settings.thingstosay.di;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+import javax.inject.Scope;
+
+@Scope
+@Retention(RetentionPolicy.CLASS)
+public @interface ThingsToSayScope {
+}

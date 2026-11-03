@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:id="@+id/rel_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="09:47 PM"
+            android:textColor="@color/white_16_opacity"
+            android:textSize="@dimen/sp_66"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_time"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-regular"
+            android:text="23 October · 18° C"
+            android:textColor="@color/white_16_opacity"
+            android:textSize="@dimen/sp_32"
+            />
+
+
+        <Button
+            android:id="@+id/turn_off_dark_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_32"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_53"
+            android:background="@drawable/rounded_corner_dark_bg"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dp_24"
+            android:text="@string/turn_off_night_mode"
+            android:textAllCaps="true"
+            android:textColor="@color/white_10_opacity"
+            android:textSize="@dimen/sp_20" />
+    </RelativeLayout>
+
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

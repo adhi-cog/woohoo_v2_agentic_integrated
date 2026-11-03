@@ -1,0 +1,46 @@
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    tools:context=".ui.main.fragments.todo.ToDoFragment">
+
+    <include
+        android:id="@+id/fragment_to_do_toolbar"
+        layout="@layout/common_toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_to_do_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_to_do_toolbar"
+        android:layout_marginStart="@dimen/fragment_to_do_recycler_view_margin_start_end"
+        android:layout_marginEnd="@dimen/fragment_to_do_recycler_view_margin_start_end"
+        android:background="@drawable/rounded_corners_white_transparent"
+        android:backgroundTint="#90FFFFFF" />
+
+    <TextView
+        android:id="@+id/fragment_to_do_text_view_empty_to_do_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/fragment_to_do_text_view_empty_to_do_list_margin_top"
+        android:drawableTop="@drawable/ic_to_do_empty"
+        android:drawablePadding="@dimen/fragment_to_do_text_view_empty_to_do_list_drawable_padding"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/fragment_to_do_text_view_empty_to_do_list"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fragment_to_do_text_view_empty_to_do_list_text_size"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/fragment_to_do_progress_bar"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@android:color/white" />
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

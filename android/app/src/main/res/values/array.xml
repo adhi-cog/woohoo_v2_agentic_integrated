@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="icon_list">
+        <item>@drawable/ic_device_1</item>
+        <item>@drawable/ic_device_2</item>
+        <item>@drawable/ic_device_3</item>
+        <item>@drawable/ic_device_4</item>
+        <item>@drawable/ic_device_5</item>
+        <item>@drawable/ic_device_6</item>
+        <item>@drawable/ic_device_7</item>
+
+
+    </array>
+</resources>

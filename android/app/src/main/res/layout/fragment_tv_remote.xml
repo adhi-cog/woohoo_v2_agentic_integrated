@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dining_restaurant"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_theme_color_secondary">
+
+        <include
+            android:id="@+id/fragment_settings_relative_layout_header"
+            layout="@layout/common_toolbar" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_toolbar"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5">
+
+            <LinearLayout
+                android:id="@+id/liner_power"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="top"
+                android:layout_marginTop="@dimen/dp_100"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_power_on"
+                    android:layout_width="@dimen/dp_64"
+                    android:layout_height="@dimen/dp_64"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:background="@drawable/remote_tv_power_on"
+                    android:gravity="center"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_power_off"
+                    android:layout_width="@dimen/dp_64"
+                    android:layout_height="@dimen/dp_64"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:background="@drawable/remote_tv_power_off"
+                    android:gravity="center"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liner_mute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/liner_power"
+                android:layout_marginTop="@dimen/dp_24"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_mute"
+                    android:layout_width="@dimen/dp_64"
+                    android:layout_height="@dimen/dp_64"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:background="@drawable/remote_tv_mute"
+                    android:gravity="center"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_un_mute"
+                    android:layout_width="@dimen/dp_64"
+                    android:layout_height="@dimen/dp_64"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:background="@drawable/remote_tv_unmute"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liner_vol_ch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/liner_mute"
+                android:layout_marginTop="@dimen/dp_50"
+                android:layout_marginBottom="@dimen/dp_50"
+                android:gravity="center|top"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/liner_vol"
+                    android:layout_width="60dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:background="@drawable/remote_tv_channel"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btn_vol_up"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null" />
+
+                        <Button
+                            android:id="@+id/btn_vol_down"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="sans-serif"
+                        android:text="Vol"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_18" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/liner_channel"
+                    android:layout_width="60dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:background="@drawable/remote_tv_channel"
+                    android:visibility="invisible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btn_channel_up"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null" />
+
+                        <Button
+                            android:id="@+id/btn_channel_down"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="sans-serif"
+                        android:text="Ch"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_18" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_mirror"
+                android:layout_width="@dimen/dp_64"
+                android:layout_height="@dimen/dp_64"
+                android:layout_below="@+id/liner_vol_ch"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_screen_cast_connected"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_search"
+                style="@style/EditTextCentered"
+                android:layout_marginTop="@dimen/dp_24"
+                android:layout_marginBottom="@dimen/dp_24"
+                android:background="@drawable/bg_stroke_edit_text"
+                android:drawableEnd="@drawable/ic_search"
+                android:hint="@string/search"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="@dimen/padding_15"
+                android:paddingTop="@dimen/padding_15"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/padding_15" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_restaurants"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingRight="@dimen/dp_16"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

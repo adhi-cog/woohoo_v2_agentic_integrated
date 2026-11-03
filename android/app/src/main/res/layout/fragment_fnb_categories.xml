@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/fragment_settings_relative_layout_header"
+        layout="@layout/ordering_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/layout_category_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_settings_relative_layout_header"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_banner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/banner_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp" />
+
+            <ImageView
+                android:id="@+id/img_banner_default"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="?color_primary"
+                android:scaleType="centerCrop"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_categories"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rlCartContainer"
+            android:background="@color/bg_listening"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_16">
+
+            <TextView
+                android:id="@+id/tvItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2 items | "
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18"/>
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvItems"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18"
+                tools:text="INR 260" />
+
+            <TextView
+                android:layout_below="@+id/tvItems"
+                android:id="@+id/tvTaxesMayApply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Taxes may apply"
+                android:text="@string/taxes_may_apply"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"/>
+
+            <TextView
+                android:id="@+id/tvViewCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/rounded_corners_white_outline"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_22"
+                android:paddingEnd="@dimen/dp_22"
+                android:text="@string/view_cart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include android:id="@+id/containerBottomDialog"
+        layout="@layout/dialog_bottom_fnb"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="gone"/>
+</RelativeLayout>

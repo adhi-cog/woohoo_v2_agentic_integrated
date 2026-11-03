@@ -1,0 +1,31 @@
+<resources>
+
+
+    <style name="MyRadioButton">
+        <item name="android:layout_width">@dimen/dp_32</item>
+        <item name="android:layout_height">@dimen/dp_32</item>
+        <item name="android:scaleX">2</item>
+        <item name="android:scaleY">2</item>
+    </style>
+
+    <style name="MyRadioButton2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleX">2</item>
+        <item name="android:scaleY">2</item>
+    </style>
+
+
+    <declare-styleable name="SmileRating">
+        <attr name="angryColor" format="color" />
+        <attr name="normalColor" format="color" />
+        <attr name="drawingColor" format="color" />
+        <attr name="showLine" format="boolean" />
+        <attr name="placeHolderSmileColor" format="color" />
+        <attr name="placeHolderBackgroundColor" format="color" />
+        <attr name="textSelectionColor" format="color" />
+        <attr name="textNonSelectionColor" format="color" />
+        <attr name="isIndicator" format="boolean" />
+    </declare-styleable>
+
+</resources>

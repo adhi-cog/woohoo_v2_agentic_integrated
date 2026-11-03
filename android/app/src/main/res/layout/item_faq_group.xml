@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="@dimen/dp_20">
+
+    <TextView
+        android:id="@+id/list_item_group_position"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_marginStart="@dimen/dp_40"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/common_toolbar_title_text_size"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/groupName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_vertical"
+        android:layout_toEndOf="@+id/list_item_group_position"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/common_toolbar_title_text_size"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_toStartOf="@+id/list_item_group_arrow"
+        tools:text="Genre" />
+
+    <ImageView
+        android:id="@+id/list_item_group_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:background="@drawable/bg_arrow_expand_more"
+        android:src="@drawable/ic_baseline_expand_more" />
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    android:orientation="vertical"
+    tools:context="com.sb.woohoo.ui.main.fragments.voipaudiocall.AudioCallFragment">
+
+    <ImageView
+        android:layout_width="@dimen/fragment_contacts_profile_image_view_contact_size"
+        android:layout_height="@dimen/fragment_contacts_profile_image_view_contact_size"
+        android:layout_below="@id/fragment_contacts_profile_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_50"
+        android:contentDescription="@string/hint_second_name"
+        android:src="@drawable/ic_all_contact_default_48dp" />
+
+    <TextView
+        android:id="@+id/fragment_audio_call_state"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fragment_audio_call_hangup"
+        android:layout_marginBottom="@dimen/dp_32"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_15" />
+
+    <Button
+        android:id="@+id/fragment_audio_call_hangup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_no_access"
+        android:padding="@dimen/dp_5"
+        android:text="@string/hang_up"
+        android:textSize="@dimen/sp_15"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="18dp" />
+            <size android:height="24dp" />
+            <solid android:color="@color/sip_call_volume_track" />
+        </shape>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="18dp" />
+                <size android:height="24dp" />
+                <gradient
+                    android:angle="0"
+                    android:startColor="@color/sip_call_volume_start"
+                    android:endColor="@color/sip_call_volume_end" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

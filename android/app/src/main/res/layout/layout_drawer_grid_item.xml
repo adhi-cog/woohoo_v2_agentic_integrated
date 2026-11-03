@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_drawer_grid_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_180"
+    android:layout_marginRight="@dimen/dp_10"
+    android:layout_marginBottom="@dimen/dp_20"
+    android:layout_weight="1"
+    android:background="@drawable/rounded_corners_navy_transparent"
+    android:padding="@dimen/dp_30">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_grid_item_icon"
+        style="@style/HomeScreenIcon"
+        android:src="@drawable/ic_home_spotify"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_grid_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_horizontal"
+        android:text="@string/spotify"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_grid_item_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

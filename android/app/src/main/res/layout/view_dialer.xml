@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fragment_dialer_view_text_view_1"
+            android:layout_width="@dimen/sip_dialer_key_size"
+            android:layout_height="@dimen/sip_dialer_key_size"
+            android:background="@drawable/bg_sip_dialer_key"
+            android:gravity="center"
+            android:text="@string/fragment_dialer_text_view_1"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sip_dialer_key_text_size"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/fragment_dialer_view_relative_layout_2"
+            android:layout_width="@dimen/sip_dialer_key_size"
+            android:layout_height="@dimen/sip_dialer_key_size"
+            android:layout_marginStart="@dimen/sip_dialer_key_gap"
+            android:background="@drawable/bg_sip_dialer_key">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/fragment_dialer_text_view_2"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sip_dialer_key_text_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_dialer_view_relative_layout_3"
+            android:layout_width="@dimen/sip_dialer_key_size"
+            android:layout_height="@dimen/sip_dialer_key_size"
+            android:layout_marginStart="@dimen/sip_dialer_key_gap"
+            android:background="@drawable/bg_sip_dialer_key">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/fragment_dialer_text_view_3"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sip_dialer_key_text_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sip_dialer_key_gap"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/fragment_dialer_view_relative_layout_4"
+            android:layout_width="@dimen/sip_dialer_key_size"
+            android:layout_height="@dimen/sip_dialer_key_size"
+            android:background="@drawable/bg_sip_dialer_key">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/fragment_dialer_text_view_4"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sip_dialer_key_text_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_dialer_view_relative_layout_5"
+            android:layout_width="@dimen/sip_dialer_key_size"
+            android:layout_height="@dimen/sip_dialer_key_size"
+            android:layout_marginStart="@dimen/sip_dialer_key_gap"
+            android:background="@drawable/bg_sip_dialer_key">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/fragment_dialer_text_view_5"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sip_dialer_key_text_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_dialer_view_relative_layout_6"
+            android:layout_width="@dimen/sip_dialer_key_size"
+            android:layout_height="@dimen/sip_dialer_key_size"
+            android:layout_marginStart="@dimen/sip_dialer_key_gap"
+            android:background="@drawable/bg_sip_dialer_key">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/fragment_dialer_text_view_6"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sip_dialer_key_text_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sip_dialer_key_gap"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/fragment_dialer_view_relative_layout_7"
+            android:layout_width="@dimen/sip_dialer_key_size"
+            android:layout_height="@dimen/sip_dialer_key_size"
+            android:background="@drawable/bg_sip_dialer_key">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/fragment_dialer_text_view_7"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sip_dialer_key_text_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_dialer_view_relative_layout_8"
+            android:layout_width="@dimen/sip_dialer_key_size"
+            android:layout_height="@dimen/sip_dialer_key_size"
+            android:layout_marginStart="@dimen/sip_dialer_key_gap"
+            android:background="@drawable/bg_sip_dialer_key">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/fragment_dialer_text_view_8"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sip_dialer_key_text_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_dialer_view_relative_layout_9"
+            android:layout_width="@dimen/sip_dialer_key_size"
+            android:layout_height="@dimen/sip_dialer_key_size"
+            android:layout_marginStart="@dimen/sip_dialer_key_gap"
+            android:background="@drawable/bg_sip_dialer_key">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/fragment_dialer_text_view_9"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sip_dialer_key_text_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sip_dialer_key_gap"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fragment_dialer_view_text_view_star"
+            android:layout_width="@dimen/sip_dialer_key_size"
+            android:layout_height="@dimen/sip_dialer_key_size"
+            android:background="@drawable/bg_sip_dialer_key"
+            android:gravity="center"
+            android:text="@string/fragment_dialer_text_view_star"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sip_dialer_key_text_size"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/fragment_dialer_view_relative_layout_0"
+            android:layout_width="@dimen/sip_dialer_key_size"
+            android:layout_height="@dimen/sip_dialer_key_size"
+            android:layout_marginStart="@dimen/sip_dialer_key_gap"
+            android:background="@drawable/bg_sip_dialer_key">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/fragment_dialer_text_view_0"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sip_dialer_key_text_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/fragment_dialer_view_text_view_hash"
+            android:layout_width="@dimen/sip_dialer_key_size"
+            android:layout_height="@dimen/sip_dialer_key_size"
+            android:layout_marginStart="@dimen/sip_dialer_key_gap"
+            android:background="@drawable/bg_sip_dialer_key"
+            android:gravity="center"
+            android:text="@string/fragment_dialer_text_view_hash"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sip_dialer_key_text_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

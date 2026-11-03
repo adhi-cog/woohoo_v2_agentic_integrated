@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/slot_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/dp_6"
+    android:background="@drawable/bg_rect_shape_light">
+
+    <TextView
+        android:padding="@dimen/dp_8"
+        android:id="@+id/item_slot_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="07:00"
+        android:textColor="?text_color_primary"
+        android:textSize="@dimen/sp_18"/>
+
+</LinearLayout>

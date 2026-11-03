@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/item_to_do_linear_layout_margin_start_end"
+        android:layout_marginTop="@dimen/item_to_do_linear_layout_margin_top"
+        android:layout_marginEnd="@dimen/item_to_do_linear_layout_margin_start_end"
+        android:layout_marginBottom="@dimen/item_to_do_linear_layout_margin_bottom"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/item_to_do_linear_layout_padding_start_end"
+        android:paddingTop="@dimen/item_to_do_linear_layout_padding_top_bottom"
+        android:paddingEnd="@dimen/item_to_do_linear_layout_padding_start_end"
+        android:paddingBottom="@dimen/item_to_do_linear_layout_padding_top_bottom">
+
+        <RelativeLayout
+            android:layout_width="@dimen/item_to_do_relative_layout_count_width_height"
+            android:layout_height="@dimen/item_to_do_relative_layout_count_width_height"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/item_to_do_relative_layout_count_margin_end">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:alpha="0.2"
+                android:background="@drawable/circle_white"
+                android:backgroundTint="#90000000" />
+
+            <TextView
+                android:id="@+id/item_to_do_text_view_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/item_to_do_text_view_count_size" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_to_do_text_view_to_do_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/item_to_do_text_view_name_size" />
+
+    </LinearLayout>
+
+</RelativeLayout>

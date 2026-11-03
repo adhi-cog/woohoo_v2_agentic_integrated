@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layout_restaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_12">
+    <ImageView
+        android:id="@+id/img_restaurant"
+        android:layout_width="@dimen/dp_130"
+        android:layout_height="@dimen/dp_160"
+        android:src="@drawable/ic_baseline_photo_album_24"
+        android:layout_centerVertical="true"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_restaurant_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_8"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/img_restaurant">
+    <TextView
+        android:id="@+id/txt_restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_20"
+        android:text="Basilico"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txt_restaurant_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Basilico"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/grey_restaurant_timing"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_below="@+id/txt_restaurant_name"/>
+
+        <TextView
+            android:id="@+id/txt_book_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/txt_restaurant_desc"
+            android:text="@string/book_a_table"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/white"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_4"
+            android:background="@drawable/bg_book_table"/>
+    </RelativeLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_alignBottom="@+id/layout_restaurant"
+        android:background="@color/grey_restaurant_divider"/>
+</RelativeLayout>

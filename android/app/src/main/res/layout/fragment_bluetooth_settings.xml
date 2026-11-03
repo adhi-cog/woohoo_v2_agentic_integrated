@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bluetooth_parent_bg_gradient"
+    android:clickable="true"
+    android:focusable="true">
+
+    <include
+        android:id="@+id/fragment_settings_relative_layout_header"
+        layout="@layout/common_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_settings_relative_layout_header"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:paddingTop="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/bluetooth_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/dp_40"
+            android:fontFamily="sans-serif"
+            android:text="@string/bluetooth"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/bluetooth_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:checked="false"
+            android:thumb="@drawable/bluetooth_customswitchselector"
+            app:track="@drawable/bluetooth_custom_track" />
+
+        <TextView
+            android:id="@+id/bluetooth_discoverable_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetooth_text"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_3"
+            android:fontFamily="sans-serif"
+            android:text="@string/bt_discovery_text"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/device_name_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bluetooth_discoverable_text"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_20"
+            android:fontFamily="sans-serif"
+            android:text="Device Name"
+            android:textColor="@color/purple_theme_text_color_secondary"
+            android:textSize="@dimen/sp_21" />
+
+        <TextView
+            android:id="@+id/device_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/device_name_header"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:drawablePadding="@dimen/padding_12"
+            android:fontFamily="sans-serif"
+            android:text="@string/device_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_21" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/device_name_text"
+            android:layout_marginTop="26dp"
+            android:background="#19ffffff"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayout2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:paddingTop="@dimen/padding_05dp"
+        android:paddingBottom="@dimen/padding_05dp"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:src="@drawable/ic_baseline_autorenew_24" />
+
+        <TextView
+            android:id="@+id/available_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/refresh"
+            android:textColor="@color/purple_theme_text_color_tertiary" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loading_place_holder"
+        layout="@layout/data_loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_scan"
+        android:visibility="gone" />
+
+    <com.sb.woohoo.custom.RecyclerViewEmptySupport
+        android:id="@+id/list_bluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rlDiscoverable"
+        android:layout_below="@id/rl_scan"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/bluetooth_rv_bg"
+        android:backgroundTint="@color/white_55_opacity"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_bluetooth" />
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="@string/no_devices_available"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlDiscoverable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_21"
+            android:paddingTop="@dimen/padding_05dp"
+            android:paddingBottom="@dimen/padding_05dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/discoverable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:indeterminate="true"
+                android:src="@drawable/ic_bluetooth"
+                android:tooltipText="hi"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/discoverable_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/discoverable"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Discoverable"
+                android:textColor="@color/purple_theme_text_color_tertiary"
+                android:textSize="@dimen/sp_20" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

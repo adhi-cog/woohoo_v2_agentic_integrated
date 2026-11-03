@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_live_feed_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Layout that will be visible to user when dropping is under initialising  -->
+    <RelativeLayout
+        android:id="@+id/live_feed_connecting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/person_image"
+            android:layout_width="@dimen/dp_350"
+            android:layout_height="@dimen/dp_350"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_48"
+            android:background="?color_secondary"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/person_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/person_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_28"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-light"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_42" />
+
+        <TextView
+            android:id="@+id/connecting_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/person_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/live_feed_initializing"
+            android:textColor="?tile_color_secondary"
+            android:textSize="@dimen/sp_26" />
+
+        <LinearLayout
+            android:id="@+id/live_feed_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/live_feed_call"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:contentDescription="@string/hint_second_name"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_live_feed_accept_call" />
+
+            <ImageView
+                android:id="@+id/live_feed_end"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
+                android:layout_marginStart="@dimen/dp_20"
+                android:contentDescription="@string/hint_second_name"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_live_feed_reject_call" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- Layout that will be visible to user when sync countdown ends  -->
+    <RelativeLayout
+        android:id="@+id/live_feed_connected_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/content_live_feed"
+            android:id="@+id/fragment_content_live_feed"/>
+    </RelativeLayout>
+</RelativeLayout>

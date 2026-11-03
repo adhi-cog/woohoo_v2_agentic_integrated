@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary">
+
+    <include
+        android:id="@+id/common_toolbar"
+        layout="@layout/common_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/common_toolbar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/layout_surveillance_initial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/during_surveillance_mode"
+                android:textColor="?text_color_tertiary"
+                android:textSize="@dimen/text_size_24" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_40"
+                android:drawableStart="@drawable/ic_stealth"
+                android:drawablePadding="@dimen/dp_30"
+                android:text="@string/surveillance_stealth_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_22" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_40"
+                android:drawableStart="@drawable/ic_notification"
+                android:drawablePadding="@dimen/dp_30"
+                android:text="@string/surveillance_notification_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_22" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_40"
+                android:drawableStart="@drawable/ic_record_video"
+                android:drawablePadding="@dimen/dp_30"
+                android:text="@string/surveillance_record_video_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_22" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:background="@color/white_20_opacity" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_40"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:background="@drawable/rounder_corners_purple_10dp"
+                android:gravity="center"
+                android:padding="@dimen/padding_15"
+                android:text="@string/surveillance_sleep_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_22" />
+
+
+            <TextView
+                android:id="@+id/tv_turn_on_surveillance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:background="@drawable/rounded_corners_white_background"
+                android:gravity="center"
+                android:padding="@dimen/dp_20"
+                android:text="@string/turn_on_surveillance_mode"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

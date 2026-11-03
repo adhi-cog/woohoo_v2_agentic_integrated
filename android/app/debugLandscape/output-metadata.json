@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.sb.woohoo",
+  "variantName": "debugLandscape",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 184,
+      "versionName": "v1.2.3_debug-landscape_260126_1927",
+      "outputFile": "wh-debugLandscape_184.apk"
+    }
+  ],
+  "elementType": "File"
+}

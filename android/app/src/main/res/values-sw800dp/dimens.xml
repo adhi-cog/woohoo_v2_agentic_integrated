@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="orb_height">@dimen/dp_180</dimen>
+
+    <dimen name="dp_172">224dp</dimen>
+    <dimen name="dp_180">240dp</dimen>
+    <dimen name="dp_220_homebanner">330dp</dimen>
+    <dimen name="dp_100">133dp</dimen>
+
+    <dimen name="dp_15">20dp</dimen>
+    <dimen name="dp_14">19dp</dimen>
+    <dimen name="dp_16">21dp</dimen>
+    <dimen name="dp_18">24dp</dimen>
+    <dimen name="dp_21">28dp</dimen>
+    <dimen name="dp_93">124dp</dimen>
+    <dimen name="dp_120">160dp</dimen>
+    <dimen name="dp_250">332dp</dimen>
+
+    <dimen name="sp_10">13sp</dimen>
+    <dimen name="sp_12">16sp</dimen>
+    <dimen name="sp_14_familyname">@dimen/sp_14</dimen>
+    <dimen name="sp_14">18sp</dimen>
+    <dimen name="sp_15">20sp</dimen>
+    <dimen name="sp_16">21sp</dimen>
+    <dimen name="sp_18">24sp</dimen>
+    <dimen name="sp_22">29sp</dimen>
+    <dimen name="text_size_24">@dimen/sp_24</dimen>
+    <dimen name="sp_25">33sp</dimen>
+    <dimen name="sp_20">26sp</dimen>
+    <dimen name="sp_32">42sp</dimen>
+
+
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_3">4dp</dimen>
+    <dimen name="dp_2">3dp</dimen>
+    <dimen name="dp_5">6dp</dimen>
+    <dimen name="dp_7">9dp</dimen>
+    <dimen name="dp_10">13dp</dimen>
+    <dimen name="dp_12">16dp</dimen>
+    <dimen name="dp_13">17dp</dimen>
+    <dimen name="dp_34_66" format="float" type="dimen">46.09dp</dimen>
+    <dimen name="dp_85_33" format="float" type="dimen">113.49dp</dimen>
+    <dimen name="dp_19">25dp</dimen>
+    <dimen name="dp_20">26dp</dimen>
+    <dimen name="dp_minus_20">-26dp</dimen>
+    <dimen name="dp_23">31dp</dimen>
+    <dimen name="dp_24">32dp</dimen>
+    <dimen name="dp_25">33dp</dimen>
+    <dimen name="dp_28">37dp</dimen>
+    <dimen name="dp_30">40dp</dimen>
+    <dimen name="dp_32">42dp</dimen>
+    <dimen name="dp_36">48dp</dimen>
+    <dimen name="dp_40">53dp</dimen>
+    <dimen name="dp_45">60dp</dimen>
+    <dimen name="dp_48">64dp</dimen>
+    <dimen name="dp_80">106dp</dimen>
+    <dimen name="dp_130">173dp</dimen>
+    <dimen name="dp_200">266dp</dimen>
+    <dimen name="dp_213">283dp</dimen>
+    <dimen name="dp_380">505dp</dimen>
+
+
+    <dimen name="sp_21">28sp</dimen>
+    <dimen name="sp_21_33" format="float" type="dimen">28.36dp</dimen>
+    <dimen name="sp_28">37sp</dimen>
+    <dimen name="sp_37">49sp</dimen>
+    <dimen name="sp_40">53sp</dimen>
+    <dimen name="sp_160">213sp</dimen>
+
+    <dimen name="margin_15dp">@dimen/dp_15</dimen>
+    <dimen name="padding_15">@dimen/dp_15</dimen>
+    <dimen name="padding_32dp">@dimen/dp_32</dimen>
+    <dimen name="common_toolbar_title_text_size">@dimen/sp_24</dimen>
+    <dimen name="common_toolbar_title_margin_start_end">@dimen/dp_60</dimen>
+    <dimen name="common_toolbar_padding_start_end">@dimen/dp_12</dimen>
+    <dimen name="common_toolbar_padding_top_bottom">@dimen/dp_12</dimen>
+    <dimen name="common_toolbar_parent_margin_top" format="float" type="dimen">35.47dp</dimen>
+    <dimen name="common_toolbar_back_width_height">@dimen/dp_48</dimen>
+    <dimen name="fragment_contacts_profile_image_view_contact_size">@dimen/dp_240</dimen>
+    <dimen name="fragment_contacts_profile_text_view_contact_name_margin_top">@dimen/dp_30</dimen>
+    <dimen name="fragment_contacts_profile_text_view_contact_number_margin_top">@dimen/dp_10</dimen>
+    <dimen name="padding_normal">@dimen/dp_18</dimen>
+    <dimen name="margin_big">@dimen/dp_9</dimen>
+    <dimen name="fragment_qna_top_header_text_view_margin_left">@dimen/dp_65</dimen>
+    <dimen name="margin_large_80">@dimen/dp_80</dimen>
+    <dimen name="item_video_list_height">@dimen/dp_254</dimen>
+    <dimen name="item_video_list_margin_top" format="float" type="dimen">22.17dp</dimen>
+
+
+    <dimen name="fragment_contacts_profile_text_view_contact_number_size">@dimen/sp_18</dimen>
+    <dimen name="fragment_contacts_profile_text_view_contact_name_text_size">@dimen/sp_36</dimen>
+    <dimen name="heading_font_size">@dimen/sp_28</dimen>
+    <dimen name="item_video_list_text_view_serial_no_text_size" format="float" type="dimen">
+        28.36sp
+    </dimen>
+    <dimen name="item_video_list_text_view_name_text_size">@dimen/sp_24</dimen>
+
+    <!-- FRAGMENT : Update -->
+    <dimen name="fragment_update_text_view_update_margin">@dimen/dp_32</dimen>
+    <dimen name="fragment_update_text_view_update_margin_top_bottom">@dimen/dp_20</dimen>
+    <dimen name="fragment_update_relative_layout_new_update_padding">@dimen/dp_32</dimen>
+    <dimen name="fragment_update_text_view_update_text_size" format="float" type="dimen">28.82sp</dimen>
+    <dimen name="fragment_update_relative_layout_new_update_margin_start_end" format="float" type="dimen">
+        22.17dp
+    </dimen>
+    <dimen name="fragment_update_relative_layout_new_update_margin_top" format="float" type="dimen">
+        22.17dp
+    </dimen>
+    <dimen name="fragment_update_text_view_new_update_available_text_size">@dimen/sp_24</dimen>
+    <dimen name="fragment_update_view_line_height">@dimen/dp_2</dimen>
+    <dimen name="fragment_update_view_margin_top_bottom">@dimen/dp_28</dimen>
+    <dimen name="fragment_update_simple_drawee_view_orb_animation_margin_top">@dimen/dp_16</dimen>
+    <dimen name="fragment_update_image_view_logo_margin_top">@dimen/dp_20</dimen>
+    <dimen name="fragment_update_text_view_version_text_size" format="float" type="dimen">
+        28.36sp
+    </dimen>
+    <dimen name="fragment_update_text_view_change_log_text_size" format="float" type="dimen">
+        28.36sp
+    </dimen>
+    <dimen name="fragment_update_text_view_change_log_margin_top" format="float" type="dimen">
+        28.36dp
+    </dimen>
+    <dimen name="fragment_update_text_view_version_number_margin_top" format="float" type="dimen">
+        28.36dp
+    </dimen>
+    <dimen name="fragment_update_text_view_version_number_text_size" format="float" type="dimen">
+        24.83sp
+    </dimen>
+    <dimen name="fragment_update_image_view_logo_width" format="float" type="dimen">354.67dp</dimen>
+    <dimen name="fragment_update_image_view_logo_height" format="float" type="dimen">65.60dp</dimen>
+
+
+    <!-- ACTIVITY : Enrollment -->
+    <dimen name="activity_enrollment_relative_layout_parent_padding_start_end">@dimen/dp_40</dimen>
+    <dimen name="activity_enrollment_relative_layout_parent_margin_bottom">@dimen/dp_32</dimen>
+    <dimen name="activity_enrollment_text_view_screen_header_text_size">@dimen/sp_34</dimen>
+    <dimen name="activity_enrollment_text_view_screen_header_2_text_size" format="float" type="dimen">
+        28.36sp
+    </dimen>
+    <dimen name="activity_enrollment_linear_layout_training_margin_top">@dimen/dp_40</dimen>
+    <dimen name="activity_enrollment_linear_layout_training_height">@dimen/dp_84</dimen>
+    <dimen name="activity_enrollment_image_view_icon_width_height" format="float" type="dimen">
+        70.92dp
+    </dimen>
+    <dimen name="activity_enrollment_image_view_icon_padding" format="float" type="dimen">19.00dp
+    </dimen>
+    <dimen name="activity_enrollment_text_view_text_size">@dimen/sp_28</dimen>
+    <dimen name="activity_enrollment_text_view_button_height">@dimen/dp_62</dimen>
+    <dimen name="activity_enrollment_text_view_margin_start" format="float" type="dimen">31.99dp
+    </dimen>
+    <dimen name="activity_enrollment_text_view_button_text_size">@dimen/sp_20</dimen>
+    <dimen name="activity_enrollment_image_view_mic_width_height">@dimen/dp_160</dimen>
+    <dimen name="activity_enrollment_image_view_mic_margin_top" format="float" type="dimen">
+        70.92dp
+    </dimen>
+    <dimen name="activity_enrollment_text_view_voice_train_successful_margin_top" format="float" type="dimen">
+        67.39dp
+    </dimen>
+    <dimen name="activity_enrollment_text_view_voice_train_successful_text_size" format="float" type="dimen">
+        28.82dp
+    </dimen>
+    <dimen name="activity_enrollment_view_line_margin_bottom" format="float" type="dimen">35.47dp
+    </dimen>
+    <dimen name="activity_enrollment_view_line_margin_top" format="float" type="dimen">24.83dp
+    </dimen>
+    <dimen name="activity_enrollment_progress_bar_progress_margin_start_end">@dimen/dp_40</dimen>
+    <dimen name="activity_enrollment_relative_layout_say_bar_height" format="float" type="dimen">
+        124.12dp
+    </dimen>
+    <dimen name="activity_enrollment_text_view_say_bar_text_text_size" format="float" type="dimen">
+        28.36sp
+    </dimen>
+    <dimen name="activity_enrollment_text_view_retrain_voice_text_size">@dimen/sp_28</dimen>
+    <dimen name="activity_enrollment_text_view_enrollment_date_time_text_size">@dimen/sp_28</dimen>
+    <dimen name="activity_enrollment_image_view_icon_arrow_right_padding_top_bottom">@dimen/dp_16</dimen>
+    <dimen name="activity_enrollment_image_view_icon_arrow_right_padding_start_end">@dimen/dp_20</dimen>
+    <dimen name="activity_enrollment_image_view_icon_arrow_right_width_height" format="float" type="dimen">
+        70.92dp
+    </dimen>
+
+
+    <dimen name="margin_20dp">26dp</dimen>
+
+    <!-- LAYOUT : DrawerHelper -->
+    <dimen name="drawer_ic_height">@dimen/dp_36</dimen>
+    <dimen name="drawer_ic_width">@dimen/dp_36</dimen>
+    <dimen name="drawer_text_size">@dimen/sp_13</dimen>
+    <dimen name="drawer_seek_layout_height">@dimen/dp_60</dimen>
+    <dimen name="drawer_seek_ic_width">@dimen/dp_32</dimen>
+    <dimen name="drawer_seek_ic_height">@dimen/dp_32</dimen>
+
+
+    <!-- ContactsScreen -->
+    <dimen name="margin_top_10">@dimen/dp_10</dimen>
+    <dimen name="margin_medium">@dimen/dp_32</dimen>
+
+    <!-- Top Drawer Dimensions -->
+    <dimen name="include_top_drawer_top_linear_layout_height_118_66dp" type="dimen" format="float">157.81dp</dimen>
+    <dimen name="include_top_drawer_top_linear_layout_margin_22_66dp" type="dimen" format="float">30.13dp</dimen>
+    <dimen name="dp_0pt2" type="dimen" format="float">0.2dp</dimen>
+    <dimen name="top_drawer_height_480_dp">@dimen/dp_480</dimen>
+    <dimen name="gif_height">@dimen/dp_320</dimen>
+
+
+    <!-- Fragment Setting -->
+    <dimen name="dimen_fragment_settings_AppBarLayout_Height_134_dp">@dimen/dp_134</dimen>
+    <dimen name="dimen_fragment_settings_AppBarLayout_Margin_26_dp">@dimen/dp_26</dimen>
+
+    <!-- Item Settings -->
+    <dimen name="dp_53">70dp</dimen>
+    <dimen name="margin_start_52">69dp</dimen>
+    <dimen name="margin_start_21">@dimen/dp_21</dimen>
+    <dimen name="dp_26">35dp</dimen>
+    <dimen name="dp_0">0dp</dimen>
+    <dimen name="dp_74">98dp</dimen>
+    <dimen name="dp_8">11dp</dimen>
+    <dimen name="dp_4">5dp</dimen>
+    <dimen name="dp_6">8dp</dimen>
+    <dimen name="dp_22">29dp</dimen>
+    <dimen name="dp_9">12dp</dimen>
+    <dimen name="dp_400">532dp</dimen>
+    <dimen name="dp_84">112dp</dimen>
+    <dimen name="dp_46">61dp</dimen>
+
+    <dimen name="sp_36">48sp</dimen>
+    <dimen name="sp_24">32sp</dimen>
+    <dimen name="dp_64">85dp</dimen>
+    <dimen name="sp_66">88sp</dimen>
+    <dimen name="dp_50">66dp</dimen>
+    <dimen name="dp_60">80dp</dimen>
+    <dimen name="dp_350">465dp</dimen>
+    <dimen name="sp_42">56sp</dimen>
+    <dimen name="dp_136">180dp</dimen>
+    <dimen name="dp_240">319dp</dimen>
+    <dimen name="dp_42">56dp</dimen>
+    <dimen name="dp_34">45dp</dimen>
+    <dimen name="dp_58">77dp</dimen>
+    <dimen name="sp_26">34dp</dimen>
+    <dimen name="dp_70">93dp</dimen>
+    <dimen name="dp_73">97dp</dimen>
+    <dimen name="dp_90">120dp</dimen>
+    <dimen name="dp_35">46dp</dimen>
+    <dimen name="sp_50">66sp</dimen>
+    <dimen name="sp_30">40sp</dimen>
+    <dimen name="sp_35">46sp</dimen>
+
+    <dimen name="dp_minus_2">-3dp</dimen>
+
+    <dimen name="padding_2x">@dimen/dp_16</dimen>
+    <dimen name="dp_201">267dp</dimen>
+    <dimen name="dp_75">100dp</dimen>
+    <dimen name="dp_160">213dp</dimen>
+    <dimen name="dp_140">186dp</dimen>
+
+    <dimen name="dp_34pt67" type="dimen" format="float">46.11dp</dimen>
+    <dimen name="dp_85pt33" type="dimen" format="float">113.48dp</dimen>
+
+    <!-- ITEM : Music -->
+    <dimen name="fragment_music_root_margin_top">@dimen/dp_30</dimen>
+    <dimen name="icon_size_home">@dimen/dp_60</dimen>
+    <dimen name="fragment_music_pager_container_height">@dimen/dp_230</dimen>
+    <dimen name="fragment_music_header_text_size">@dimen/sp_24</dimen>
+    <dimen name="fragment_music_text_view_song_name_text_size">@dimen/sp_24</dimen>
+    <dimen name="fragment_music_text_view_artist_name_text_size">@dimen/sp_20</dimen>
+    <dimen name="fragment_music_text_view_song_name_margin_start">@dimen/dp_20</dimen>
+    <dimen name="fragment_music_text_view_song_name_margin_end">@dimen/dp_20</dimen>
+    <dimen name="fragment_music_text_view_song_name_margin_top">@dimen/dp_28</dimen>
+    <dimen name="fragment_music_text_view_artist_name_margin_top">@dimen/dp_8</dimen>
+    <dimen name="fragment_music_relative_layout_header_padding_top_bottom">@dimen/dp_16</dimen>
+    <dimen name="fragment_music_text_view_no_account_text_size">@dimen/sp_20</dimen>
+    <dimen name="fragment_music_text_view_no_account_drawable_padding">@dimen/dp_24</dimen>
+    <dimen name="fragment_music_relative_layout_seek_bar_margin_start_end">@dimen/dp_16</dimen>
+    <dimen name="fragment_music_relative_layout_seek_bar_margin_top">@dimen/dp_10</dimen>
+    <dimen name="fragment_music_text_view_duration_size">@dimen/sp_12</dimen>
+    <dimen name="fragment_music_text_view_duration_margin">@dimen/dp_16</dimen>
+    <dimen name="fragment_music_relative_layout_music_control_margin_bottom">@dimen/dp_28</dimen>
+    <dimen name="fragment_music_relative_layout_music_control_margin_top">@dimen/dp_18</dimen>
+    <dimen name="fragment_music_image_view_shuffle_repeat_padding">@dimen/dp_24</dimen>
+    <dimen name="fragment_music_image_view_shuffle_repeat_margin">@dimen/dp_24</dimen>
+    <dimen name="fragment_music_image_view_play_padding">@dimen/dp_16</dimen>
+    <dimen name="fragment_music_image_view_back_padding">@dimen/dp_10</dimen>
+    <dimen name="fragment_music_image_vector_width">@dimen/dp_24</dimen>
+    <dimen name="fragment_music_image_vector_height">@dimen/dp_19</dimen>
+
+    <!-- FRAGMENT : Contacts -->
+    <dimen name="fragment_contacts_relative_layout_recycler_family_height">@dimen/dp_110</dimen>
+    <dimen name="fragment_contacts_relative_layout_recycler_family_margin_top">@dimen/dp_15</dimen>
+    <dimen name="fragment_contacts_recycler_view_family_height">@dimen/dp_110</dimen>
+    <dimen name="fragment_contacts_image_view_group_padding">@dimen/dp_5</dimen>
+    <dimen name="fragment_contacts_image_view_group_margin_end">@dimen/dp_12</dimen>
+    <dimen name="fragment_contacts_relative_layout_content_padding_start_end" format="float" type="dimen">
+        19.51dp
+    </dimen>
+    <dimen name="fragment_contacts_relative_layout_content_padding_top">@dimen/dp_15</dimen>
+    <dimen name="fragment_contacts_text_view_family_title_padding_start_end">@dimen/dp_5</dimen>
+    <dimen name="fragment_contacts_text_view_family_title_text_size" format="float" type="dimen">
+        20.84dp
+    </dimen>
+    <dimen name="fragment_contacts_text_view_no_family_members_padding_start_end">@dimen/dp_5</dimen>
+    <dimen name="fragment_contacts_text_view_no_family_members_text_size">@dimen/sp_25</dimen>
+    <dimen name="fragment_contacts_text_view_all_contacts_title_margin_top">@dimen/dp_25</dimen>
+    <dimen name="fragment_contacts_text_view_all_contacts_title_padding_start_end">@dimen/dp_5</dimen>
+    <dimen name="fragment_contacts_text_view_all_contacts_title_text_size" format="float" type="dimen">
+        20.84dp
+    </dimen>
+    <dimen name="fragment_contacts_all_contacts_layout_margin_top">@dimen/dp_15</dimen>
+    <dimen name="fragment_contacts_text_view_no_contacts_margin_top_bottom">@dimen/dp_10</dimen>
+    <dimen name="fragment_contacts_text_view_no_contacts_padding_start_end">@dimen/dp_5</dimen>
+    <dimen name="fragment_contacts_text_view_no_contacts_text_size">@dimen/sp_25</dimen>
+
+    <!-- ITEM : Family -->
+    <dimen name="item_family_image_view_size">@dimen/dp_48</dimen>
+    <dimen name="item_family_text_view_margin_top">@dimen/dp_10</dimen>
+    <dimen name="item_family_text_view_size">@dimen/sp_16</dimen>
+    <dimen name="item_family_linear_layout_margin_start">0dp</dimen>
+    <dimen name="item_family_linear_layout_margin_end">0dp</dimen>
+    <dimen name="fragment_home_horizontal_scroll_view_height">@dimen/dp_180</dimen>
+    <dimen name="fragment_home_horizontal_scroll_item_width">@dimen/dp_115</dimen>
+    <dimen name="fragment_home_horizontal_scroll_item_height">@dimen/dp_145</dimen>
+    <dimen name="fragment_homr_text_view_date_size">@dimen/sp_20</dimen>
+
+    <dimen name="dp_0pt3" type="dimen" format="float">0.39dp</dimen>
+    <dimen name="dp_13pt33" type="dimen" format="float">17.72dp</dimen>
+    <dimen name="dp_10pt66" type="dimen" format="float">14.17dp</dimen>
+    <dimen name="dp_26pt66" type="dimen" format="float">35.45dp</dimen>
+    <dimen name="dp_18pt6" type="dimen" format="float">24.73dp</dimen>
+
+    <!-- FRAGMENT : News Audio -->
+    <dimen name="fragment_news_audio_parent_layout_padding_top_bottom">@dimen/dp_24</dimen>
+    <dimen name="fragment_news_audio_parent_layout_padding_start_end">@dimen/dp_18</dimen>
+    <dimen name="fragment_news_audio_card_view_news_elevation">@dimen/dp_5</dimen>
+    <dimen name="fragment_news_audio_card_view_news_card_corner_radius">@dimen/dp_5</dimen>
+    <dimen name="fragment_news_audio_card_view_news_image_width_height">@dimen/dp_120</dimen>
+    <dimen name="fragment_news_audio_text_view_banner_margin_top">@dimen/dp_16</dimen>
+    <dimen name="fragment_news_audio_text_view_banner_text_size">@dimen/sp_24</dimen>
+    <dimen name="fragment_news_audio_relative_layout_player_controls_margin_top">@dimen/dp_14</dimen>
+    <dimen name="fragment_news_audio_relative_layout_player_controls_padding_top_bottom">@dimen/dp_10</dimen>
+    <dimen name="fragment_news_audio_seek_bar_margin_bottom">@dimen/dp_5</dimen>
+    <dimen name="fragment_news_audio_text_view_start_duration_text_size">@dimen/sp_12</dimen>
+    <dimen name="fragment_news_audio_text_view_end_duration_text_size">@dimen/sp_12</dimen>
+    <dimen name="fragment_news_audio_image_view_play_margin_bottom">@dimen/dp_8</dimen>
+    <dimen name="fragment_news_audio_image_view_play_padding">@dimen/dp_16</dimen>
+
+    <!-- FRAGMENT : News Headline -->
+    <dimen name="fragment_news_headline_text_view_size">@dimen/sp_18</dimen>
+
+    <dimen name="dp_150">200dp</dimen>
+    <dimen name="dp_320">425dp</dimen>
+    <dimen name="dp_300">400dp</dimen>
+
+
+    <!-- FRAGMENT : To Do -->
+    <dimen name="fragment_to_do_recycler_view_margin_start_end" format="float" type="dimen">@dimen/dp_12</dimen>
+    <dimen name="fragment_to_do_text_view_empty_to_do_list_margin_top">@dimen/dp_25</dimen>
+    <dimen name="fragment_to_do_text_view_empty_to_do_list_drawable_padding">@dimen/dp_32</dimen>
+    <dimen name="fragment_to_do_text_view_empty_to_do_list_text_size" format="float" type="dimen">
+        35.47sp
+    </dimen>
+
+    <!-- ITEM : Contact -->
+    <dimen name="item_contact_linear_layout_padding_top_bottom">@dimen/dp_12</dimen>
+    <dimen name="item_contact_linear_layout_padding_start_end">@dimen/dp_16</dimen>
+    <dimen name="item_contact_image_width_height">@dimen/dp_48</dimen>
+    <dimen name="item_contact_name_margin_start">@dimen/dp_16</dimen>
+    <dimen name="item_contact_name_text_size">@dimen/sp_18</dimen>
+
+    <!-- ITEM : Contact Family -->
+    <dimen name="item_contact_family_parent_size_width_height">@dimen/dp_110</dimen>
+    <dimen name="item_contact_family_parent_margin_end">@dimen/dp_5</dimen>
+    <dimen name="item_contact_family_image_width_height">@dimen/dp_48</dimen>
+    <dimen name="item_contact_family_image_margin_top">@dimen/dp_18</dimen>
+    <dimen name="item_contact_family_name_margin_bottom">@dimen/dp_15</dimen>
+    <dimen name="item_contact_family_name_margin_top">@dimen/dp_10</dimen>
+    <dimen name="item_contact_family_name_text_size">@dimen/sp_16</dimen>
+    <dimen name="item_contact_family_name_margin_start_end">@dimen/dp_23</dimen>
+
+    <!-- RemoteAlertModel : To Do -->
+    <dimen name="item_to_do_linear_layout_margin_start_end">@dimen/dp_10</dimen>
+    <dimen name="item_to_do_linear_layout_margin_top">@dimen/dp_10</dimen>
+    <dimen name="item_to_do_linear_layout_margin_bottom">@dimen/dp_10</dimen>
+    <dimen name="item_to_do_linear_layout_padding_start_end">@dimen/dp_23</dimen>
+    <dimen name="item_to_do_linear_layout_padding_top_bottom">@dimen/dp_15</dimen>
+    <dimen name="item_to_do_relative_layout_count_width_height">@dimen/dp_30</dimen>
+    <dimen name="item_to_do_relative_layout_count_margin_end">@dimen/dp_15</dimen>
+    <dimen name="item_to_do_text_view_count_size">@dimen/sp_16</dimen>
+    <dimen name="item_to_do_text_view_name_size">@dimen/sp_20</dimen>
+
+
+    <dimen name="dp_44">58dp</dimen>
+    <dimen name="dp_428">569dp</dimen>
+    <dimen name="dp_105">140dp</dimen>
+    <dimen name="sp_27">36sp</dimen>
+    <dimen name="sp_60">80sp</dimen>
+    <dimen name="dp_17">22dp</dimen>
+    <dimen name="sp_76">101sp</dimen>
+    <dimen name="sp_65">86sp</dimen>
+    <dimen name="dp_480">638dp</dimen>
+    <dimen name="dp_202">268dp</dimen>
+    <dimen name="sp_19">25sp</dimen>
+    <dimen name="dp_106">141dp</dimen>
+    <dimen name="dp_109">145dp</dimen>
+    <dimen name="dp_114">151dp</dimen>
+    <dimen name="dp_minus_12">-16dp</dimen>
+
+    <!-- FRAGMENT : Device Launcher -->
+    <dimen name="fragment_device_launcher_image_view_add_device_icon_width_height">@dimen/dp_48</dimen>
+    <dimen name="fragment_device_launcher_image_view_add_device_icon_margin_end">@dimen/dp_16</dimen>
+    <dimen name="fragment_device_launcher_image_view_add_device_icon_padding">@dimen/dp_10</dimen>
+    <dimen name="fragment_device_launcher_image_view_no_device_width_height">@dimen/dp_80</dimen>
+    <dimen name="fragment_device_launcher_text_view_no_device_message">@dimen/sp_20</dimen>
+    <dimen name="fragment_device_launcher_text_view_no_device_message_margin_top">@dimen/dp_24</dimen>
+    <dimen name="fragment_device_launcher_linear_layout_no_device_margin_start_end">@dimen/dp_32</dimen>
+    <dimen name="fragment_device_launcher_text_view_discover_text_size">@dimen/sp_16</dimen>
+    <dimen name="fragment_device_launcher_text_view_discover_padding">@dimen/dp_10</dimen>
+    <dimen name="fragment_philips_switch_margin_end">@dimen/dp_24</dimen>
+
+    <dimen name="dp_38">50dp</dimen>
+    <dimen name="dp_168">223dp</dimen>
+    <dimen name="dp_65">86dp</dimen>
+    <dimen name="sp_34">45sp</dimen>
+    <dimen name="dp_62">82dp</dimen>
+    <dimen name="sp_13">17sp</dimen>
+    <dimen name="dp_134">178dp</dimen>
+    <dimen name="dp_230">306dp</dimen>
+    <dimen name="dp_110">146dp</dimen>
+    <dimen name="dp_115">153dp</dimen>
+    <dimen name="dp_145">193dp</dimen>
+    <dimen name="dp_254">338dp</dimen>
+</resources>

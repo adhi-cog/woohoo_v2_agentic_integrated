@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="?color_secondary">
+
+    <include
+        android:id="@+id/activity_enrollment_toolbar"
+        layout="@layout/common_toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/linphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_28"
+        android:text="@string/voip_calls"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_enrollment_toolbar" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/linphone_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_23"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:thumb="@drawable/customswitchselector"
+        app:layout_constraintBottom_toTopOf="@+id/linphone_view1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:track="@drawable/custom_track" />
+
+    <View
+        android:id="@+id/linphone_view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_28"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:background="#19ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/linphone" />
+
+    <TextView
+        android:id="@+id/agora_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_28"
+        android:text="@string/agora_calls"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linphone_view1" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/agora_call_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_23"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:thumb="@drawable/customswitchselector"
+        app:layout_constraintBottom_toTopOf="@+id/agora_call_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:track="@drawable/custom_track" />
+
+    <View
+        android:id="@+id/agora_call_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_28"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:background="@color/white_20_opacity"
+        app:layout_constraintTop_toBottomOf="@+id/agora_switch" />
+
+    <TextView
+        android:id="@+id/network_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_28"
+        android:text="@string/network_calls"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agora_call_view" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/network_log_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_23"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:thumb="@drawable/customswitchselector"
+        app:layout_constraintBottom_toTopOf="@+id/network_log_view1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:track="@drawable/custom_track" />
+
+    <View
+        android:id="@+id/network_log_view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_28"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:background="@color/white_20_opacity"
+        app:layout_constraintTop_toBottomOf="@+id/network_log" />
+
+    <TextView
+        android:id="@+id/restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_28"
+        android:text="Restart Time"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/network_log_view1" />
+
+    <TextView
+        android:id="@+id/restart_hr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_7"
+        android:text="Hour :"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small_15"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_restart_hr"
+        app:layout_constraintEnd_toStartOf="@+id/edit_restart_hr"
+        app:layout_constraintTop_toTopOf="@+id/edit_restart_hr" />
+
+    <TextView
+        android:id="@+id/restart_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_7"
+        android:text="Min :"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small_15"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_restart_min"
+        app:layout_constraintEnd_toStartOf="@+id/edit_restart_min"
+        app:layout_constraintTop_toTopOf="@+id/edit_restart_min" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/restart_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_23"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:thumb="@drawable/customswitchselector"
+        app:layout_constraintBottom_toTopOf="@+id/restart_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:track="@drawable/custom_track" />
+
+    <EditText
+        android:id="@+id/edit_restart_hr"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@drawable/bg_stroke_edit_text"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:hint="hr"
+        android:inputType="number"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:text="04"
+        android:textColor="@color/white"
+        android:textColorHint="?tile_color_secondary"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintBottom_toTopOf="@+id/restart_view"
+        app:layout_constraintEnd_toStartOf="@+id/restart_min"
+        app:layout_constraintTop_toBottomOf="@+id/network_log_view1" />
+
+    <EditText
+        android:id="@+id/edit_restart_min"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/bg_stroke_edit_text"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:hint="min"
+        android:inputType="number"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:text="00"
+        android:textColor="@color/white"
+        android:textColorHint="?tile_color_secondary"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintBottom_toTopOf="@+id/restart_view"
+        app:layout_constraintEnd_toStartOf="@+id/restart_switch"
+        app:layout_constraintTop_toBottomOf="@+id/network_log_view1" />
+
+    <View
+        android:id="@+id/restart_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_28"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:background="@color/white_20_opacity"
+        app:layout_constraintTop_toBottomOf="@+id/restart" />
+
+    <TextView
+        android:id="@+id/select_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_28"
+        android:text="Select Test Device"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restart_view" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner_device"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_device"
+        android:backgroundTint="@color/white"/>
+
+    <View
+        android:id="@+id/device_view"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:background="@color/white_20_opacity"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_device" />
+
+    <TextView
+        android:id="@+id/operating_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_28"
+        android:text="@string/sensory_op"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/device_view" />
+
+    <Spinner
+        android:id="@+id/spinner_operating_point"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:background="@drawable/button_background"
+        app:layout_constraintBottom_toBottomOf="@+id/operating_point"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/operating_point">
+
+    </Spinner>
+
+    <View
+        android:id="@+id/operating_point_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_28"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:background="@color/white_20_opacity"
+        app:layout_constraintTop_toBottomOf="@+id/operating_point" />
+
+    <TextView
+        android:id="@+id/dark_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_28"
+        android:text="Dark Mode Time"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operating_point_view" />
+
+    <TextView
+        android:id="@+id/dark_mode_hr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_7"
+        android:text="Enable \n Hr :"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_tiny"
+        app:layout_constraintBottom_toBottomOf="@+id/dark_mode_restart_hr"
+        app:layout_constraintEnd_toStartOf="@+id/dark_mode_restart_hr"
+        app:layout_constraintTop_toTopOf="@+id/dark_mode_restart_hr" />
+
+    <TextView
+        android:id="@+id/dark_mode_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_7"
+        android:text="Disable \n Hr :"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_tiny"
+        app:layout_constraintBottom_toBottomOf="@+id/dark_mode_restart_min"
+        app:layout_constraintEnd_toStartOf="@+id/dark_mode_restart_min"
+        app:layout_constraintTop_toTopOf="@+id/dark_mode_restart_min" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/dark_mode_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_23"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:thumb="@drawable/customswitchselector"
+        app:layout_constraintBottom_toTopOf="@+id/dark_mode_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:track="@drawable/custom_track" />
+
+    <EditText
+        android:id="@+id/dark_mode_restart_hr"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@drawable/bg_stroke_edit_text"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:hint="hr:min"
+        android:inputType="text"
+        android:maxLength="5"
+        android:maxLines="1"
+        android:text="04"
+        android:textColor="@color/white"
+        android:textColorHint="?tile_color_secondary"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintBottom_toTopOf="@+id/dark_mode_view"
+        app:layout_constraintEnd_toStartOf="@+id/dark_mode_min"
+        app:layout_constraintTop_toBottomOf="@+id/operating_point_view" />
+
+    <EditText
+        android:id="@+id/dark_mode_restart_min"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/bg_stroke_edit_text"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:hint="min"
+        android:inputType="text"
+        android:maxLength="5"
+        android:maxLines="1"
+        android:text="00"
+        android:textColor="@color/white"
+        android:textColorHint="?tile_color_secondary"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintBottom_toTopOf="@+id/dark_mode_view"
+        app:layout_constraintEnd_toStartOf="@+id/dark_mode_switch"
+        app:layout_constraintTop_toBottomOf="@+id/operating_point_view" />
+
+    <View
+        android:id="@+id/dark_mode_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_28"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:background="@color/white_20_opacity"
+        app:layout_constraintTop_toBottomOf="@+id/dark_mode" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

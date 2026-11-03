@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_weather_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="?color_secondary">
+
+    <ImageView
+        android:id="@+id/wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY" />
+
+    <include
+        android:id="@+id/fragment_settings_relative_layout_header"
+        layout="@layout/common_toolbar" />
+
+    <ProgressBar
+        android:id="@+id/fragment_weather_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_settings_relative_layout_header">
+
+        <RelativeLayout
+            android:id="@+id/relative_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edit_search"
+                style="@style/EditTextCentered"
+                android:background="@drawable/bg_stroke_edit_text"
+                android:hint="@string/enter_a_city_name"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="@dimen/padding_15"
+                android:paddingTop="@dimen/padding_15"
+                android:paddingEnd="@dimen/dp_40"
+                android:paddingBottom="@dimen/padding_15" />
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_40"
+                android:background="@drawable/ic_search" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_current_weather"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_320"
+            android:layout_below="@+id/relative_search"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_30">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager_weather"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <!--                <LinearLayout-->
+            <!--                    android:id="@+id/select_dot"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="@dimen/dp_40"-->
+            <!--                    android:gravity="center_vertical|center_horizontal"-->
+            <!--                    android:layout_alignParentBottom="true"-->
+            <!--                    android:layout_centerHorizontal="true"-->
+            <!--                    android:orientation="horizontal" />-->
+
+            <ImageView
+                android:id="@+id/img_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/news_left_right_icon_bg"
+                android:padding="@dimen/dp_16"
+                android:visibility="gone"
+                android:src="@drawable/ic_arrow_left"/>
+
+            <ImageView
+                android:id="@+id/img_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/news_left_right_icon_bg"
+                android:padding="@dimen/dp_16"
+                android:src="@drawable/ic_arrow_right_news"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_weather_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_below="@+id/layout_current_weather"/>
+    </RelativeLayout>
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

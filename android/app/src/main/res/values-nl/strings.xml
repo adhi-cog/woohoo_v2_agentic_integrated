@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello_blank_fragment">"Hallo blanco fragment"</string>
+    <string name="title_activity_base">"Basis Activiteit"</string>
+    <string name="service_music_description">"Muziekservice om nummers van Spotify af te spelen."</string>
+    <string name="empty">"leeg"</string>
+
+    <!-- WooHoo Text -->
+    <string name="woo_hoo_music_text">"Zeg \"Voice Genie, pauzeer de muziek.\""</string>
+    <string name="activity_main_bottom_text">"Zeg \"Voice Genie, herinner me eraan.\""</string>
+    <string name="mute_text">"Wakeword staat uit. Raak hier aan om opdrachten te maken"</string>
+
+    <!-- Login Screen -->
+    <string name="header_login">"Inloggen"</string>
+    <string name="hint_enter_email">"Voer e-mailadres in"</string>
+    <string name="hint_password">"Voer wachtwoord in"</string>
+    <string name="btn_text_login">"Inloggen"</string>
+    <string name="error_email_msg">"Voer een geldig e-mailadres in (bijv. gebruiker@domein.com)"</string>
+    <string name="error_password_msg">"Voer een geldig wachtwoord in (6 tekens)"</string>
+    <string name="error_generic">"Bewerk tekst niet correct geïnitialiseerd!"</string>
+
+    <!-- Name Screen -->
+    <string name="header_name">"Voer uw naam in"</string>
+    <string name="error_first_name">"Voer een geldige voornaam in"</string>
+    <string name="error_first_name_empty">"Voer de voornaam in"</string>
+    <string name="error_last_name">"Voer een geldige achternaam in"</string>
+    <string name="hint_first_name">"voornaam"</string>
+    <string name="hint_second_name">"achternaam"</string>
+
+    <!-- Fuzzy -->
+    <string name="btn_text_proceed">"Doorgaan"</string>
+    <string name="available_networks">"Beschikbare netwerken"</string>
+    <string name="set_up_wi_fi">"Wi-Fi instellen"</string>
+    <string name="set_up_wi_fi_password">"Wachtwoord"</string>
+    <string name="button_skip">"Overslaan"</string>
+    <string name="no_reminders_added">"Geen herinneringen toegevoegd"</string>
+    <string name="weather">"Weer"</string>
+    <string name="spotify">"Spotify"</string>
+    <string name="reservation_app_tile">"Boek een
+service"</string>
+    <string name="reservation_screen_title">"Boek een dienst"</string>
+    <string name="devices">"Apparaten"</string>
+    <string name="settings">"Instellingen"</string>
+    <string name="faq">"Veelgestelde vragen"</string>
+    <string name="overview">"Hotelinfo"</string>
+    <string name="overview_title_gbtb">"Informatie"</string>
+    <string name="overview_title_st">"Saudi Tourism"</string>
+    <string name="overview_title_st_events">"Evenementen"</string>
+    <string name="overview_title_st_experience">"Ervaringen"</string>
+    <string name="overview_title_st_attractions">"Attracties"</string>
+    <string name="overview_title_st_destination">"Bestemming"</string>
+    <string name="overview_title_st_packages">"Pakket"</string>
+
+    <!-- Face Register Screen -->
+    <string name="header_face_register">"Gezichtsregistratie"</string>
+    <string name="textview_text_face_reg_header">"Gezichtsregistratie"</string>
+    <string name="btn_text_ready">"KLAAR"</string>
+    <string name="textview_text_skip">"OVERSLAAN"</string>
+    <string name="textview_face_register_desc">"\"Voeg Face ID toe om WooHoo te ontgrendelen en te bedienen met je gezicht.
+
+Houd uw gezicht in een heldere omgeving op een afstand van 1-2 meter om u te registreren.\""</string>
+    <string name="whatson">"Wat is er op"</string>
+    <string name="getting_around">"Verplaatsing"</string>
+    <string name="dining">"Dineren"</string>
+    <string name="ticket_purchase">"Ticket kopen"</string>
+    <string name="time_slot_booking">"Boek een tijdslot"</string>
+    <string name="information">"Informatie"</string>
+
+    <!-- Fuzzy -->
+    <string name="whatson_quote">"Wat is er op"</string>
+    <string name="getting_around_quote">"\"Verplaatsingen\""</string>
+
+    <!-- Fuzzy -->
+    <string name="ticket_purchase_quote">"\"Ticket kopen\""</string>
+
+    <!-- Fuzzy -->
+    <string name="time_slot_booking_quote">"\"Boek een tijdslot\""</string>
+
+    <!-- Fuzzy -->
+    <string name="scan_qr_code_for_feedback">"Scan de QR-code om feedback te geven over uw ervaring. We horen graag van je."</string>
+
+    <!-- Fuzzy -->
+    <string name="scan_qr_for_getting_around">"Scan de QR-code om \"Getting Around\" in de tuin te komen. Zal je metgezel zijn op je apparaat."</string>
+
+    <!-- Fuzzy -->
+    <string name="scan_qr_for_whats_on">"Scan de QR-code om \"What's On\" rond de tuinen op je apparaat te zien."</string>
+
+    <!-- Fuzzy -->
+    <string name="scan_qr_code_to_purchase_ticket">"Scan de QR-code om \"Ticket kopen\" op uw apparaat."</string>
+    <string name="scan_qr_code_to_book_slot">"Scan de QR-code naar \"Book A Time Slot\" op je apparaat. Het is noodzakelijk om een tijdslot te reserveren om ongemak te voorkomen."</string>
+    <string name="select_a_language">"Selecteer een taal"</string>
+    <string name="available_languages">"Beschikbare talen"</string>
+    <string name="time_zone">"Tijdzone"</string>
+    <string name="analyzing">"Analyseren…"</string>
+    <string name="face_id_setup_complete">"Face ID instellen voltooid."</string>
+
+    <!-- Fragment : To Do -->
+    <string name="fragment_to_do_title">"To Do"</string>
+    <string name="fragment_to_do_bottom_text">"Zeg Hey Voice Genie, verwijder tandenborstel"</string>
+    <string name="fragment_to_do_text_view_empty_to_do_list">"Je takenlijst is leeg."</string>
+
+    <!-- Fragment : Contacts -->
+    <string name="fragment_contacts_title">"Contacten"</string>
+    <string name="fragment_contacts_bottom_text">"Zeg Hey Voice Genie, bel Dylan Stone."</string>
+    <string name="fragment_contacts_text_view_title_family">"Hotel"</string>
+    <string name="fragment_contacts_text_view_no_family_members">"Geen hotelgasten"</string>
+    <string name="fragment_contacts_text_view_title_all_contacts">"Alle contacten"</string>
+    <string name="fragment_contacts_text_view_no_contacts">"Geen contacten"</string>
+
+    <!-- Fragment : Dialer -->
+    <string name="fragment_dialer_text_view_1">"1"</string>
+    <string name="fragment_dialer_text_view_2">"2"</string>
+    <string name="fragment_dialer_text_view_2_bottom_text">"ABC"</string>
+    <string name="fragment_dialer_text_view_3">"3"</string>
+    <string name="fragment_dialer_text_view_3_bottom_text">"DEF"</string>
+    <string name="fragment_dialer_text_view_4">"4"</string>
+    <string name="fragment_dialer_text_view_4_bottom_text">"GHI"</string>
+    <string name="fragment_dialer_text_view_5">"5"</string>
+    <string name="fragment_dialer_text_view_5_bottom_text">"JKL"</string>
+    <string name="fragment_dialer_text_view_6">"6"</string>
+    <string name="fragment_dialer_text_view_6_bottom_text">"MNO"</string>
+    <string name="fragment_dialer_text_view_7">"7"</string>
+    <string name="fragment_dialer_text_view_7_bottom_text">"PQRS"</string>
+    <string name="fragment_dialer_text_view_8">"8"</string>
+    <string name="fragment_dialer_text_view_8_bottom_text">"TUV"</string>
+    <string name="fragment_dialer_text_view_9">"9"</string>
+    <string name="fragment_dialer_text_view_9_bottom_text">"WXYZ"</string>
+    <string name="fragment_dialer_text_view_star">"*"</string>
+    <string name="fragment_dialer_text_view_0">"0"</string>
+    <string name="fragment_dialer_text_view_0_bottom_text">"+"</string>
+    <string name="fragment_dialer_text_view_hash">"#"</string>
+    <string name="fragment_dialer_text_view_no_contact_found">"Geen contacten gevonden"</string>
+
+    <!-- Fragment : Contacts Profile -->
+    <string name="fragment_contacts_profile_text_view_drop_in">"DROP IN"</string>
+    <string name="no_reminder_set">"Geen herinnering toegevoegd."</string>
+
+    <!-- Fragment : Live Feed -->
+    <string name="woohoo">"Woohoo"</string>
+    <string name="room_name">"Naam kamer"</string>
+    <string name="live_feed_initializing">"Videoconferentie wordt geïnitialiseerd"</string>
+    <string name="audio_initializing">"Audio-oproep initialiseren"</string>
+
+    <!-- Fragment : Dialog box -->
+    <string name="password">"wachtwoord"</string>
+    <string name="ok">"@android:string/ok"</string>
+    <string name="cancel">"@android:string/cancel"</string>
+    <string name="reset">"Resetten"</string>
+    <string name="save">"Opslaan"</string>
+
+    <!-- Fragment : Alarm Alert fragment -->
+    <string name="_00_00_am">"00:00 AM"</string>
+    <string name="snooze">"Snooze"</string>
+    <string name="dismiss">"Negeren"</string>
+
+    <!-- Fragment : Alarm -->
+    <string name="alarms">"Alarmen"</string>
+    <string name="add_alarm">"Alarm toevoegen"</string>
+    <string name="snooze_alarm">"Snooze"</string>
+    <string name="no_alarms_set">"Oeps... Je hebt geen alarmen!"</string>
+
+    <!-- Fragment : Music -->
+    <string name="music">"Muziek"</string>
+    <string name="zero_time">"00:00"</string>
+    <string name="fragment_music_text_no_account_linked">"Geen Spotify-account gekoppeld"</string>
+    <string name="fragment_music_text_view_title">"Muziek"</string>
+
+    <!-- Fragment : Weather -->
+    <string name="fragment_weather_text_view_title">"Weer"</string>
+    <string name="no_internet_text">"Geen internetverbinding"</string>
+    <string name="home">"Thuis"</string>
+
+    <!-- Fuzzy -->
+    <string name="mute">"Dempen"</string>
+    <string name="call">"Bel"</string>
+    <string name="live_feed">"Video
+Conferentie"</string>
+    <string name="surveillance">"Toezicht"</string>
+    <string name="night_mode">"Nachtmodus"</string>
+
+    <!-- Fragment : Settings -->
+    <string name="fragment_settings_text_view_title">"Instellingen"</string>
+    <string name="fragment_settings_text_view_wifi">"Wifi"</string>
+    <string name="fragment_settings_text_view_bluetooth">"Bluetooth"</string>
+    <string name="fragment_settings_text_view_system_update">"Systeemupdate"</string>
+    <string name="fragment_settings_text_view_display">"Weergave"</string>
+    <string name="fragment_settings_text_view_sound">"Geluid"</string>
+    <string name="fragment_settings_text_view_log_out">"Uitloggen"</string>
+    <string name="fragment_settings_text_view_things_to_say">"Dingen om te zeggen"</string>
+    <string name="fragment_settings_text_view_help">"Voice Enroll"</string>
+
+    <!-- Fuzzy -->
+    <string name="fragment_news_audio_text_view_news">"Het belangrijkste nieuws van vandaag"</string>
+
+    <!-- Fragment : Video -->
+    <string name="fragment_video_list_text_view_title">"Video's"</string>
+
+    <!-- Fragment : Reminder -->
+    <string name="fragment_reminder_text_view_title">"Herinneringen"</string>
+
+    <!-- Fragment : News -->
+    <string name="fragment_news_text_view_title">"Nieuws"</string>
+    <string name="search">"ZOEKEN"</string>
+
+    <!-- Fragment : Feedback -->
+    <string name="fragment_feedback_text_view_title">"Feedback"</string>
+    <string name="fragment_qrcode_title">"QR-code"</string>
+    <string name="qr_code_to_access_food_beverage">"Scan de QR-code om toegang te krijgen tot de Food &amp; Drankmenu op uw apparaat"</string>
+
+    <!-- Fragment : Covid -->
+    <string name="fragment_covid_text_view_title">"COVID-19"</string>
+
+    <!-- Fragment : Devices -->
+    <string name="fragment_devices_no_device_txt">"Geen apparaat toegevoegd.
+Zoek naar nieuwe apparaten."</string>
+    <string name="fragment_devices_discover">"ONTDEK"</string>
+    <string name="fragment_devices_discover_new_device">"ONTDEK NIEUW APPARAAT"</string>
+    <string name="fragment_devices">"Apparaten"</string>
+    <string name="device_lookup">"Op zoek naar beschikbare apparaten.."</string>
+
+    <!-- Fragment : Timer -->
+    <string name="fragment_timer_text_view_cancel_text">"@android:string/cancel"</string>
+    <string name="fragment_timer_text_view_pause_text">"PAUSE"</string>
+    <string name="fragment_timer_text_view_timer_default_text">"00:00:00"</string>
+    <string name="fragment_timer_title">"Timer"</string>
+
+    <!-- Fragment : Device -->
+    <string name="fragment_register_device_text_register">"Registreren"</string>
+    <string name="fragment_register_device_text_setup">"Instellen"</string>
+    <string name="discovering_devices">"Apparaten ontdekken"</string>
+    <string name="for_philips_hue_press_the_button_on_philips_bridge_to_discover">"Voor Philips Hue, druk op de knop
+op Philips Bridge te ontdekken."</string>
+    <string name="looking_for_available_devices">"Op zoek naar beschikbare apparaten.."</string>
+    <string name="wifi_on">"Wi-Fi staat aan"</string>
+    <string name="wifi_off">"Wi-Fi staat uit"</string>
+    <string name="listening">"Luisteren…"</string>
+
+    <!-- Fragment : Philips -->
+    <string name="fragment_philips_toolbar_title">"Philips Hue"</string>
+    <string name="fragment_philips_text_brightness">"Helderheid"</string>
+    <string name="fragment_philips_text_set_color">"Kleur instellen"</string>
+    <string name="enroll">"Inschrijven"</string>
+    <string name="talk">"Overleg"</string>
+    <string name="stop">"Stop"</string>
+    <string name="done_training">"Training voltooid"</string>
+    <string name="music_spotify_empty_text">"Gebruik de WooHoo mobiele app/website om in te loggen op je Spotify-account."</string>
+    <string name="turn_on_light">"Licht aan!"</string>
+    <string name="philips_hue">"Philips Hue"</string>
+    <string name="fit_bit">"Fitbit"</string>
+    <string name="nest_thermostat">"Nest Thermostat"</string>
+
+    <!-- Fuzzy -->
+    <string name="response_no_error">"Sorry, ik kon het niet verstaan, probeer het opnieuw"</string>
+    <string name="video_call">"Videogesprek"</string>
+    <string name="front_camera_view">"Vooraanzicht camera"</string>
+    <string name="wifi_toolbar">"Wifi"</string>
+    <string name="device_settings">"Apparaatinstellingen"</string>
+
+    <!-- Fuzzy -->
+    <string name="say_ok_woohoo_play_the_trending_videos">"Zeg \"Voice Genie, speel de trending video's.\""</string>
+
+    <!-- FRAGMENT : Update -->
+    <string name="fragment_update_string_toolbar_title">"Systeemupdate"</string>
+    <string name="fragment_update_string_update">"UPDATE"</string>
+    <string name="fragment_update_string_update_check_1">"CONTROLEER OP UPDATE"</string>
+    <string name="fragment_update_string_update_check_2">"CONTROLEREN OP UPDATE"</string>
+    <string name="fragment_update_string_new_updates">"Nieuwe update beschikbaar"</string>
+    <string name="fragment_update_string_version">"Versie:"</string>
+    <string name="fragment_update_string_change_log">"Wijzig logboek:"</string>
+    <string name="fragment_own_device_fragment">"Videoconferentie"</string>
+
+    <!-- Fuzzy -->
+    <string name="reminder_hint">"Zeg \"Voice Genie, stel een herinnering in\""</string>
+
+    <!-- Fuzzy -->
+    <string name="alarm_hint">"Zeg \"Voice Genie, stel een alarm in.\""</string>
+
+    <!-- Fuzzy -->
+    <string name="weather_hint">"Zeg \"Voice Genie, wat voor weer is het vandaag.\""</string>
+
+    <!-- Fuzzy -->
+    <string name="qna_hint">"Zeg \"Voice Genie, wie is Obama.\""</string>
+
+    <!-- Fuzzy -->
+    <string name="music_hint">"Zeg \"Voice Genie, speel Coldplay\""</string>
+
+    <!-- Fuzzy -->
+    <string name="contact_hint">"Zeg \"Voice Genie, toon mijn contacten\""</string>
+
+    <!-- Fuzzy -->
+    <string name="news_hint">"Zeg \"Voice Genie, wat is er vandaag in het nieuws.\""</string>
+
+    <!-- Fuzzy -->
+    <string name="todo_hint">"Zeg \"Voice Genie, voeg een taak toe.\""</string>
+
+    <!-- Fuzzy -->
+    <string name="devices_hint">"Zeg \"Voice Genie, verander de kleur in rood.\""</string>
+
+    <!-- FRAGMENT : Device Setting -->
+    <string name="fragment_device_settings_title">"Apparaatinstellingen"</string>
+    <string name="fragment_device_settings_factory_reset_message">"Fabrieksreset wist alle opgeslagen gegevens op het apparaat."</string>
+    <string name="fragment_device_settings_factory_reset">"Resetten"</string>
+    <string name="fragment_device_settings_support_text">"We ondersteunen beperkte talen. Onze ontwikkelaars werken er hard aan om jullie allemaal te ondersteunen."</string>
+    <string name="fragment_device_settings_edit_device_name">"Apparaatnaam bewerken"</string>
+
+    <!-- ACTIVITY : Enrollment -->
+    <string name="activity_enrollment_text_voice_model">"Spraakmodel"</string>
+    <string name="activity_enrollment_text_teach">"Leer WooHoo om je stem te herkennen"</string>
+
+    <!-- Fuzzy -->
+    <string name="activity_enrollment_text_voice_training_stage_one">"Zeg \"eerste zin hier\""</string>
+
+    <!-- Fuzzy -->
+    <string name="activity_enrollment_text_voice_training_stage_two">"Zeg \"tweede zin hier\""</string>
+
+    <!-- Fuzzy -->
+    <string name="activity_enrollment_text_voice_training_stage_three">"Zeg \"derde zin hier\""</string>
+
+    <!-- Fuzzy -->
+    <string name="activity_enrollment_text_voice_training_stage_four">"Zeg \"laatste zin hier\""</string>
+    <string name="activity_enrollment_text_start_voice_training">"START STEMTRAINING"</string>
+
+    <!-- Fuzzy -->
+    <string name="activity_enrollment_text_finish_voice_training">"FINISH"</string>
+    <string name="activity_enrollment_text_try_again">"OPNIEUW PROBEREN"</string>
+    <string name="activity_enrollment_text_skip">"OVERSLAAN"</string>
+    <string name="activity_enrollment_text_completed_voice_training">"Stemmodel succesvol getraind!"</string>
+    <string name="activity_enrollment_text_audio_enrollment_failed">"Audio vastleggen mislukt"</string>
+    <string name="activity_enrollment_text_audio_enrollment_completed">"Voltooid"</string>
+    <string name="activity_enrollment_text_success">"Succes"</string>
+    <string name="activity_enrollment_text_voice_training_mode">"Voice Training-modus"</string>
+    <string name="activity_enrollment_text_failed_voice_training">"Training spraakmodel mislukt."</string>
+    <string name="activity_enrollment_text_please_try_again">"Probeer het opnieuw."</string>
+    <string name="activity_enrollment_text_retrain_voice">"Hertrain uw Voice-model"</string>
+    <string name="activity_enrollment_text_voice_training_completed_description">"WooHoo kan nu je stem herkennen.
+
+Je hebt toegang tot je contacten, muziek en andere persoonlijke dingen door gewoonuw stem gebruiken; geen pincode vereist."</string>
+    <string name="no_internet">"Geen internetverbinding. Tik om verbinding te maken."</string>
+    <string name="server_down">"Netwerkprobleem! Maak alstublieft verbinding met internet"</string>
+    <string name="layout_pin_text">"Gebruik de WooHoo Client-app om de pincode opnieuw in te stellen"</string>
+    <string name="layout_incorrect_pin_text">"Verkeerde pincode. Probeer het opnieuw."</string>
+
+    <!-- Fuzzy -->
+    <string name="turn_on_surveillance_hint">"Zeg \"Voice Genie, zet bewaking aan\""</string>
+    <string name="surveillance_mode">"Bewakingsmodus"</string>
+    <string name="surveillance_timer_text">"Apparaat gaat in slaapstand"</string>
+
+    <!-- Fuzzy -->
+    <string name="screen_saver_hint_text">"Zeg \"Voice Genie, speel muziek\""</string>
+    <string name="title_activity_scrolling">"ScrollingActivity"</string>
+    <string name="action_settings">"Instellingen"</string>
+    <string name="time_s_up">"De tijd is om!"</string>
+
+    <!-- Fuzzy -->
+    <string name="done">"GEREED"</string>
+    <string name="light_reachable_on">"Bereikbaar (AAN)"</string>
+    <string name="light_reachable_off">"Bereikbaar (UIT)"</string>
+    <string name="light_reachable">"Bereikbaar"</string>
+    <string name="unreachable">"Onbereikbaar"</string>
+    <string name="capturer_preview_content_description">"Applicatievoorbeeld"</string>
+    <string name="surveillance_five_mins_message">"Apparaat gaat over 5 seconden in slaapstand…"</string>
+    <string name="no_timer">"Geen timer"</string>
+    <string name="set_timers_text">"Stel timers in door Hey Voice Genie te zeggen."</string>
+    <string name="turn_off_surveillance_desc">"Weet u zeker dat u de bewakingsmodus wilt uitschakelen?"</string>
+    <string name="interel">"Interel"</string>
+    <string name="celcius_fahrenheit">"\u00B0C/\u00B0F"</string>
+    <string name="fan_mode_auto">"Auto"</string>
+    <string name="fan_mode_eco">"Eco"</string>
+
+    <!-- Fuzzy -->
+    <string name="fan_mode_off">"Uit"</string>
+
+    <!-- google asr start -->
+    <string name="setting_up_woohoo">"WooHoo instellen..."</string>
+    <string name="engine">"Motor"</string>
+    <string name="wakeword">"Wakeword"</string>
+    <string name="device_language">"Apparaattaal"</string>
+    <string name="voice_model">"Stemmodel"</string>
+    <string name="things_to_say">"Dingen om te zeggen"</string>
+    <string name="system_update">"Systeemupdate"</string>
+    <string name="logout">"Uitloggen"</string>
+    <string name="no_update_available">"Geen updates beschikbaar."</string>
+    <string name="update_available">"Update beschikbaar"</string>
+    <string name="could_not_fetch">"Kan update niet ophalen."</string>
+    <string name="cellular_data_on">"Mobiele data: aan"</string>
+    <string name="cellular_data_off">"Mobiele data: uit"</string>
+    <string name="updating">"Bijwerken..."</string>
+    <string name="checking_update">"Controleren op updates..."</string>
+    <string name="suggestions_to_speak">"Suggesties om met WooHoo te praten"</string>
+    <string name="enroll_voice">"Schrijf je stem in"</string>
+    <string name="name_device_lang">"Naam van het apparaat, taal, tijdzone"</string>
+    <string name="check_internet">"Controleer de internetverbinding!"</string>
+    <string name="wifi_no_internet">"Wifi heeft geen actieve internetverbinding!"</string>
+    <string name="network_issues">"Netwerkprobleem!"</string>
+    <string name="no_service_order_updated">"Er zijn onlangs geen serviceorders bijgewerkt"</string>
+    <string name="you_have_placed">"Je hebt geplaatst"</string>
+    <string name="orders">"bestellingen"</string>
+    <string name="order">"Bestellen"</string>
+    <string name="towels">"Handdoeken"</string>
+
+    <!-- Fuzzy -->
+    <string name="enter_qty">"Geldige hoeveelheid invoeren"</string>
+    <string name="amadeus_service">"Amadeus-diensten"</string>
+    <string name="water">"Water"</string>
+    <string name="shampoo">"Shampoo"</string>
+
+    <!-- google asr end -->
+    <!-- Fuzzy -->
+    <string name="amadeus_services_hotsos">"HotSoS"</string>
+    <string name="enter_a_city_name">"Voer een plaatsnaam in"</string>
+    <string name="enter_feedback">"Schrijf uw feedback"</string>
+    <string name="enter_covid">"Schrijf uw opmerkingen"</string>
+    <string name="confirm">"Bevestigen"</string>
+    <string name="cancel_text">"Annuleren"</string>
+    <string name="cancelText">"Annuleren"</string>
+    <string name="bluetooth">"Bluetooth"</string>
+    <string name="contacts">"Contacten"</string>
+    <string name="sleep_mode">"Slaapstand"</string>
+    <string name="call_disconnected">"Gebruiker kan uw oproep niet opnemen"</string>
+    <string name="call_accept">"Gebruiker heeft de oproep geaccepteerd"</string>
+    <string name="call_reject">"Gebruiker heeft de oproep geweigerd"</string>
+    <string name="add_one">"Voeg er een toe"</string>
+    <string name="warning_missing_app_permissions">"Geef de vereiste rechten op en probeer het opnieuw!"</string>
+    <string name="permission_message_modify_system_settings">"Geef toestemming voor het wijzigen van systeeminstellingen. Tik op OK om door te gaan."</string>
+    <string name="permission_dialog_title_modify_system_settings">"Toestaan om systeeminstellingen te wijzigen"</string>
+    <string name="circle">"cirkel"</string>
+    <string name="alarm_added">"Alarm toegevoegd."</string>
+    <string name="alarm_updated">"Alarm bijgewerkt."</string>
+    <string name="you_have_reminder_set">"Je hebt %d herinneringen ingesteld."</string>
+    <string name="you_have_alrams_set">"Je hebt %d alarmen ingesteld."</string>
+    <string name="already_have_everyday_alarm">"Je hebt al een dagelijks alarm om %s"</string>
+    <string name="already_have_alarm">"Je hebt al een alarm op %s"</string>
+    <string name="cant_set_past_alarms">"Ik kan geen alarm instellen na 24 uur. U kunt in plaats daarvan herinneringen toevoegen."</string>
+    <string name="alarm_added_at">"Alarm toegevoegd om %s"</string>
+    <string name="ask_alarm_index">"Je hebt %d ingesteld, kun je me alsjeblieft de index vertellen om het alarm te verwijderen."</string>
+    <string name="you_have_no_alarms_set">"Je hebt geen alarm ingesteld."</string>
+    <string name="something_went_wrong">"Er ging iets mis"</string>
+    <string name="today">"Vandaag"</string>
+    <string name="tomorrow">"Morgen"</string>
+
+    <!-- Fuzzy -->
+    <string name="null_object">"Null-object!"</string>
+    <string name="Alarm">"Alarm"</string>
+    <string name="no_remark">"Geen opmerking"</string>
+    <string name="error_occured_enable_bluetooth">"Er is een fout opgetreden bij het inschakelen van bluetooth"</string>
+    <string name="paired_devices">"Gekoppelde apparaten"</string>
+    <string name="available_devices">"Beschikbare apparaten"</string>
+    <string name="connected">"Verbonden"</string>
+    <string name="no_contact_added">"Geen contactpersoon toegevoegd door hotelbeheerder"</string>
+    <string name="contact_not_found">"Contact niet gevonden"</string>
+    <string name="try_again">"Probeer het opnieuw"</string>
+    <string name="hub_busy">"Hub is bezet"</string>
+    <string name="restricted_by_contact">"Beperkt door contact"</string>
+    <string name="hub_currently_offline">"Hub is momenteel offline"</string>
+    <string name="all_contacts_holder">"Alle contacthouders"</string>
+    <string name="All">"Alle"</string>
+    <string name="no_sim_card_present">"Geen simkaart aanwezig in het apparaat"</string>
+    <string name="Reception">"Ontvangst"</string>
+    <string name="room_service">"Service"</string>
+    <string name="Maintenance">"Onderhoud"</string>
+    <string name="Spa">"Spa"</string>
+    <string name="Concierge">"Conciërge"</string>
+    <string name="Interel">"Interel"</string>
+    <string name="cant_set_below_18">"Je kunt geen punt onder %s instellen"</string>
+    <string name="cant_set_below_28">"Je kunt geen punt instellen boven %s"</string>
+    <string name="streaming_live_feed_in">"Live-feed streamen in %s sec"</string>
+    <string name="internet_not_available">"Internet niet beschikbaar probeer het over een tijdje"</string>
+    <string name="call_disconnected_by_user">"Gesprek is verbroken door de andere gebruiker"</string>
+    <string name="audio_get_connected">"Audio-oproep om verbinding te maken..."</string>
+    <string name="livefeed_in">"%s LiveFeed in %s sec"</string>
+    <string name="user_not_pick_call">"Gebruiker kan uw oproep niet opnemen"</string>
+    <string name="record_started">"Opname gestart"</string>
+    <string name="connecting">"Verbinden..."</string>
+    <string name="audio_connected_in">"%s audiogesprek wordt binnen %s sec verbonden"</string>
+    <string name="video_conference_users">"U kunt videoconferenties houden met volgende gebruikers"</string>
+    <string name="no_songs_found">"Geen nummers gevonden"</string>
+    <string name="player_not_initialised">"Speler niet geïnitialiseerd."</string>
+    <string name="found_on_web">"Dit is wat ik op internet vond"</string>
+    <string name="not_found_anything">"Sorry, ik kon er niets over vinden."</string>
+
+    <!-- Fuzzy -->
+    <string name="hey_its">"Hé, het is %s"</string>
+    <string name="Notification">"Notificatie"</string>
+    <string name="you_remind_to">"Je wordt herinnerd aan %s op %s om %s"</string>
+    <string name="reminder_date_already_paused">"De datum van de herinnering is al verstreken."</string>
+    <string name="reminder_deleted">"Herinnering verwijderd."</string>
+    <string name="you_dont_have_as_your_reminder">"Je hebt %s niet als herinnering."</string>
+    <string name="as_your_reminder">"als uw herinnering."</string>
+    <string name="sorry_you_dont_have_reminder_set">"Sorry, je hebt geen %s herinneringen ingesteld."</string>
+    <string name="reminder_set">"herinneringen ingesteld."</string>
+    <string name="is_changed_to">"%s is gewijzigd in %s"</string>
+    <string name="one_reminder_set">"Je hebt maar 1 herinnering ingesteld."</string>
+    <string name="no_reminders_set">"Je hebt geen herinneringen ingesteld."</string>
+    <string name="updating_time">"Naam bijwerken..."</string>
+    <string name="not_fetch_name">"Kan naam niet ophalen."</string>
+    <string name="name_of_device">"Naam van het apparaat"</string>
+    <string name="device_timezone">"Tijdzone apparaat"</string>
+    <string name="factory_reset">"Fabrieksreset"</string>
+    <string name="fetching_name">"Naam ophalen..."</string>
+    <string name="english_us">"Engels (VS)"</string>
+    <string name="reset_woohoo_hub">"WooHoo hub resetten"</string>
+    <string name="connect_to_other_devices">"Maak verbinding met andere apparaten"</string>
+    <string name="switch_engine">"Switch-engine"</string>
+    <string name="sim_settings">"Sim-instellingen"</string>
+    <string name="no_updates_available">"Er zijn momenteel geen updates beschikbaar"</string>
+    <string name="version">"Versie: %s"</string>
+    <string name="change_log">"Wijzig logboek:
+
+%s"</string>
+    <string name="UPDATE">"UPDATE"</string>
+    <string name="download_complete">"Download voltooid (100%)"</string>
+    <string name="install_update">"UPDATE INSTALLEREN"</string>
+    <string name="downloading_update">"Update downloaden"</string>
+    <string name="update_download_cancelled">"Update downloaden geannuleerd!"</string>
+    <string name="update_download_failed">"Update downloaden mislukt!"</string>
+    <string name="switch_wakeword">"Schakelaar Wakeword"</string>
+    <string name="authenticating">"Authenticatie..."</string>
+    <string name="scanning">"Scannen..."</string>
+    <string name="connection_failed">"Verbinding mislukt"</string>
+    <string name="authentication_problem">"Authenticatieprobleem"</string>
+    <string name="enter_wifi_pass">"Voer wifi-wachtwoord in"</string>
+    <string name="forget_nwtwork">"Netwerk vergeten"</string>
+    <string name="connect_to_network">"Verbinden met netwerk"</string>
+    <string name="not_connected">"Niet verbonden"</string>
+    <string name="set_woohoo_pin">"WooHoo-pincode instellen"</string>
+    <string name="permission_needed">"Toestemming vereist..."</string>
+    <string name="Reconnecting">"Opnieuw verbinden"</string>
+    <string name="Your">"Uw"</string>
+    <string name="timer_is_done">"timer is afgelopen."</string>
+    <string name="no_timer_set">"Er zijn geen timers ingesteld."</string>
+    <string name="postresponse_corrupted">"PostResponse beschadigd"</string>
+    <string name="params_not_provided">"Parameters niet opgegeven"</string>
+    <string name="Trending">"Trending"</string>
+    <string name="enter_city_name">"Voer een plaatsnaam in"</string>
+    <string name="location_not_available">"Locatie niet beschikbaar"</string>
+    <string name="whether_response_corrupted">"Whole Weather Response beschadigd"</string>
+    <string name="install_google_app">"Installeer de Google-app."</string>
+    <string name="next_song_not_available">"Volgend nummer is niet beschikbaar!"</string>
+    <string name="prev_song_not_available">"Vorige nummer is niet beschikbaar!"</string>
+    <string name="no_timer_set_">"Geen timer ingesteld!"</string>
+    <string name="timer_cancelled">"timer is geannuleerd."</string>
+    <string name="youtube">"Youtube"</string>
+    <string name="Translation">"Vertaling"</string>
+    <string name="did_not_get_that">"Dat heb ik niet begrepen"</string>
+    <string name="cant_do_that">"Dat kan ik nog niet!"</string>
+    <string name="empty_user_response">"Leeg gebruikersantwoord!!"</string>
+    <string name="empty_string_to_speak">"Lege string om uit te spreken!!"</string>
+    <string name="camera_not_working">"Camera werkt niet voor dit apparaat"</string>
+    <string name="error_while_updating">"Fout tijdens updaten"</string>
+    <string name="no_languages">"Geen talen"</string>
+    <string name="wifi_no_active_internet">"Wifi heeft geen actieve internetverbinding!"</string>
+    <string name="no_timezone">"Geen tijdzone"</string>
+    <string name="make_woohoo_system_app">"Maak WooHoo als systeem of anders heeft deze app geen toestemming om de tijdzone op Android oreo en hoger te wijzigen"</string>
+    <string name="request_permission_failed">"Toestemming aanvragen mislukt"</string>
+    <string name="permission_granted">"Toestemming verleend"</string>
+    <string name="voice_training_done">"Stemtraining is voltooid, u kunt op Skip drukken OF als u opnieuw wilt trainen, drukt u op de knop INSCHRIJVEN hierboven."</string>
+    <string name="press_enroll_button">"Druk op de knop INSCHRIJVEN hierboven om de training te doen!"</string>
+    <string name="enrolling_trigger">"Trigger inschrijven"</string>
+    <string name="server_is_down">"Server is uitgeschakeld"</string>
+    <string name="ssl_certi_error">"SSL-certificaatfout!"</string>
+    <string name="no_device_action_fetched">"Geen apparaatactie opgehaald!"</string>
+    <string name="didnt_get_that">"Ik snapte het niet."</string>
+    <string name="no_data_fetched">"Geen gegevens opgehaald!"</string>
+    <string name="no_nlp_response_fetched">"Geen NLP-antwoord opgehaald!"</string>
+    <string name="whole_weather_response_corrupted">"Whole Weather-reactie beschadigd"</string>
+    <string name="weather_data_response_corrupted">"Weerdata-antwoord beschadigd"</string>
+    <string name="unknown_category">"onbekende categorie"</string>
+    <string name="installation_failed">"Installatie mislukt"</string>
+    <string name="already_have_latest_version">"Je hebt al de nieuwste versie!"</string>
+    <string name="spotify_account_not_linked">"Spotify-account niet gekoppeld!"</string>
+    <string name="token_expired">"Token verlopen"</string>
+    <string name="server_error">"Serverfout!"</string>
+    <string name="error_fetching_spotify_token">"Fout bij ophalen Spotify-token"</string>
+    <string name="server_not_available">"Server kan token niet ophalen!"</string>
+    <string name="authorization_error">"Autorisatiefout"</string>
+    <string name="bad_gateway">"Slechte gateway"</string>
+    <string name="internal_server_error">"Interne serverfout"</string>
+    <string name="problem_in_fetching_data">"Probleem bij het ophalen van gegevens"</string>
+    <string name="body_corrupted">"Body beschadigd"</string>
+    <string name="Disconnected">"Disconnected"</string>
+    <string name="your_timer_cancelled">"Je %d %s timer is geannuleerd."</string>
+    <string name="your_timer_is_done">"Je %d %s timer is klaar."</string>
+    <string name="your_woohoo_hubs">"Je WooHoo Hubs"</string>
+    <string name="no_other_hubs_registered">"Geen andere hubs geregistreerd"</string>
+    <string name="enter_quantity">"Voer hoeveelheid in"</string>
+    <string name="have_a_pleasant_stay">"Prettig verblijf"</string>
+    <string name="explore_woohoo">"Ontdek Woohoo"</string>
+    <string name="thank_you">"Bedankt"</string>
+    <string name="have_a_nice_day">"Fijne dag verder"</string>
+    <string name="give_feedback">"Feedback geven"</string>
+    <string name="poor_internet_connection">"Slechte internetverbinding"</string>
+    <string name="server_sync_error">"Synchronisatiefout (code-%d)"</string>
+    <string name="tap_anywhere_to_retry">"Tik ergens om het opnieuw te proberen..."</string>
+    <string name="rename">"Hernoemen"</string>
+    <string name="delete_light">"LICHT VERWIJDEREN"</string>
+    <string name="enter_light_name_here">"Voer hier de naam van de lamp in"</string>
+    <string name="enter_wi_fi_password">"Voer wifi-wachtwoord in"</string>
+    <string name="network">"Netwerk:"</string>
+    <string name="secured_wi_fi">"Beveiligde wifi"</string>
+    <string name="enter_password_here">"Voer hier het wachtwoord in"</string>
+    <string name="join">"DOE MEE"</string>
+    <string name="wrong_password_try_again">"Verkeerd wachtwoord. Probeer het opnieuw."</string>
+    <string name="forget">"VERGETEN"</string>
+    <string name="alarm_sound">"Alarmgeluid"</string>
+    <string name="snooze_for_10_min">"SNOOZE 10 MIN"</string>
+    <string name="hang_up">"Ophangen"</string>
+    <string name="no_devices_available">"Geen apparaten beschikbaar"</string>
+    <string name="refresh">"Vernieuwen"</string>
+    <string name="camera_control">"Camerabediening"</string>
+
+    <!-- Fuzzy -->
+    <string name="left">"Links"</string>
+    <string name="right">"Rechts"</string>
+    <string name="no_access">"Geen toegang"</string>
+    <string name="audio_call">"Audio-oproep"</string>
+    <string name="turn_off_night_mode">"Schakel de nachtmodus uit"</string>
+    <string name="enter_password">"Voer wachtwoord in"</string>
+    <string name="following_items_need_your_attention">"De volgende items hebben uw aandacht nodig"</string>
+    <string name="enter_pin">"Voer pincode in"</string>
+    <string name="add_anything_just_by_saying_hey_woohoo">"Voeg alles toe door Hey WooHoo te zeggen."</string>
+    <string name="cellular_data">"Mobiele data"</string>
+    <string name="data_roaming">"Dataroaming"</string>
+    <string name="preferred_network_type">"Voorkeursnetwerktype"</string>
+    <string name="_4g_recommended">"4G (aanbevolen)"</string>
+    <string name="access_point_names">"Namen toegangspunten"</string>
+    <string name="network_operators">"Netwerkoperators"</string>
+    <string name="choose_a_network_operator">"Kies een netwerkoperator"</string>
+    <string name="on">"Aan"</string>
+    <string name="interval">"Interval"</string>
+    <string name="surveillance_mode_on">"Bewakingsmodus aan."</string>
+    <string name="turn_off">"Uitschakelen"</string>
+    <string name="during_surveillance_mode">"Tijdens Surveillance-modus"</string>
+    <string name="surveillance_stealth_content">"WooHoo detecteert verdachte activiteiten door middel van lichaams- en gezichtsherkenning."</string>
+    <string name="surveillance_notification_content">"Als het gezicht van een niet-gezinslid wordt gedetecteerd, wordt u hiervan op de hoogte gesteld via uw web- en mobiele app."</string>
+    <string name="surveillance_record_video_content">"Er wordt een video van 30 seconden opgenomen en met je gedeeld op je web en mobiele app."</string>
+    <string name="surveillance_sleep_content">"Tijdens de Surveillance-modus gaat de WooHoo-hub in de slaapmodus en kun je de WooHoo-services niet gebruiken."</string>
+    <string name="turn_on_surveillance_mode">"SCHAKEL DE SURVEILLANCEMODUS IN"</string>
+    <string name="surveillance_mode_activated">"Bewakingsmodus geactiveerd."</string>
+    <string name="enter_text">"Voer tekst in"</string>
+    <string name="wi_fi">"Wifi"</string>
+    <string name="no_networks_available">"Geen netwerken beschikbaar"</string>
+    <string name="order_now">"BESTEL NU"</string>
+    <string name="order_closes_with_in">"Bestelling sluit met in"</string>
+    <string name="woohoo_hub">"WooHoo Hub"</string>
+    <string name="favorite_apps_that_can_be_accessed_from_home_screen">"Favoriete apps die toegankelijk zijn vanaf het startscherm"</string>
+    <string name="drag_and_drop_apps_to_your_favorite_section">"Sleep apps naar je favoriete sectie"</string>
+    <string name="delete">"Verwijderen"</string>
+    <string name="update">"Bijwerken"</string>
+    <string name="alarm">"Alarm"</string>
+    <string name="hey_woohoo_play_some_music">"Hé WooHoo, speel wat muziek."</string>
+    <string name="concierge">"Conciërge"</string>
+    <string name="maintenance">"Onderhoud"</string>
+    <string name="reception">"Ontvangst"</string>
+    <string name="id">"ID"</string>
+    <string name="towel">"Handdoek"</string>
+    <string name="spa">"Spa"</string>
+
+    <!-- Fuzzy -->
+    <string name="off">"Uit"</string>
+    <string name="auto">"Auto"</string>
+    <string name="echo">"Echo"</string>
+    <string name="low">"Laag"</string>
+    <string name="high">"Hoog"</string>
+    <string name="error_no_videos_listed">"Er worden geen video's weergegeven"</string>
+
+    <!-- Fuzzy -->
+    <string name="smile_rating_terrible">"Verschrikkelijk"</string>
+    <string name="smile_rating_bad">"Slecht"</string>
+    <string name="smile_rating_okay">"Oké"</string>
+    <string name="smile_rating_good">"Goed"</string>
+    <string name="smile_rating_great">"Geweldig"</string>
+    <string name="no_result_fetched">"Geen resultaat opgehaald"</string>
+    <string name="feedback_thanks">"Bedankt voor feedback"</string>
+    <string name="sucessful_submit">"Succesvolle indiening"</string>
+
+    <!-- FnB Feature strings -->
+    <string name="fnb_menus">"Menu's"</string>
+    <string name="fnb_sub_menus">"Submenu's"</string>
+    <string name="fnb_categories">"Categorieën"</string>
+    <string name="fnb_sub_categories">"Subcategorieën"</string>
+    <string name="fnb_products">"Producten"</string>
+    <string name="your_order">"Je bestelling"</string>
+    <string name="fnb_confirm_order">"Bestelling bevestigen"</string>
+    <string name="fnb_past_order">"Vorige bestelling"</string>
+    <string name="add_more">"Meer toevoegen"</string>
+    <string name="portion_size">"Portiegrootte"</string>
+    <string name="cuisine">"Keuken"</string>
+    <string name="instructions_for_chef">"Instructies voor Chef"</string>
+    <string name="additional_charges">"Voor belastingen en servicekosten gelden extra kosten."</string>
+    <string name="not_in_stock">"Niet op voorraad"</string>
+    <string name="grand_total">"Groottotaal"</string>
+    <string name="details">"Details"</string>
+    <string name="place_order">"Bestelling plaatsen"</string>
+    <string name="quantity_cant_select_more">"Niet op voorraad."</string>
+    <string name="place_order_failed">"Selecteer een product om te bestellen"</string>
+    <string name="want_to_remove_product_from_cart">"Wilt u dit product uit de winkelwagen verwijderen?"</string>
+    <string name="yes">"JA"</string>
+    <string name="no">"NEE"</string>
+    <string name="order_added_successfully">"Uw bestelling is succesvol geplaatst."</string>
+    <string name="no_sub_categories">"Geen subcategorieën gevonden voor deze categorie."</string>
+    <string name="item_not_available">"Geselecteerd item is op dit moment niet beschikbaar. Probeer een ander item."</string>
+    <string name="full">"Volledig"</string>
+    <string name="Italian">"Italiaans"</string>
+    <string name="enter_instruction">"Geef uw instructies..."</string>
+    <string name="fnb.categories.no_offers_found">"Er zijn momenteel geen aanbiedingen voor u gevonden!"</string>
+    <string name="fnb.categories.error_ordering_disabled_due_to_no_categories">"Oeps, het lijkt erop dat Bestellen nog niet is ingeschakeld!"</string>
+
+    <!-- Fuzzy -->
+    <string name="drawer.menu.feedback">"Feedback"</string>
+    <string name="drawer.menu.covid">"Covid-19"</string>
+    <string name="drawer.menu.ordering">"Bestellen"</string>
+    <string name="no_active_internet">"Geen actieve internetverbinding!"</string>
+    <string name="tap_to_connect_wifi">"Tik om wifi te verbinden"</string>
+    <string name="wifi_disabled">"Wi-Fi uitgeschakeld"</string>
+    <string name="unknown_error">"Onbekende fout"</string>
+    <string name="video_over">"Video over"</string>
+    <string name="honeywell">"Honeywell"</string>
+
+    <!-- Fuzzy -->
+    <string name="your_order_is_placed">"Uw bestelling is geplaatst"</string>
+    <string name="download_failed">"Download mislukt"</string>
+    <string name="hello_guestname">"Hallo %s"</string>
+    <string name="welcome_to_hotelname">"Welkom bij %s"</string>
+
+    <!-- Fuzzy -->
+    <string name="do_not_disturb">"NIET STOREN"</string>
+
+    <!-- Fuzzy -->
+    <string name="make_up_room">"MAKE UP ROOM"</string>
+
+    <!-- Fuzzy -->
+    <string name="open_close_curtain">"GORDIJN OPENEN/SLUITEN"</string>
+    <string name="bathroom_light">"BADKAMER"</string>
+    <string name="toggle_lights">"SLAAPKAMER"</string>
+    <string name="bedside">"BEDSIDE"</string>
+    <string name="entrance_light">"INGANGSVERLICHTING"</string>
+    <string name="master_on_off">"MASTER AAN/UIT"</string>
+    <string name="thermostat">"THERMOSTAAT"</string>
+    <string name="fan_mode">"VENTILATORMODUS"</string>
+
+    <!-- Fuzzy -->
+    <string name="blind_state">"BLINDE STAAT"</string>
+    <string name="consumer_smartflow">"Consument Smartflow"</string>
+    <string name="enterprise_smartflow">"Enterprise SmartFlow"</string>
+    <string name="global_wakeword">"Global Wakeword"</string>
+    <string name="private_wakeword">"Privé Wakeword"</string>
+    <string name="english_lang">"English (US)"</string>
+    <string name="chinese_lang">"Chinese (CH)"</string>
+    <string name="arabic_lang">"Arabic (AR)"</string>
+
+    <!-- To be translated -->
+    <string name="dutch_lang">"Dutch (NL)"</string>
+    <string name="Profile">"Profiel"</string>
+    <string name="sentry_dsn">"https://b7ab5faf0dd14016b2e6fa55e6908f73@o447741.ingest.sentry.io/5427976"</string>
+
+    <!-- To be deleted -->
+    <string name="sentry_dsn_old">"https://d38455c7c6714d42a56599492f01af21@o444154.ingest.sentry.io/5418764"</string>
+    <string name="beta_features">"Bètafuncties"</string>
+    <string name="set_features">"&lt;u&gt;FUNCTIES INSTELLEN&lt;/u&gt;"</string>
+    <string name="udp">"UDP"</string>
+    <string name="tcp">"TCP"</string>
+    <string name="tls">"TLS"</string>
+    <string name="add_to_bag">"Toevoegen aan tas"</string>
+    <string name="checkout">"Afrekenen"</string>
+    <string name="quantity_cant_be_reduced">"Aantal kan niet worden verminderd"</string>
+    <string name="please_select_quantity">"Selecteer het aantal om af te rekenen"</string>
+    <string name="special_instructions">"+Instructies voor Chef toevoegen"</string>
+    <string name="app_center_app_secret">"a4d668a8-5161-4e49-94d4-3eae0d7ee2d4"</string>
+    <string name="accept">"Accepteren"</string>
+    <string name="back">"Terug"</string>
+    <string name="next">"Volgende"</string>
+    <string name="submit">"VERZENDEN"</string>
+    <string name="reservation_select_service">"Service selecteren"</string>
+    <string name="reservation_your_bookings">"Uw boekingen"</string>
+    <string name="reservation_select_guests">"Selecteer aantal gasten"</string>
+    <string name="reservation_select_date">"Selecteer datum"</string>
+    <string name="reservation_select_time">"Tijd selecteren"</string>
+    <string name="str_submit">"Verzenden"</string>
+    <string name="f_and_b"><![CDATA[F & B]]></string>
+    <string name="feedback">"Feedback"</string>
+    <string name="qr_code">"QR-code"</string>
+    <string name="qr_code_feature">"%s QR-code"</string>
+    <string name="receptionist">"Receptionist"</string>
+    <string name="temp_feature_unavailable">"Deze functie is tijdelijk niet beschikbaar!"</string>
+    <string name="booking_confirmation_slot_details">"VOOR %s"</string>
+    <string name="overview_items">"Artikelen"</string>
+    <string name="title_upcoming_service">"Aankomend"</string>
+    <string name="booking_cancelled">"Boeking geannuleerd!"</string>
+    <string name="your_booking_is_confirmed">"Uw boeking is bevestigd"</string>
+    <string name="in_room_dining">"In-Room
+Dineren"</string>
+    <string name="woohoo_mobile">"Mobiel menu"</string>
+    <string name="select_service">"Selecteer een service."</string>
+    <string name="select_guests">"Selecteer het aantal gasten."</string>
+    <string name="select_reservation_date">"Kies een datum voor reservering."</string>
+    <string name="select_reservation_time">"Kies een tijdslot voor reservering."</string>
+    <string name="search_video_message">"Typ de naam van de video waarnaar je wilt zoeken"</string>
+    <string name="order_history_total">"TOTAAL"</string>
+    <string name="settings_not_enabled">"Instellingen zijn niet ingeschakeld. Vraag de Admin/Helpdesk om Instellingen van de portal in te schakelen."</string>
+    <string name="book_service_not_available">"Services zijn nu niet beschikbaar"</string>
+    <string name="welcome_to_gbtb">"Welkom bij Gardens By The Bay, hoe kan ik je helpen"</string>
+    <string name="night_mode_activating">"Nachtmodus wordt geactiveerd over"</string>
+    <string name="info">"Informatie"</string>
+    <string name="compendium_park_royal">"Compendium"</string>
+    <string name="reservation">"Reservering"</string>
+    <string name="amadeus_service_request">"Serviceaanvraag"</string>
+    <string name="control">"Slimme kamer"</string>
+    <string name="smart_room_control">"Slimme kamerbediening"</string>
+    <string name="coffee">"Koffiezakje"</string>
+    <string name="cream_sugar">"Creamer &amp; Suiker"</string>
+    <string name="mtea_sachet">"Theezakje"</string>
+    <string name="dental">"Tandheelkundige kit"</string>
+    <string name="shaving">"Scheermes/Scheerschuim"</string>
+    <string name="toilet">"Toiletrol"</string>
+    <string name="toothbrush">"Tandenborstel"</string>
+    <string name="bath_towel">"Badhanddoek"</string>
+    <string name="drinking_water">"Drinkwater (Dr Who)"</string>
+    <string name="soap_shampoo">"Zeep &amp; Shampoo"</string>
+    <string name="hand_towel">"Handdoek"</string>
+    <string name="slipper">"Slipper"</string>
+
+    <!-- Fuzzy -->
+    <string name="screen_cast">"Schermcast"</string>
+    <string name="mirror_your_device">"Spiegel je apparaat"</string>
+    <string name="Yesterday">"Gisteren"</string>
+    <string name="agora_app_id">"45fac1f788c849bc94b8f1ad8232f501"</string>
+    <string name="agora_temp_token">"0067d846191e03f4271ad3af50b793ed92cIABQoDASAdoKXcXg/TROa++E4VWXkPptN4WDGQofGeeUUuIVUyEAAAAAEAAoIaFGGeb2YAEAAQAZ5vZg"</string>
+    <string name="call_not_allow">"Deze oproep is niet toegestaan!"</string>
+    <string name="amenities">"Verzoek Voorzieningen"</string>
+    <string name="your_bookings">"Je boekingen"</string>
+    <string name="fragment_restaurant_title">"Dineren Reserveringen"</string>
+    <string name="bottom_drawer_gesture_message">"Veeg omhoog om meer apps te zien."</string>
+    <string name="label_ordering">@string/drawer.menu.ordering</string>
+    <string name="str_done">"Klaar"</string>
+    <string name="str_customise">"Aanpassen"</string>
+    <string name="str_optional">" (Optioneel)"</string>
+    <string name="no_i_ll_choose">"Nee, ik kies"</string>
+    <string name="str_yes">"Ja"</string>
+    <string name="str_repeat_customization_for">"Herhaal aanpassing voor "</string>
+    <string name="customise">"Aanpassen"</string>
+    <string name="delivery_charges">"Bezorgkosten"</string>
+    <string name="service_charge_10">"Servicekosten (10%)"</string>
+    <string name="gst">"GST"</string>
+    <string name="view_cart">"Bekijk winkelwagen"</string>
+    <string name="taxes_may_apply">"Belastingen kunnen van toepassing zijn"</string>
+    <string name="edit">"Bewerken"</string>
+    <string name="item_total">"Artikeltotaal:"</string>
+    <string name="msg_no_modifiers">"Geen modifiers onder dit product!"</string>
+    <string name="honor_bar">"Eerbalk"</string>
+    <string name="bakery">"Bakkerij"</string>
+    <string name="message_device_id_copied">"Apparaat-ID gekopieerd!!"</string>
+    <string name="blutooth">"Bluetooth"</string>
+    <string name="device_name">"Apparaatnaam"</string>
+    <string name="bt_title_change_device_name">"Apparaatnaam wijzigen"</string>
+    <string name="bt_description">"Deze apparaatnaam wordt weergegeven bij gebruik van Bluetooth."</string>
+    <string name="bt_discovery_text">"Je telefoon is momenteel zichtbaar voor apparaten in de buurt."</string>
+    <string name="bt_error_disable">"Uitgeschakeld!"</string>
+    <string name="bt_error_disconnected">"\" Verbinding verbroken!\""</string>
+    <string name="bt_error_connected">"Verbonden!"</string>
+    <string name="bt_error_callback">"Kan actie niet uitvoeren!"</string>
+    <string name="bt_unpair_device">"Apparaat ontkoppelen"</string>
+    <string name="bt_unpair_confirmation">"Weet je het zeker?"</string>
+    <string name="bt_dialog_unpair">"Ontkoppelen"</string>
+    <string name="bt_paring">"Koppelen..."</string>
+    <string name="bt_name_required">"Naam mag niet leeg zijn"</string>
+    <string name="book_a_table">"Reserveer een tafel"</string>
+    <string name="tablecheck">"Tabelcontrole"</string>
+    <string name="load_more">"Meer laden"</string>
+    <string name="first_name">"Voornaam"</string>
+    <string name="last_name">"Achternaam"</string>
+    <string name="confirm_table_booking">"Bevestig uw tafelreservering"</string>
+    <string name="booking_confirmed">"Boeking bevestigd"</string>
+    <string name="tablecheck_warning">"We verzoeken je om op tijd te komen voor een probleemloze ervaring. Als u niet komt opdagen, kan uw reservering worden geannuleerd."</string>
+    <string name="sip_configuration">"SIP-configuratie"</string>
+    <string name="transport">"Vervoer"</string>
+    <string name="customized">"Aangepast"</string>
+    <string name="xyz_melody">"XYZ-melodie"</string>
+    <string name="voip_calls">"VoIP-oproepen"</string>
+    <string name="agora_calls">"Agora-oproepen"</string>
+    <string name="sensory_op">"Sensory Operating Point"</string>
+    <string name="network_calls">"Netwerklogboek"</string>
+    <string name="npr">"NPR"</string>
+    <string name="no_updated_service">"Geen recent bijgewerkte servicebestellingen gevonden"</string>
+    <string name="one">"01"</string>
+    <string name="two">"02"</string>
+    <string name="three">"03"</string>
+    <string name="four">"04"</string>
+    <string name="five">"05"</string>
+    <string name="lang_1">"Taal 1"</string>
+    <string name="lang_2">"Taal 2"</string>
+    <string name="order_id">"Bestellings-ID: #%s"</string>
+    <string name="tax_names">"%1$s(%2$d%%)"</string>
+    <string name="convience_fee">"Gemakskosten"</string>
+    <string name="max_item">"Kies maximaal %s items."</string>
+    <string name="lang_english_prefix">"En"</string>
+    <string name="lang_arabic_prefix">"Ar"</string>
+    <string name="lang_chinese_prefix">"Ch"</string>
+    <string name="lang_dutch_prefix">"Nl"</string>
+    <string name="wifi_gps_not_supported">"GPS is niet actief op dit apparaat. Controleer de instellingen"</string>
+    <string name="unmute">"Unmute"</string>
+    <string name="mute_bar_error_text_secondary">"Knop om te unmuten"</string>
+    <string name="mute_bar_error_text_primary">"Uw apparaat is gemute. Druk op"</string>
+    <string name="feedback_submitted_successfully">"Feedback opgeslagen"</string>
+    <string name="update_alarm">"Update alarm"</string>
+    <string name="total_tax">"Totale belastingen"</string>
+    <string name="total_excluding_tax_hint">"Exclusief belastingen"</string>
+    <string name="total_including_tax_hint">"Inclusief belastingen"</string>
+    <string name="visit_saudi">"Bezoek Saudi"</string>
+    <string name="tourism_hotline">"Toerisme hotline"</string>
+    <string name="location">"Locatie"</string>
+    <string name="start">"Start"</string>
+    <string name="end">"Einde"</string>
+    <string name="from">"Van"</string>
+    <string name="to">"Naar"</string>
+    <string name="about">"Over"</string>
+    <string name="address">"Adres"</string>
+    <string name="suitable_for">"Geschikt voor"</string>
+    <string name="years_old">"Jaren oud"</string>
+    <string name="refund_policy">"Terrugave policy"</string>
+    <string name="h_care_spa">"Spa voor mannen"</string>
+    <string name="list_price">"Prijsstelling"</string>
+    <string name="discount_price">"Korting"</string>
+    <string name="duration">"Duur"</string>
+    <string name="best_for">"Geschikt voor"</string>
+    <string name="area_near_by">"In de buurt"</string>
+    <string name="description">"Omschrijving"</string>
+    <string name="select_mode">"Selecteer mode"</string>
+    <string name="clock_mode">"Klok mode"</string>
+    <string name="display_off">"Display uit"</string>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary">
+
+    <include
+        android:id="@+id/common_toolbar"
+        layout="@layout/common_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/common_toolbar">
+
+        <TextView
+            android:id="@+id/tv_enter_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="@string/enter_pin"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_37" />
+
+        <com.sb.woohoo.custom.PassCodeView
+            android:id="@+id/passcode_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv_enter_pin"
+            android:layout_marginTop="@dimen/dp_50"
+            android:background="#120b29"
+            android:padding="@dimen/dp_25"
+            app:digit_size="@dimen/dp_30"
+            app:digits="4"
+            app:empty_drawable="@drawable/empty_field"
+            app:filled_drawable="@drawable/filled_dot"
+            app:key_text_size="@dimen/sp_37" />
+    </RelativeLayout>
+
+</RelativeLayout>

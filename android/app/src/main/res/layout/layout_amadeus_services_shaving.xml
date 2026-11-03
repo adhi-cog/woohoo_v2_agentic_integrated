@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contacts_layout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@drawable/rounded_corners_navy_transparent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10"
+    android:layout_margin="@dimen/dp_2">
+
+    <ImageView
+        android:id="@+id/iv_service_shaving"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:src="@drawable/razor"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/tv_service_shaving"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/shaving"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textSize="@dimen/sp_16" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/iv_sub_shaving"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toLeftOf="@id/tv_shaving_counter"
+            app:srcCompat="@drawable/ic_sub" />
+
+        <TextView
+            android:id="@+id/tv_shaving_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/item_family_text_view_margin_top"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:padding="@dimen/dp_10"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_24" />
+
+        <ImageView
+            android:id="@+id/iv_add_shaving"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/tv_shaving_counter"
+            app:srcCompat="@drawable/ic_add" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_confirm_shaving_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:padding="@dimen/dp_10"
+        android:text="@string/confirm"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_16" />
+
+
+</LinearLayout>

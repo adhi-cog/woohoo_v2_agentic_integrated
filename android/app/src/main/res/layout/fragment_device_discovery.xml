@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    android:focusable="true"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/common_toolbar_back"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/fragment_device_discovery_img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_weight="0"
+            android:contentDescription="@string/app_name"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:src="@drawable/ic_back_arrow_white_48dp" />
+
+        <TextView
+            android:layout_marginEnd="@dimen/dp_70"
+            android:id="@+id/fragment_device_discovery_txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/discovering_devices"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_24" />
+
+    </LinearLayout>
+
+    <com.sb.woohoo.custom.RecyclerViewEmptySupport
+        android:id="@+id/fragment_device_discover_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/common_toolbar_back"
+        android:layout_marginStart="@dimen/margin_top_10"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginEnd="@dimen/margin_top_10"
+        android:layout_marginBottom="@dimen/dp_14"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_device_discover_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fragment_device_launcher_no_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_device_discovery_loader" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_device_launcher_no_device"
+            android:layout_marginTop="@dimen/dp_24"
+            android:gravity="center"
+            android:text="@string/looking_for_available_devices"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_20" />
+
+        <TextView
+            android:id="@+id/fragment_devices_txt_discover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_24"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:fontFamily="serif-light"
+            android:gravity="center"
+            android:text="@string/for_philips_hue_press_the_button_on_philips_bridge_to_discover"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_16" />
+
+    </RelativeLayout>
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

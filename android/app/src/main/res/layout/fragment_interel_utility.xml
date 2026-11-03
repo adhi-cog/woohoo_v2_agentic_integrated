@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_primary"
+    android:focusable="true"
+    android:clickable="true">
+
+
+    <include
+        android:id="@+id/common_toolbar"
+        layout="@layout/common_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/common_toolbar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_temperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:background="@drawable/rounded_corners_navy_transparent"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_thermostat_mode"
+                    android:id="@+id/layout_thermostat_mode" />
+
+                <LinearLayout
+                    android:id="@+id/radio_group_fan_control_speed_control"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_large_80"
+                    android:layout_marginEnd="@dimen/margin_large_80"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RadioButton
+                        android:id="@+id/rb_low"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableTop="@drawable/ic_fan_mode_low"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_12" />
+
+                    <RadioButton
+                        android:id="@+id/rb_medium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableTop="@drawable/ic_fan_mode_medium"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_12" />
+
+                    <RadioButton
+                        android:id="@+id/rb_high"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_horizontal"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableTop="@drawable/ic_fan_mode_high"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/dp_5" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/radio_group_fan_control_feature_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_50"
+                    android:layout_marginEnd="@dimen/dp_50"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RadioButton
+                        android:id="@+id/rb_fan_auto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_12"
+                        android:text="@string/fan_mode_auto"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_22"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rb_fan_Eco"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_12"
+                        android:text="@string/fan_mode_eco"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_22"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rb_fan_off"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_12"
+                        android:text="@string/fan_mode_off"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_22"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_interel_utility"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_15"
+                android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_background_color"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_80"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

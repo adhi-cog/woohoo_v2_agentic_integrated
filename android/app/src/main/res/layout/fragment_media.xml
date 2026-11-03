@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <FrameLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:background="@color/black">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_172"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/video_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/hint_bar"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_20dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_28" />
+
+    <TextView
+        android:id="@+id/hint_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="@string/say_ok_woohoo_play_the_trending_videos"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20" />
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_60"
+        android:layout_above="@+id/hint_bar"
+        android:id="@+id/whole_screen"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp_60"
+        android:layout_above="@+id/hint_bar"
+        android:id="@+id/left_side"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/whole_screen">
+
+        <ImageView
+            android:id="@+id/img_backward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:paddingLeft="@dimen/dp_50"
+            android:src="@drawable/ic_backward"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp_60"
+        android:layout_above="@+id/hint_bar"
+        android:id="@+id/right_side"
+        android:layout_toRightOf="@+id/whole_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/img_forward"
+            android:paddingRight="@dimen/dp_50"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_forward"
+            android:adjustViewBounds="true" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/fragment_settings_relative_layout_header"
+        layout="@layout/common_toolbar" />
+
+</RelativeLayout>

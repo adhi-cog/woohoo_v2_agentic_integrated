@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    android:orientation="vertical"
+    tools:context=".ui.main.fragments.devices.huecontrol.PhilipsHueFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/common_toolbar"
+            android:id="@+id/fragment_common_toolbar"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/fragment_philips_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_48"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:paddingTop="@dimen/dp_24"
+            android:thumb="@drawable/customswitchselector"
+            app:track="@drawable/custom_track" />
+
+        <ImageView
+            android:id="@+id/fragment_device_launcher_image_view_add_device_icon"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_32"
+            android:layout_toLeftOf="@+id/fragment_philips_switch"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_devices_add" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/hue_control_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:text="@string/fragment_philips_text_brightness"
+                android:textColor="@color/rounded_corners_white_transparency"
+                android:textSize="@dimen/sp_16" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:background="@drawable/rounded_corners_white_transparent">
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/fragment_philips_seek_bar_brightness"
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:layout_marginBottom="@dimen/dp_30" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp_15"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/fragment_philips_seek_bar_brightness"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_sun_white_22dp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/fragment_philips_seek_bar_brightness"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_sun_white_22dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_30"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:gravity="center_horizontal"
+                android:text="@string/fragment_philips_text_set_color"
+                android:textColor="@color/rounded_corners_white_transparency"
+                android:textSize="@dimen/sp_16" />
+
+            <com.sb.woohoo.custom.ColorPicker
+                android:id="@+id/colorpicker_hue_control"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_16" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/off_light_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/turn_on_light"
+            android:textColor="@color/rounded_corners_white_transparency"
+            android:textSize="@dimen/sp_32" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_drawer_grid_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/dp_13"
+    android:layout_marginBottom="@dimen/dp_13"
+    android:layout_weight="1"
+    android:background="@drawable/rounded_corners_navy_transparent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_40">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_grid_item_icon"
+        android:layout_height="@dimen/dp_80"
+        android:layout_width="@dimen/dp_80"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_home_spotify" />
+
+    <TextView
+        android:id="@+id/tv_grid_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/spotify"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_18" />
+
+</LinearLayout>

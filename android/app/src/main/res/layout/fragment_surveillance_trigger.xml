@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?tile_color_primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:contentDescription="@string/surveillance"
+            app:srcCompat="@drawable/ic_surveillance_2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:text="@string/surveillance_mode_activated"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_65"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_cancel_surveillance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:background="@drawable/rounded_corners_white_background"
+            android:gravity="center"
+            android:padding="@dimen/dp_20"
+            android:text="@string/cancel"
+            android:textSize="@dimen/text_size_24" />
+    </LinearLayout>
+
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

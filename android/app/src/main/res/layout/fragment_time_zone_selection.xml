@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_12"
+    android:paddingRight="@dimen/dp_12">
+
+    <include
+        android:id="@+id/fragment_settings_relative_layout_header"
+        layout="@layout/common_toolbar" />
+
+    <com.sb.woohoo.custom.RecyclerViewEmptySupport
+        android:id="@+id/list_time_zone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:background="@drawable/rounded_corners_white_transparent"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+</LinearLayout>

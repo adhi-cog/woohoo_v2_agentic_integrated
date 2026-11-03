@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary">
+
+
+    <RelativeLayout
+        android:id="@+id/wake_word_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/content_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/wakeword_hint" />
+
+        <TextView
+            android:id="@+id/wakeword_hint"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_93"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bottom_hint_background"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="@string/activity_main_bottom_text"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="italic" />
+
+        <View
+            android:id="@+id/screen_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?overlay_colour" />
+
+        <RelativeLayout
+            android:id="@+id/wake_word_animation_background"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_120"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/listening_background"
+            android:clipChildren="false"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_26"
+            android:paddingEnd="@dimen/dp_12"
+            android:paddingBottom="@dimen/dp_26">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:layout_marginRight="@dimen/dp_20"
+                android:clipChildren="false"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/voice_modulation_view"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_white"
+                    android:backgroundTint="@color/light_grey_color"
+                    android:clipChildren="false" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_drop_in_mic_on" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/wake_word_animation_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_100"
+                android:layout_marginRight="@dimen/dp_100"
+                android:fontFamily="sans-serif-light"
+                android:maxLines="4"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/wake_word_recording_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:layout_toStartOf="@id/wake_word_processing"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/recording_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/wake_word_processing"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_12"
+                android:layout_toStartOf="@id/clear"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/white"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingEnd="@dimen/dp_12"
+                android:src="@drawable/ic_cancel" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/error_layout"
+            layout="@layout/home_no_network_error_layout" />
+
+    </RelativeLayout>
+
+    <com.sileria.android.view.SlidingTray
+        android:id="@+id/sliding_tray"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_drawer_height_480_dp"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:content="@+id/content"
+        android:handle="@+id/handle">
+
+        <include
+            android:id="@+id/handle"
+            layout="@layout/handle" />
+
+        <include
+            android:id="@+id/content"
+            layout="@layout/include_top_drawer" />
+
+    </com.sileria.android.view.SlidingTray>
+
+    <RelativeLayout
+        android:id="@+id/rl_lottie_swipe_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_480"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="swipe_gesture_up.json"
+            app:lottie_loop="true"
+            app:lottie_speed="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_480"
+            android:layout_centerHorizontal="true"
+            android:gravity="bottom"
+            android:paddingBottom="@dimen/dp_64"
+            android:text="@string/bottom_drawer_gesture_message"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

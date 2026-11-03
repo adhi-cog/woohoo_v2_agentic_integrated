@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    android:clickable="true"
+    android:focusable="true">
+
+    <include
+        android:id="@+id/fragment_settings_relative_layout_header"
+        layout="@layout/common_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/relative_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_settings_relative_layout_header">
+
+        <EditText
+            android:id="@+id/edit_search"
+            style="@style/EditTextCentered"
+            android:background="@drawable/bg_stroke_edit_text"
+            android:hint="@string/search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="@dimen/padding_15"
+            android:paddingTop="@dimen/padding_15"
+            android:paddingEnd="@dimen/dp_40"
+            android:paddingBottom="@dimen/padding_15" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:background="@drawable/ic_search" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:layout_below="@+id/relative_search"
+        android:focusable="true">
+
+        <com.sb.woohoo.custom.RecyclerViewEmptySupport
+            android:id="@+id/video_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/txt_no_videos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:text="@string/search_video_message"
+        android:fontFamily="sans-serif-medium"
+        android:textAlignment="center"
+        android:layout_marginStart="@dimen/dp_80"
+        android:layout_marginEnd="@dimen/dp_80"
+        android:textColor="?text_color_secondary"
+        android:textSize="@dimen/item_video_list_text_view_serial_no_text_size"/>
+
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

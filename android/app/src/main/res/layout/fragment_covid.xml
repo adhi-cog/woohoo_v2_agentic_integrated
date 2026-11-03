@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_news_headline_relative_layout_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="?color_secondary">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/fragment_settings_relative_layout_header"
+        layout="@layout/common_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_submit"
+        android:layout_below="@+id/fragment_settings_relative_layout_header"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_30"
+        >
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager_news_headline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_40"/>
+
+        <LinearLayout
+            android:id="@+id/select_dot"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_back_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_60"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:fontFamily="sans-serif"
+            android:text="@string/back"
+            android:visibility="gone"
+            android:layout_margin="@dimen/dp_10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_21" />
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_60"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:fontFamily="sans-serif"
+            android:text="@string/next"
+            android:visibility="visible"
+            android:layout_margin="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_21" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_background"
+        android:fontFamily="sans-serif"
+        android:text="@string/submit"
+        android:visibility="gone"
+        android:layout_margin="@dimen/dp_10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_21" />
+</RelativeLayout>

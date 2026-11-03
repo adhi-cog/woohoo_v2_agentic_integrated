@@ -1,0 +1,132 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    tools:context="com.sb.woohoo.ui.onboarding.login.LoginFragment">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_60"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <EditText
+        android:id="@+id/edit_email"
+        style="@style/EditTextCentered"
+        android:layout_marginBottom="@dimen/dp_32"
+        android:background="@drawable/bg_stroke_edit_text"
+        android:hint="@string/hint_enter_email"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:padding="@dimen/dp_26"
+        app:layout_constraintBottom_toTopOf="@+id/edit_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        style="@style/EditTextCentered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_stroke_edit_text"
+        android:hint="@string/enter_password"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/dp_26"
+        android:paddingLeft="@dimen/dp_26"
+        android:paddingTop="@dimen/dp_26"
+        android:paddingRight="@dimen/dp_80"
+        android:textColor="#80ffffff"
+        android:textColorHint="#80ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/password_toggle_button"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:padding="@dimen/dp_10"
+        android:layoutDirection="ltr"
+        android:src="@drawable/ic_eye_icon_show"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_password"
+        app:layout_constraintEnd_toEndOf="@+id/edit_password"
+        app:layout_constraintTop_toTopOf="@+id/edit_password" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:background="@drawable/button_background"
+        android:text="@string/btn_text_login"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_password" />
+
+    <TextView
+        android:id="@+id/hub_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_22"
+        android:drawableStart="@drawable/ic_copy"
+        tools:text="abcdefghijkl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+<!--    <Spinner-->
+<!--        android:id="@+id/spinner"-->
+<!--        android:layout_width="@dimen/dp_250"-->
+<!--        android:layout_height="@dimen/dp_60"-->
+<!--        android:layout_marginStart="@dimen/dp_24"-->
+<!--        android:layout_marginEnd="@dimen/dp_24"-->
+<!--        android:layout_marginBottom="@dimen/dp_24"-->
+<!--        android:background="@drawable/button_background"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/edit_email"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+<!--    </Spinner>-->
+
+    <TextView
+        android:id="@+id/tv_set_features"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:text="@string/set_features"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hub_id" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

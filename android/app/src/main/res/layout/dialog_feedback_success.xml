@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_coming_soon"
+    android:backgroundTint="?tile_color_primary"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:padding="@dimen/dp_30"
+    android:layout_gravity="center"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/feedback_success_img"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:lottie_loop="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/feedback_success_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/feedback_submitted_successfully"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_19"
+        app:layout_constraintEnd_toEndOf="@+id/feedback_success_img"
+        app:layout_constraintStart_toStartOf="@+id/feedback_success_img"
+        app:layout_constraintTop_toBottomOf="@+id/feedback_success_img" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,954 @@
+<resources>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="service_music_description">Music Service to play songs from Spotify.</string>
+    <string name="empty">empty</string>
+
+    <!--WooHoo Text-->
+    <string name="woo_hoo_music_text">Say \"Voice Genie, pause the music.\"</string>
+
+    <string name="activity_main_bottom_text">Say \"Voice Genie, remind me.\"</string>
+
+    <string name="mute_text">Wake word is off. Touch here to make commands</string>
+    <string name="recording_label">Recording\u2026</string>
+
+    <!-- Login Screen -->
+    <string name="header_login">Login</string>
+    <string name="hint_enter_email">Enter email</string>
+    <string name="hint_re_enter_email">Re-enter email</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="hint_password">enter password</string>
+    <string name="btn_text_login">Login</string>
+    <string name="error_email_msg">Please enter a valid email (eg: user@domain.com)</string>
+    <string name="error_password_msg">Please enter a valid password (6 chars)</string>
+    <string name="error_generic">EditText Not initialized properly!</string>
+
+    <!--Name Screen-->
+    <string name="header_name">Please enter your name</string>
+    <string name="error_first_name">Enter valid First Name</string>
+    <string name="error_first_name_empty">Please Enter the First Name</string>
+    <string name="error_last_name">Enter valid Last Name</string>
+    <string name="hint_first_name">first name</string>
+    <string name="hint_second_name">last name</string>
+    <string name="btn_text_proceed">Proceed</string>
+    <string name="available_networks">Available Networks</string>
+    <string name="set_up_wi_fi">Set up Wi-Fi</string>
+    <string name="set_up_wi_fi_password">Password</string>
+    <string name="button_skip">Skip</string>
+    <string name="no_reminders_added">No reminders added</string>
+    <string name="weather">Weather</string>
+    <string name="spotify">Spotify</string>
+    <string name="relaxation_music">Relaxation Music</string>
+    <string name="reservation_app_tile">Book A\nService</string>
+    <string name="reservation_screen_title">Book A Service</string>
+    <string name="devices">Devices</string>
+    <string name="settings">Settings</string>
+    <string name="faq">FAQ</string>
+    <string name="overview">Hotel Info</string>
+    <string name="overview_title_gbtb">Information</string>
+    <string name="overview_title_st">Visit Saudi</string>
+    <string name="overview_title_st_events">What\'s Happening</string>
+    <string name="overview_title_st_experience">Experience</string>
+
+    <string name="overview_title_st_attractions">Attractions</string>
+    <string name="overview_title_st_destination">Destination</string>
+    <string name="overview_title_st_packages">Packages</string>
+
+    <!--Face Register Screen-->
+    <string name="header_face_register">Face Register</string>
+    <string name="textview_text_face_reg_header">Face Register</string>
+    <string name="btn_text_ready">READY</string>
+    <string name="textview_text_skip">SKIP</string>Over
+    <string name="textview_face_register_desc">Add Face ID to Unlock and control WooHoo with your face.\n\nTo register,
+        keep your face in bright environment at a distance of 1–2 metres.
+    </string>
+
+    <string name="whatson">What\'s On</string>
+    <string name="getting_around">Getting Around</string>+
+    <string name="dining">Dining</string>
+    <string name="ticket_purchase">Purchase Ticket</string>
+    <string name="time_slot_booking">Book a Time Slot</string>
+    <string name="information">Information</string>
+    <string name="whatson_quote">\"What\'s On\"</string>
+    <string name="getting_around_quote">\"Getting Around\"</string>+
+    <string name="ticket_purchase_quote">\"Purchase Ticket\"</string>
+    <string name="time_slot_booking_quote">\"Book A Time Slot\"</string>
+    <string name="scan_qr_code_for_feedback">Please scan the QR code to provide the feedback regarding your experience. We would love to hear from you.</string>
+    <string name="scan_qr_for_getting_around">Please scan the QR code to \"Getting Around\" the garden.  Will be your companion on your device.</string>
+    <string name="scan_qr_for_whats_on">Please scan the QR code to  see \"What\'s On\" around the gardens on your device.</string>
+    <string name="scan_qr_code_to_purchase_ticket">Please scan the QR code to \"Purchase Ticket\" on your device.</string>
+    <string name="scan_qr_code_to_book_slot">Please scan the QR code to \"Book A Time Slot\" on your device. It is necessary to book a time slot to avoid any inconvenience.</string>
+    <string name="select_a_language">Select a Language</string>
+    <string name="available_languages">Available Languages</string>
+    <string name="time_zone">Time Zone</string>
+    <string name="analyzing">Analyzing…</string>
+    <string name="face_id_setup_complete">Face ID setup complete.</string>
+
+    <!-- Fragment : To Do -->
+    <string name="fragment_to_do_title">To Do</string>
+    <string name="fragment_to_do_bottom_text">Say "Hey Voice Genie, remove ToothBrush".</string>
+    <string name="fragment_to_do_text_view_empty_to_do_list">Your To-Do List is empty.</string>
+
+    <!-- Fragment : Contacts -->
+    <string name="fragment_contacts_title">Contacts</string>
+    <string name="fragment_contacts_bottom_text">Say "Hey Voice Genie, call Dylan Stone".</string>
+    <string name="fragment_contacts_text_view_title_family">Hotel</string>
+    <string name="fragment_contacts_text_view_no_family_members">No Hotel Members</string>
+    <string name="fragment_contacts_text_view_title_all_contacts">All Contacts</string>
+    <string name="fragment_contacts_text_view_no_contacts">No Contacts</string>
+
+    <!-- Fragment : Dialer -->
+    <string name="fragment_dialer_text_view_1">1</string>
+    <string name="fragment_dialer_text_view_2">2</string>
+    <string name="fragment_dialer_text_view_2_bottom_text">ABC</string>
+    <string name="fragment_dialer_text_view_3">3</string>
+    <string name="fragment_dialer_text_view_3_bottom_text">DEF</string>
+    <string name="fragment_dialer_text_view_4">4</string>
+    <string name="fragment_dialer_text_view_4_bottom_text">GHI</string>
+    <string name="fragment_dialer_text_view_5">5</string>
+    <string name="fragment_dialer_text_view_5_bottom_text">JKL</string>
+    <string name="fragment_dialer_text_view_6">6</string>
+    <string name="fragment_dialer_text_view_6_bottom_text">MNO</string>
+    <string name="fragment_dialer_text_view_7">7</string>
+    <string name="fragment_dialer_text_view_7_bottom_text">PQRS</string>
+    <string name="fragment_dialer_text_view_8">8</string>
+    <string name="fragment_dialer_text_view_8_bottom_text">TUV</string>
+    <string name="fragment_dialer_text_view_9">9</string>
+    <string name="fragment_dialer_text_view_9_bottom_text">WXYZ</string>
+    <string name="fragment_dialer_text_view_star">*</string>
+    <string name="fragment_dialer_text_view_0">0</string>
+    <string name="fragment_dialer_text_view_0_bottom_text">+</string>
+    <string name="fragment_dialer_text_view_hash">#</string>
+    <string name="fragment_dialer_text_view_no_contact_found">No Contacts Found</string>
+
+    <!-- Fragment : Contacts Profile -->
+    <string name="fragment_contacts_profile_text_view_drop_in">DROP IN</string>
+    <string name="no_reminder_set">No reminder added.</string>
+
+    <!-- Fragment : Live Feed-->
+    <string name="woohoo">Woohoo</string>
+    <string name="room_name">Room Name</string>
+    <string name="live_feed_initializing">Video Conference initializing</string>
+    <string name="audio_initializing">Audio Call initializing</string>
+
+    <!-- Fragment : Dialog box-->
+    <string name="password">password</string>
+    <string name="ok">@android:string/ok</string>
+    <string name="cancel">@android:string/cancel</string>
+    <string name="reset">Reset</string>
+    <string name="save">Save</string>
+
+    <!-- Fragment : Alarm Alert fragment-->
+    <string name="_00_00_am">00:00 AM</string>
+    <string name="snooze">Snooze</string>
+    <string name="dismiss">Dismiss</string>
+
+    <!-- Fragment : Alarm-->
+    <string name="alarms">Alarms</string>
+    <string name="add_alarm">Add Alarm</string>
+    <string name="snooze_alarm">Snooze</string>
+    <string name="no_alarms_set">Oops... You don\'t have any Alarms!</string>
+
+    <!-- Fragment : Music -->
+    <string name="music">Music</string>
+    <string name="relaxation_music_dashboard_title">Unwind &amp; Relax</string>
+    <string name="relaxation_music_dashboard_subtitle">Choose a soundscape to begin your journey to tranquility.</string>
+    <string name="relaxation_music_nav_explore">Explore</string>
+    <string name="relaxation_music_nav_sleep">Sleep</string>
+    <string name="relaxation_music_nav_timer">Timer</string>
+    <string name="relaxation_music_ready">Ready to stream</string>
+    <string name="relaxation_music_streaming">Streaming from WooHoo Cloud</string>
+    <string name="relaxation_music_playing_now">Playing Now</string>
+    <string name="relaxation_music_paused">Paused</string>
+    <string name="relaxation_music_timer_complete">Timer complete</string>
+    <string name="relaxation_music_select_track_for_timer">Select a track to set a timer.</string>
+    <string name="relaxation_music_playback_error">Unable to play this track</string>
+    <string name="relaxation_music_repeat_enabled">Loop enabled</string>
+    <string name="zero_time">00:00</string>
+    <string name="fragment_music_text_no_account_linked">No Spotify Account Linked</string>
+    <string name="fragment_music_text_view_title">Music</string>
+
+    <!-- Fragment : Weather -->
+    <string name="fragment_weather_text_view_title">Weather</string>
+    <string name="no_internet_text">No Internet Connection</string>
+    <string name="home">Home</string>
+    <string name="mute">Mute</string>
+    <string name="call">Call</string>
+    <string name="live_feed">Video\nConference</string>
+    <string name="surveillance">Surveillance</string>
+    <string name="night_mode">Night Mode</string>
+
+    <!-- Fragment : Settings -->
+    <string name="fragment_settings_text_view_title">Settings</string>
+    <string name="fragment_settings_text_view_wifi">Wi-Fi</string>
+    <string name="fragment_settings_text_view_bluetooth">Bluetooth</string>
+    <string name="fragment_settings_text_view_system_update">System Update</string>
+    <string name="fragment_settings_text_view_display">Display</string>
+    <string name="fragment_settings_text_view_sound">Sound</string>
+    <string name="fragment_settings_text_view_log_out">Log Out</string>
+    <string name="fragment_settings_text_view_things_to_say">Things to say</string>
+    <string name="fragment_settings_text_view_help">Voice Enroll</string>
+    <string name="fragment_news_audio_text_view_news">Today\'s Top News</string>
+
+    <!-- Fragment : Video -->
+    <string name="fragment_video_list_text_view_title">Videos</string>
+
+    <!-- Fragment : Reminder -->
+    <string name="fragment_reminder_text_view_title">Reminders</string>
+
+    <!-- Fragment : News -->
+    <string name="fragment_news_text_view_title">News</string>
+    <string name="search">SEARCH</string>
+
+    <!-- Fragment : Feedback -->
+    <string name="fragment_feedback_text_view_title">Feedback</string>
+
+    <string name="fragment_qrcode_title">QR Code</string>
+    <string name="qr_code_to_access_food_beverage">Please scan the QR code to access the Food &amp; Beverage menu on your device</string>
+
+    <!-- Fragment : Covid -->
+    <string name="fragment_covid_text_view_title">COVID-19</string>
+
+    <!-- Fragment : Devices -->
+    <string name="fragment_devices_no_device_txt">No device added. \nSearch for new devices.</string>
+    <string name="fragment_devices_discover">DISCOVER</string>
+    <string name="fragment_devices_discover_new_device">DISCOVER NEW DEVICE</string>
+
+    <string name="fragment_devices">Devices</string>
+    <string name="device_lookup">Looking for available devices..</string>
+
+    <!-- Fragment : Timer  -->
+    <string name="fragment_timer_text_view_cancel_text">@android:string/cancel</string>
+    <string name="fragment_timer_text_view_pause_text">PAUSE</string>
+    <string name="fragment_timer_text_view_timer_default_text">00:00:00</string>
+    <string name="fragment_timer_title">Timer</string>
+
+    <!-- Fragment : Device -->
+    <string name="fragment_register_device_text_register">Register</string>
+    <string name="fragment_register_device_text_setup">Setup</string>
+    <string name="discovering_devices">Discovering Devices</string>
+    <string name="for_philips_hue_press_the_button_on_philips_bridge_to_discover">For Philips Hue, press the button \n
+        on Philips Bridge to discover.
+    </string>
+    <string name="looking_for_available_devices">Looking for available devices..</string>
+    <string name="wifi_on">Wi-Fi is on</string>
+    <string name="wifi_off">Wi-Fi is off</string>
+    <string name="listening">Listening…</string>
+
+    <!-- Fragment : Philips -->
+    <string name="fragment_philips_toolbar_title">Philips Hue</string>
+    <string name="fragment_philips_text_brightness">Brightness</string>
+    <string name="fragment_philips_text_set_color">Set Color</string>
+    <string name="enroll">Enroll</string>
+    <string name="talk">Talk</string>
+    <string name="stop">Stop</string>
+    <string name="done_training">Done Training</string>
+    <string name="music_spotify_empty_text">Use WooHoo mobile app/website to Login to your Spotify account.</string>
+    <string name="turn_on_light">Turn on Light!</string>
+
+    <string name="philips_hue">Philips Hue</string>
+    <string name="fit_bit">Fit Bit</string>
+    <string name="nest_thermostat">Nest Thermostat</string>
+    <string name="response_no_error">Sorry, I couldn\'t get that, please try again</string>
+
+    <string name="video_call">Video Call</string>
+    <string name="front_camera_view">Front Camera View</string>
+    <string name="wifi_toolbar">Wi-Fi</string>
+    <string name="device_settings">Device Settings</string>
+    <string name="say_ok_woohoo_play_the_trending_videos">Say \"Voice Genie, Play the trending videos.\"</string>
+
+    <!-- FRAGMENT : Update -->
+    <string name="fragment_update_string_toolbar_title">System Update</string>
+    <string name="fragment_update_string_update">UPDATE</string>
+    <string name="fragment_update_string_update_check_1">CHECK FOR UPDATE</string>
+    <string name="fragment_update_string_update_check_2">CHECKING FOR UPDATE</string>
+    <string name="fragment_update_string_new_updates">New Update Available</string>
+    <string name="fragment_update_string_version">Version:</string>
+    <string name="fragment_update_string_change_log">Change log:</string>
+    <string name="fragment_own_device_fragment">Video Conference</string>
+
+    <string name="reminder_hint">Say \"Voice Genie, Set a reminder\"</string>
+    <string name="alarm_hint">Say \"Voice Genie, Set an alarm.\"</string>
+    <string name="weather_hint">Say \"Voice Genie, What\'s the weather like today.\"</string>
+    <string name="qna_hint">Say \"Voice Genie, Who is Obama.\"</string>
+    <string name="music_hint">Say \"Voice Genie, Play Coldplay\"</string>
+    <string name="contact_hint">Say \"Voice Genie, Show my contacts\"</string>
+    <string name="news_hint">Say \"Voice Genie, What\'s in the news today.\"</string>
+    <string name="todo_hint">Say \"Voice Genie, Add a todo.\"</string>
+    <string name="devices_hint">Say \"Voice Genie, Change color to red.\"</string>
+
+    <!-- FRAGMENT : Device Setting -->
+    <string name="fragment_device_settings_title">Device Settings</string>
+    <string name="fragment_device_settings_factory_reset_message">Factory reset will erase all the saved data in the device.</string>
+    <string name="fragment_device_settings_factory_reset">Reset</string>
+    <string name="fragment_device_settings_support_text">We Support limited languages. Our developers are working hard to support you all.</string>
+    <string name="fragment_device_settings_edit_device_name">Edit Device Name</string>
+
+    <!-- ACTIVITY : Enrollment -->
+    <string name="activity_enrollment_text_voice_model">Voice Model</string>
+    <string name="activity_enrollment_text_teach">Teach WooHoo to recognize your Voice</string>
+    <string name="activity_enrollment_text_voice_training_stage_one">Say \"first phrase here\"</string>
+    <string name="activity_enrollment_text_voice_training_stage_two">Say \"second phrase here\"</string>
+    <string name="activity_enrollment_text_voice_training_stage_three">Say \"third phrase here\"</string>
+    <string name="activity_enrollment_text_voice_training_stage_four">Say \"last phrase here\"</string>
+    <string name="activity_enrollment_text_start_voice_training">START VOICE TRAINING</string>
+    <string name="activity_enrollment_text_finish_voice_training">FINISH</string>
+    <string name="activity_enrollment_text_try_again">TRY AGAIN</string>
+    <string name="activity_enrollment_text_skip">SKIP</string>
+    <string name="activity_enrollment_text_completed_voice_training">Voice model successfully trained!</string>
+    <string name="activity_enrollment_text_audio_enrollment_failed">Failed Capturing Audio</string>
+    <string name="activity_enrollment_text_audio_enrollment_completed">Completed</string>
+    <string name="activity_enrollment_text_success">Success</string>
+    <string name="activity_enrollment_text_voice_training_mode">Voice Training Mode</string>
+    <string name="activity_enrollment_text_failed_voice_training">Voice model training failed.</string>
+    <string name="activity_enrollment_text_please_try_again">Please try again.</string>
+    <string name="activity_enrollment_text_retrain_voice">Retrain your Voice model</string>
+    <string name="activity_enrollment_text_voice_training_completed_description">
+        WooHoo can now recognise your Voice.\n\nYou can access you contacts, music and other personal stuff just by
+        using your Voice; no PIN required.
+    </string>
+    <string name="no_internet">No Internet Connection. Tap to connect.</string>
+    <string name="server_down">Network Issue! Kindly connect to the Internet</string>
+    <string name="layout_pin_text">Use WooHoo Client app to reset PIN</string>
+    <string name="layout_incorrect_pin_text">Wrong PIN. Try again.</string>
+
+    <string name="turn_on_surveillance_hint">Say \"Voice Genie, Turn On Surveillance\"</string>
+    <string name="surveillance_mode">Surveillance Mode</string>
+    <string name="surveillance_timer_text">Device will go to sleep in</string>
+    <string name="screen_saver_hint_text">Say \"Voice Genie, play music\"</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="time_s_up">Time\'s Up!</string>
+    <string name="done">DONE</string>
+    <string name="light_reachable_on">Reachable (ON)</string>
+    <string name="light_reachable_off">Reachable (OFF)</string>
+    <string name="light_reachable">Reachable</string>
+    <string name="unreachable">Unreachable</string>
+    <string name="capturer_preview_content_description">Application preview</string>
+    <string name="surveillance_five_mins_message">Device will go to sleep in 5 seconds…</string>
+    <string name="no_timer">No Timer</string>
+    <string name="set_timers_text">Set timers just by saying Hey Voice Genie.</string>
+    <string name="turn_off_surveillance_desc">Are you sure you want to turn off the Surveillance Mode?</string>
+
+    <string name="interel">Interel</string>
+    <string name="celcius_fahrenheit">\u00B0C/\u00B0F</string>
+    <string name="fan_mode_auto">Auto</string>
+    <string name="fan_mode_eco">Eco</string>
+    <string name="fan_mode_off">Off</string>
+
+    <!--google asr start-->
+    <string name="setting_up_woohoo">Setting Up WooHoo...</string>
+    <string name="engine">Engine</string>
+    <string name="wakeword">Wakeword</string>
+    <string name="device_language">Device Language</string>
+    <string name="voice_model">Voice Model</string>
+    <string name="things_to_say">Things to Say</string>
+    <string name="system_update">System Update</string>
+    <string name="logout">Logout</string>
+    <string name="no_update_available">No Updates Available.</string>
+    <string name="update_available">Update available</string>
+    <string name="could_not_fetch">Couldn\'t Fetch Update.</string>
+    <string name="cellular_data_on">Cellular Data: On</string>
+    <string name="cellular_data_off">Cellular Data: Off</string>
+    <string name="updating">Updating...</string>
+    <string name="checking_update">Checking for updates...</string>
+    <string name="suggestions_to_speak">Suggestions to speak to WooHoo</string>
+    <string name="enroll_voice">Enroll your voice</string>
+    <string name="name_device_lang">Name of the device, language, time-zone</string>
+    <string name="check_internet">Please check Internet Connectivity!</string>
+    <string name="wifi_no_internet">Wifi has no Active Internet Connection!</string>
+    <string name="network_issues">Network Issue!</string>
+    <string name="no_service_order_updated">No Service Orders were updated recently</string>
+    <string name="you_have_placed">You have placed</string>
+    <string name="orders">orders</string>
+    <string name="order">Order</string>
+    <string name="towels">Towels</string>
+    <string name="enter_qty">Enter valid quantity</string>
+    <string name="amadeus_service">Amadeus Services</string>
+    <string name="water">Water</string>
+    <string name="shampoo">Shampoo</string>
+<!--google asr end-->
+
+    <string name="amadeus_services_hotsos">HotSoS</string>
+    <string name="enter_a_city_name">Enter a City Name</string>
+
+    <string name="enter_feedback">Write your feedback</string>
+    <string name="enter_covid">Write your Comments</string>
+
+    <string name="confirm">Confirm</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="cancelText">Cancel</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="contacts">Contacts</string>
+
+    <string name="sleep_mode">Sleep Mode</string>
+
+    <string name="call_disconnected">User is not able to pick up your call</string>
+    <string name="call_accept">User accepted the call</string>
+    <string name="call_reject">User rejected the call</string>
+
+    <string name="add_one">Add One</string>
+    <string name="warning_missing_app_permissions">Please provide required permissions and try again!</string>
+    <string name="permission_message_modify_system_settings">Please provide permission for modifying system settings. Tap Ok to proceed.</string>
+    <string name="permission_dialog_title_modify_system_settings">Allow Modify System Settings</string>
+
+    <string name="circle">circle</string>
+    <string name="alarm_added">Alarm Added.</string>
+    <string name="alarm_updated">Alarm Updated.</string>
+    <string name="you_have_reminder_set">You have %d reminders set.</string>
+    <string name="you_have_alrams_set">You have %d alarms set.</string>
+    <string name="already_have_everyday_alarm">You already have an everyday alarm at %s</string>
+    <string name="already_have_alarm">You already have an alarm at %s</string>
+    <string name="cant_set_past_alarms">I cannot set alarms past 24 hours. You can try adding reminders instead.</string>
+    <string name="alarm_added_at">Alarm added at %s</string>
+    <string name="ask_alarm_index">You have %d set, can you please tell me the index to delete the alarm.</string>
+    <string name="you_have_no_alarms_set">You have no Alarms set.</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="null_object">Null object!</string>
+    <string name="Alarm">Alarm</string>
+    <string name="no_remark">No Remark</string>
+    <string name="error_occured_enable_bluetooth">Error occurred while attempting to enable bluetooth</string>
+    <string name="paired_devices">Paired Devices</string>
+    <string name="available_devices">Available Devices</string>
+    <string name="connected">Connected</string>
+    <string name="no_contact_added">No Contact added by Hotel Admin</string>
+    <string name="contact_not_found">Contact not found</string>
+    <string name="try_again">Try again</string>
+    <string name="hub_busy">Hub is busy</string>
+    <string name="restricted_by_contact">Restricted by contact</string>
+    <string name="hub_currently_offline">Hub is currently offline</string>
+    <string name="all_contacts_holder">All Contacts Holder</string>
+    <string name="All">All</string>
+    <string name="no_sim_card_present">No Sim Card Present in the device</string>
+    <string name="Reception">Reception</string>
+    <string name="room_service">Service</string>
+    <string name="Maintenance">Maintenance</string>
+    <string name="Spa">Spa</string>
+    <string name="Concierge">Concierge</string>
+    <string name="Interel">Interel</string>
+    <string name="cant_set_below_18">You cannot set point below %s</string>
+    <string name="cant_set_below_28">You cannot set point above %s</string>
+    <string name="streaming_live_feed_in">Streaming Live-Feed in %s sec</string>
+    <string name="internet_not_available">Internet not available try after sometime</string>
+    <string name="call_disconnected_by_user">Call has been disconnected by the other user</string>
+    <string name="audio_get_connected">Audio Call get connected ...</string>
+    <string name="livefeed_in">%s LiveFeed in %s sec</string>
+    <string name="user_not_pick_call">User is not able to pick up your call</string>
+    <string name="record_started">Recording Started</string>
+    <string name="connecting">Connecting...</string>
+    <string name="audio_connected_in">%s Audio Call get connected in %s sec</string>
+    <string name="video_conference_users">You can Video Conference to following users</string>
+    <string name="no_songs_found">No songs found</string>
+    <string name="player_not_initialised">Player not Initialized.</string>
+    <string name="found_on_web">This is what I found on the web</string>
+    <string name="not_found_anything">Sorry, I couldn\'t find anything about it.</string>
+    <string name="hey_its">Hey, It\'s %s</string>
+    <string name="Notification">Notification</string>
+    <string name="you_remind_to">You will be reminded to %s on %s at %s</string>
+    <string name="reminder_date_already_paused">The date of the reminder has already passed.</string>
+    <string name="reminder_deleted">Reminder deleted.</string>
+    <string name="you_dont_have_as_your_reminder">You don\'t have %s as your reminder.</string>
+    <string name="as_your_reminder">as your reminder.</string>
+    <string name="sorry_you_dont_have_reminder_set">"Sorry, you don/'t have %s reminders set.</string>
+    <string name="reminder_set">reminders set.</string>
+    <string name="is_changed_to">%s is changed to %s</string>
+    <string name="one_reminder_set">You just have 1 reminder set.</string>
+    <string name="no_reminders_set">You have no reminders set.</string>
+    <string name="updating_time">Updating Name...</string>
+    <string name="not_fetch_name">Couldn\'t fetch name.</string>
+    <string name="name_of_device">Name of the Device</string>
+    <string name="device_timezone">Device Time Zone</string>
+    <string name="factory_reset">Factory Reset</string>
+    <string name="fetching_name">Fetching Name...</string>
+    <string name="english_us">English (US)</string>
+    <string name="reset_woohoo_hub">Reset WooHoo hub</string>
+    <string name="connect_to_other_devices">Connect to other devices</string>
+    <string name="switch_engine">Switch Engine</string>
+    <string name="sim_settings">Sim Settings</string>
+    <string name="no_updates_available">No Updates are currently available</string>
+    <string name="version">Version: %s</string>
+    <string name="change_log">Change log:\n\n %s</string>
+    <string name="UPDATE">UPDATE</string>
+    <string name="download_complete">Download complete (100%)</string>
+    <string name="install_update">INSTALL UPDATE</string>
+    <string name="downloading_update">Downloading Update</string>
+    <string name="update_download_cancelled">Update Download Cancelled!</string>
+    <string name="update_download_failed">Update Download Failed!</string>
+    <string name="switch_wakeword">Switch Wakeword</string>
+    <string name="authenticating">Authenticating...</string>
+    <string name="scanning">Scanning...</string>
+    <string name="connection_failed">Connection Failed</string>
+    <string name="authentication_problem">Authentication Problem</string>
+    <string name="enter_wifi_pass">Enter Wi-Fi Password</string>
+    <string name="forget_nwtwork">Forget Network</string>
+    <string name="connect_to_network">Connect To Network</string>
+    <string name="not_connected">Not Connected</string>
+    <string name="set_woohoo_pin">Set up WooHoo PIN</string>
+    <string name="permission_needed">Permission Needed...</string>
+    <string name="Reconnecting">Reconnecting</string>
+    <string name="Your">Your</string>
+    <string name="timer_is_done">timer is done.</string>
+    <string name="no_timer_set">There are no timer set.</string>
+    <string name="postresponse_corrupted">PostResponse Corrupted</string>
+    <string name="params_not_provided">Parameters not provided</string>
+    <string name="Trending">Trending</string>
+    <string name="enter_city_name">Enter a city name</string>
+    <string name="location_not_available">Location not available</string>
+    <string name="whether_response_corrupted">Whole Weather Response corrupted</string>
+    <string name="install_google_app">Please install the google app.</string>
+    <string name="next_song_not_available">Next Song is not available!</string>
+    <string name="prev_song_not_available">Previous Song is not available!</string>
+    <string name="no_timer_set_">No Timer Set!</string>
+    <string name="timer_cancelled">timer is cancelled.</string>
+    <string name="youtube">Youtube</string>
+    <string name="Translation">Translation</string>
+    <string name="did_not_get_that">I did not get that</string>
+    <string name="cant_do_that">I can\'t do that yet!</string>
+    <string name="empty_user_response">Empty user response!!</string>
+    <string name="empty_string_to_speak">Empty string to speak!!</string>
+    <string name="camera_not_working">Camera is not working for this device</string>
+    <string name="error_while_updating">Error while updating</string>
+    <string name="no_languages">No Languages</string>
+    <string name="wifi_no_active_internet">Wifi has no Active Internet Connection!</string>
+    <string name="no_timezone">No Timezone</string>
+    <string name="make_woohoo_system_app">Make WooHoo as system or otherwise this app won\'t have permission to change timezone on android oreo and above</string>
+    <string name="request_permission_failed">Request permission failed</string>
+    <string name="permission_granted">Permission granted</string>
+    <string name="voice_training_done">Voice Training is done, you may press skip OR if you want to train again press the ENROLL button above.</string>
+    <string name="press_enroll_button">Press the ENROLL button above to do the training!</string>
+    <string name="enrolling_trigger">Enrolling Trigger</string>
+    <string name="server_is_down">Server is Down</string>
+    <string name="ssl_certi_error">SSL Certificate Error!</string>
+    <string name="no_device_action_fetched">No Device Action fetched!</string>
+    <string name="didnt_get_that">I didn\'t get that.</string>
+    <string name="no_data_fetched">No Data fetched!</string>
+    <string name="no_nlp_response_fetched">No NLP Response fetched!</string>
+    <string name="whole_weather_response_corrupted">Whole Weather Response corrupted</string>
+    <string name="weather_data_response_corrupted">Weather Data Response corrupted</string>
+    <string name="unknown_category">unknown category</string>
+    <string name="installation_failed">Installation failed</string>
+    <string name="already_have_latest_version">You already have latest version!</string>
+    <string name="spotify_account_not_linked">Spotify Account not linked!</string>
+    <string name="token_expired">Token Expired</string>
+    <string name="server_error">Server Error!</string>
+    <string name="error_fetching_spotify_token">Error fetching Spotify token</string>
+    <string name="server_not_available">Server not able to fetch token!</string>
+    <string name="authorization_error">Authorization Error</string>
+    <string name="bad_gateway">Bad Gateway</string>
+    <string name="internal_server_error">Internal Server Error</string>
+    <string name="problem_in_fetching_data">Problem in fetching data</string>
+    <string name="body_corrupted">Body Corrupted</string>
+    <string name="Disconnected">Disconnected</string>
+    <string name="your_timer_cancelled">Your %d %s timer is canceled.</string>
+    <string name="your_timer_is_done">Your %d %s timer is done.</string>
+    <string name="your_woohoo_hubs">Your WooHoo Hubs</string>
+    <string name="no_other_hubs_registered">No Other Hubs Registered</string>
+    <string name="enter_quantity">Enter Quantity</string>
+    <string name="have_a_pleasant_stay">Have a pleasant stay</string>
+    <string name="explore_woohoo">Explore Woohoo</string>
+    <string name="thank_you">Thank you</string>
+    <string name="have_a_nice_day">Have a nice day</string>
+    <string name="give_feedback">Give Feedback</string>
+    <string name="poor_internet_connection">Poor Internet Connection</string>
+    <string name="server_sync_error">Syncing Error (Code-%d)</string>
+    <string name="tap_anywhere_to_retry">Tap anywhere to retry...</string>
+    <string name="rename">Rename</string>
+    <string name="delete_light">DELETE LIGHT</string>
+    <string name="enter_light_name_here">Enter light name here</string>
+    <string name="enter_wi_fi_password">Enter Wi-Fi Password</string>
+    <string name="network">Network:</string>
+    <string name="secured_wi_fi">Secured-Wi-Fi</string>
+    <string name="enter_password_here">Enter password here</string>
+    <string name="join">JOIN</string>
+    <string name="wrong_password_try_again">Wrong Password. Try Again.</string>
+    <string name="forget">FORGET</string>
+    <string name="alarm_sound">Alarm Sound</string>
+    <string name="snooze_for_10_min">SNOOZE FOR 10 MIN</string>
+    <string name="hang_up">Hang Up</string>
+    <string name="no_devices_available">No Devices Available</string>
+    <string name="refresh">Refresh</string>
+    <string name="camera_control">Camera Control</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="no_access">No Access</string>
+    <string name="audio_call">Audio Call</string>
+    <string name="turn_off_night_mode">Turn off Night Mode</string>
+    <string name="enter_password">Enter password</string>
+    <string name="following_items_need_your_attention">Following items need your attention</string>
+    <string name="enter_pin">Enter PIN</string>
+    <string name="add_anything_just_by_saying_hey_woohoo">Add anything just by saying Hey WooHoo.</string>
+    <string name="cellular_data">Cellular Data</string>
+    <string name="data_roaming">Data roaming</string>
+    <string name="preferred_network_type">Preferred Network Type</string>
+    <string name="_4g_recommended">4G (Recommended)</string>
+    <string name="access_point_names">Access Point Names</string>
+    <string name="network_operators">Network Operators</string>
+    <string name="choose_a_network_operator">Choose a network operator</string>
+    <string name="on">On</string>
+    <string name="interval">Interval</string>
+    <string name="surveillance_mode_on">Surveillance mode on.</string>
+    <string name="turn_off">Turn off</string>
+    <string name="during_surveillance_mode">During Surveillance mode</string>
+    <string name="surveillance_stealth_content">WooHoo detects any suspicious activity by body and face recognition.</string>
+    <string name="surveillance_notification_content">If a non-family member face is detected, you will be notified on your web and mobile app.</string>
+    <string name="surveillance_record_video_content">A 30 seconds video will be recorded and shared to you on your web and mobile app.</string>
+    <string name="surveillance_sleep_content">During Surveillance mode, WooHoo hub will go to sleep mode, and you will not be able to use WooHoo services.</string>
+    <string name="turn_on_surveillance_mode">TURN ON SURVEILLANCE MODE</string>
+    <string name="surveillance_mode_activated">Surveillance mode activated.</string>
+    <string name="enter_text">Enter text</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="no_networks_available">No Networks Available</string>
+    <string name="order_now">ORDER NOW</string>
+    <string name="order_closes_with_in">Order closes with in</string>
+    <string name="woohoo_hub">WooHoo Hub</string>
+    <string name="favorite_apps_that_can_be_accessed_from_home_screen">Favorite apps that can be accessed from Home Screen</string>
+    <string name="drag_and_drop_apps_to_your_favorite_section">Drag and drop apps to your favorite section</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="alarm">Alarm</string>
+    <string name="hey_woohoo_play_some_music">“Hey WooHoo, play some music.”</string>
+    <string name="concierge">Concierge</string>
+    <string name="maintenance">Maintenance</string>
+    <string name="reception">Reception</string>
+    <string name="id">ID</string>
+    <string name="towel">Towel</string>
+    <string name="spa">Spa</string>
+    <string name="off">Off</string>
+    <string name="auto">Auto</string>
+    <string name="echo">Echo</string>
+    <string name="low">Low</string>
+    <string name="high">High</string>
+    <string name="error_no_videos_listed">There are no Videos being listed</string>
+
+
+    <string name="smile_rating_terrible">Terrible</string>
+    <string name="smile_rating_bad">Bad</string>
+    <string name="smile_rating_okay">Okay</string>
+    <string name="smile_rating_good">Good</string>
+    <string name="smile_rating_great">Great</string>
+
+    <string-array name="names">
+        <item>@string/smile_rating_terrible</item>
+        <item>@string/smile_rating_bad</item>
+        <item>@string/smile_rating_okay</item>
+        <item>@string/smile_rating_good</item>
+        <item>@string/smile_rating_great</item>
+    </string-array>
+
+    <string name="no_result_fetched">No result fetched</string>
+    <string name="feedback_thanks">Thanks for feedback</string>
+    <string name="sucessful_submit">Successful Submit</string>
+
+    <!-- FnB Feature strings-->
+    <string name="fnb_menus">Menus</string>
+    <string name="fnb_sub_menus">Sub-menus</string>
+    <string name="fnb_categories">Categories</string>
+    <string name="fnb_sub_categories">Sub Categories</string>
+    <string name="fnb_products">Products</string>
+    <string name="your_order">Your Order</string>
+    <string name="fnb_confirm_order">Confirm Order</string>
+    <string name="fnb_past_order">Past Order</string>
+    <string name="add_more">Add More</string>
+    <string name="portion_size">Portion Size</string>
+    <string name="cuisine">Cuisine</string>
+    <string name="instructions_for_chef">Instructions for Chef</string>
+    <string name="additional_charges"><sup><small>*</small></sup>Additional charges apply for taxes and convenience fees/Voor belastingen en servicekosten gelden extra kosten.</string>
+    <string name="not_in_stock">Not In Stock</string>
+    <string name="grand_total">Grand Total</string>
+    <string name="details">Details</string>
+    <string name="place_order">Place Order</string>
+    <string name="quantity_cant_select_more">Out Of Stock.</string>
+
+    <string name="place_order_failed">Please select any product to place order</string>
+    <string name="want_to_remove_product_from_cart">Do you want to remove this product from cart?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="order_added_successfully">Your Order Placed Successfully.</string>
+    <string name="no_sub_categories">No sub categories found for this category.</string>
+    <string name="item_not_available">Item selected is not available at this moment. Please try another item.</string>
+
+    <string name="full">Full</string>
+    <string name="Italian">Italian</string>
+    <string name="enter_instruction">Please provide your instructions...</string>
+    <string name="fnb.categories.no_offers_found">No offers found for you at this time!</string>
+    <string name="fnb.categories.error_ordering_disabled_due_to_no_categories">Oops, it seems Ordering is not enabled yet!</string>
+    <string name="drawer.menu.feedback">Feedback</string>
+    <string name="drawer.menu.covid">Covid-19</string>
+    <string name="drawer.menu.ordering">Ordering</string>
+
+    <string name="no_active_internet">No Active Internet Connection!</string>
+
+
+    <string name="tap_to_connect_wifi">Please tap to connect Wi-Fi</string>
+    <string name="wifi_disabled">Wi-Fi Disabled</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="video_over">Video over</string>
+    <string name="honeywell">Honeywell</string>
+    <string name="your_order_is_placed">Your Order is placed</string>
+    <string name="download_failed">Download Failed</string>
+    <string name="hello_guestname">Hello %s</string>
+    <string name="welcome_to_hotelname">Welcome to %s</string>
+    <string name="do_not_disturb">DO NOT DISTURB</string>
+    <string name="make_up_room">MAKE UP ROOM</string>
+    <string name="open_close_curtain">OPEN/CLOSE CURTAIN</string>
+    <string name="bathroom_light">BATHROOM</string>
+    <string name="toggle_lights">BEDROOM</string>
+    <string name="bedside">BEDSIDE</string>
+    <string name="entrance_light">ENTRANCE LIGHTS</string>
+    <string name="master_on_off">MASTER ON/OFF</string>
+    <string name="thermostat">THERMOSTAT</string>
+    <string name="fan_mode">FAN MODE</string>
+    <string name="blind_state">BLIND STATE</string>
+
+
+    <string name="consumer_smartflow">Consumer Smartflow</string>
+    <string name="enterprise_smartflow">Enterprise SmartFlow</string>
+    <string name="global_wakeword">Global Wakeword</string>
+    <string name="private_wakeword">Private Wakeword</string>
+    <string name="english_lang">English (US)</string>
+    <string name="chinese_lang">Chinese (CH)</string>
+    <string name="arabic_lang">Arabic (AR)</string><!--To be translated-->
+    <string name="dutch_lang">Dutch (NL)</string>
+
+    <string name="Profile">Profile</string>
+
+    <string name="sentry_dsn"> https://b7ab5faf0dd14016b2e6fa55e6908f73@o447741.ingest.sentry.io/5427976</string>
+    <!--To be deleted-->
+    <string name="sentry_dsn_old">https://d38455c7c6714d42a56599492f01af21@o444154.ingest.sentry.io/5418764</string>
+
+    <string name="beta_features">Beta Features</string>
+    <string name="set_features"><u>SET FEATURES</u></string>
+
+    <string name="udp">UDP</string>
+    <string name="tcp">TCP</string>
+    <string name="tls">TLS</string>
+
+    <string name="add_to_bag">Add to bag</string>
+    <string name="checkout">Checkout</string>
+    <string name="quantity_cant_be_reduced">Quantity can\'t be reduced</string>
+    <string name="please_select_quantity">Please select quantity to checkout</string>
+    <string name="special_instructions">+Add Instructions for Chef</string>
+    <string name="app_center_app_secret">a4d668a8-5161-4e49-94d4-3eae0d7ee2d4</string>
+    <string name="accept">Accept</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="submit">SUBMIT</string>
+
+
+    <string name="reservation_select_service">Select Service</string>
+    <string name="reservation_your_bookings">Your Bookings</string>
+    <string name="reservation_select_guests">Select No. of Guests</string>
+    <string name="reservation_select_date">Select Date</string>
+    <string name="reservation_select_time">Select Time</string>
+    <string name="str_submit">Submit</string>
+
+    <string name="f_and_b"><![CDATA[F & B]]></string>
+    <string name="feedback">Feedback</string>
+    <string name="qr_code">QR Code</string>
+    <string name="qr_code_feature">%s QR Code</string>
+    <string name="receptionist">Receptionist</string>
+    <string name="temp_feature_unavailable">This feature is temporarily unavailable!</string>
+
+    <string name="booking_confirmation_slot_details">FOR %s</string>
+    <string name="overview_items">Items</string>
+    <string name="title_upcoming_service">Upcoming</string>
+    <string name="booking_cancelled">Booking Cancelled!</string>
+    <string name="your_booking_is_confirmed">Your Booking is Confirmed</string>
+    <string name="in_room_dining">In-Room\nDining</string>
+    <string name="woohoo_mobile">Mobile Menu</string>
+    <string name="select_service">Please select a service.</string>
+    <string name="select_guests">Please select guest count.</string>
+    <string name="select_reservation_date">Please choose date for reservation.</string>
+    <string name="select_reservation_time">Please choose timeslot for reservation.</string>
+    <string name="search_video_message">Type the name of the video that you would like to search for</string>
+    <string name="order_history_total">TOTAL</string>
+    <string name="settings_not_enabled">Settings are not enabled. Please ask from the Admin/Helpdesk to enable Settings from the portal.</string>
+    <string name="book_service_not_available">Services are unavailable now</string>
+    <string name="welcome_to_gbtb">Welcome to Gardens By The bay, how may i help you</string>
+    <string name="night_mode_activating">Night Mode is activating in</string>
+
+    <string name="info">Information</string>
+    <string name="compendium_park_royal">Compendium</string>
+    <string name="reservation">Reservation</string>
+    <string name="amadeus_service_request">Service Request</string>
+    <string name="control">Smart Room</string>
+    <string name="smart_room_control">Smart Room Control</string>
+
+    <string name="coffee">Coffee Sachet</string>
+    <string name="cream_sugar">Creamer &amp; Sugar</string>
+    <string name="mtea_sachet">Tea Sachet</string>
+    <string name="dental">Dental Kit</string>
+    <string name="shaving">Razor/Shaving Cream</string>
+    <string name="toilet">Toilet Roll</string>
+    <string name="toothbrush">Toothbrush</string>
+    <string name="bath_towel">Bath towel</string>
+    <string name="drinking_water">Drinking Water (Dr Who)</string>
+    <string name="soap_shampoo">Soap &amp; Shampoo</string>
+    <string name="hand_towel">Hand Towel</string>
+    <string name="slipper">Slipper</string>
+
+    <string name="screen_cast">Screen Cast</string>
+    <string name="mirror_your_device">Mirror your device</string>
+
+    <string name="Yesterday">Yesterday</string>
+
+    <string name="agora_app_id">45fac1f788c849bc94b8f1ad8232f501</string>
+    <string name="agora_temp_token">0067d846191e03f4271ad3af50b793ed92cIABQoDASAdoKXcXg/TROa++E4VWXkPptN4WDGQofGeeUUuIVUyEAAAAAEAAoIaFGGeb2YAEAAQAZ5vZg</string>
+    <string name="call_not_allow">This call is not allowed!</string>
+    <string name="amenities">Request Amenities</string>
+    <string name="your_bookings">Your Bookings</string>
+    <string name="fragment_restaurant_title">Dining Reservations</string>
+
+    <string name="bottom_drawer_gesture_message">Swipe up to see more apps.</string>
+    <string name="label_ordering">@string/drawer.menu.ordering</string>
+    <string name="str_done">Done</string>
+    <string name="str_customise">"Customise "</string>
+    <string name="str_optional">" (Optional)"</string>
+    <string name="no_i_ll_choose">No, I\'ll Choose</string>
+    <string name="str_yes">Yes</string>
+    <string name="str_repeat_customization_for">"Repeat Customisation for "</string>
+    <string name="customise">Customise</string>
+    <string name="delivery_charges">Delivery Charges</string>
+    <string name="service_charge_10">Service Charge(10%)</string>
+    <string name="gst">GST</string>
+    <string name="view_cart">View Cart</string>
+    <string name="taxes_may_apply">Taxes may apply</string>
+    <string name="edit">Edit</string>
+    <string name="item_total">Item Total:</string>
+    <string name="msg_no_modifiers">No modifiers under this product!</string>
+    <string name="honor_bar">Honor Bar</string>
+    <string name="bakery">Bakery</string>
+    <string name="message_device_id_copied">Device Id Copied!!</string>
+    <string name="blutooth">Bluetooth</string>
+    <string name="device_name">Device Name</string>
+    <string name="bt_title_change_device_name">Change Device Name</string>
+    <string name="bt_description">This device name will be displayed when using Bluetooth.</string>
+    <string name="bt_discovery_text">Your phone is currently visible to nearby devices for </string>
+    <string name="bt_error_disable">Disabled!</string>
+    <string name="bt_error_disconnected">\" Disconnected!\"</string>
+    <string name="bt_error_connected">Connected!</string>
+    <string name="bt_error_callback">Failed to perform action!</string>
+    <string name="bt_unpair_device">Unpair Device</string>
+    <string name="bt_unpair_confirmation">Are you sure?</string>
+    <string name="bt_dialog_unpair">Unpair</string>
+    <string name="bt_paring">Pairing...</string>
+    <string name="bt_name_required">Name cannot be empty</string>
+    <string name="home_screen_lang">English</string>
+    <string name="book_a_table">Book a Table</string>
+    <string name="tablecheck">Table Check</string>
+    <string name="load_more">Load More</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="confirm_table_booking">Confirm your table booking</string>
+    <string name="booking_confirmed">Booking confirmed</string>
+    <string name="tablecheck_warning">We request you to arrive timely to get hassle-free experience. In case of a no-show, your reservation may get cancelled.</string>
+
+    <string name="sip_configuration">SIP Configuration</string>
+    <string name="transport">Transport</string>
+    <string name="customized">Customized</string>
+    <string name="xyz_melody">XYZ melody</string>
+    <string name="voip_calls">VoIP Calls</string>
+    <string name="agora_calls">Agora Calls</string>
+    <string name="sensory_op">Sensory Operating Point</string>
+    <string name="network_calls">Network log</string>
+    <string name="call_log_title">Call Log</string>
+    <string name="clear_call_log">Clear call log</string>
+    <string name="call_log_empty">No calls yet</string>
+    <string name="sip_quick_actions_contact_subtitle">Tap to call</string>
+    <string name="sip_internal_call_title">Internal Call</string>
+    <string name="sip_internal_call_subtitle">Dial manually</string>
+    <string name="sip_quick_actions_hero_subtitle">Your hotel team is at your service.</string>
+    <string name="sip_greeting_morning">Good Morning,</string>
+    <string name="sip_greeting_afternoon">Good Afternoon,</string>
+    <string name="sip_greeting_evening">Good Evening,</string>
+    <string name="sip_guest_fallback">Guest.</string>
+    <string name="sip_room_fallback">ROOM</string>
+    <string name="sip_incoming_status">Incoming Call</string>
+    <string name="sip_accept_call">Accept Call</string>
+    <string name="sip_decline_call">Decline</string>
+    <string name="sip_incoming_voice_hint">Say "Hey WooHoo, Answer call"</string>
+    <string name="sip_manual_dialer_title">Enter Room Number</string>
+    <string name="sip_manual_dialer_subtitle">Internal room extension</string>
+    <string name="sip_manual_dialer_call_action">Call Room</string>
+    <string name="sip_manual_dialer_empty_error">Enter a room number</string>
+    <string name="sip_self_call_error">This number is assigned to you. Please choose another number.</string>
+    <string name="sip_call_connected_status">Connected</string>
+    <string name="sip_call_connecting_status">Calling</string>
+    <string name="sip_call_ringing_status">Ringing</string>
+    <string name="sip_call_detail_primary_label">Caller ID</string>
+    <string name="sip_call_detail_secondary_label">Call Type</string>
+    <string name="sip_call_detail_secondary_value">Voice Call</string>
+    <string name="sip_call_waiting_for_answer">Waiting for answer</string>
+    <string name="sip_end_call">End Call</string>
+    <string name="sip_speaker">Speaker</string>
+    <string name="npr">NPR</string>
+    <string name="no_updated_service">No recently updated service orders found</string>
+    <string name="one">01</string>
+    <string name="two">02</string>
+    <string name="three">03</string>
+    <string name="four">04</string>
+    <string name="five">05</string>
+    <string name="lang_1">Lang 1</string>
+    <string name="lang_2">Lang 2</string>
+    <string name="order_id">Order Id: #%s</string>
+    <string name="tax_names">%1$s(%2$d%%)</string>
+    <string name="convience_fee">Convenience Fee</string>
+    <string name="max_item">Choose a maximum of %s items.</string>
+
+    <string name="lang_english_prefix">En</string>
+    <string name="lang_arabic_prefix">Ar</string>
+    <string name="lang_chinese_prefix">Ch</string>
+    <string name="lang_dutch_prefix">Nl</string>
+    <string name="wifi_gps_not_supported">GPS is not enabled on this device. Please check your settings or continue without wifi scanned list!</string>
+    <string name="unmute">Un Mute</string>
+    <string name="mute_bar_error_text_secondary" >Button to un-mute now</string>
+    <string name="mute_bar_error_text_primary" >Your device is on mute. Press</string>
+    <string name="feedback_submitted_successfully">Feedback submitted successfully</string>
+    <string name="update_alarm">Update Alarm</string>
+    <string name="bluetooth_sec">Sec</string>
+    <string name="total_tax">Total Tax</string>
+    <string name="total_excluding_tax_hint">Excluding taxes</string>
+    <string name="total_including_tax_hint">Including taxes</string>
+
+    <string name="visit_saudi">Visit Saudi</string>
+    <string name="tourism_hotline">Tourism Hotline</string>
+
+
+    <string name="location">Location</string>
+    <string name="start">Start</string>
+    <string name="end">End</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="about">About</string>
+    <string name="address">Address</string>
+    <string name="suitable_for">Suitable For</string>
+    <string name="years_old">Years Old</string>
+    <string name="refund_policy">Refund Policy</string>
+    <string name="h_care_spa">Men Spa</string>
+
+    <string name="list_price">List Price</string>
+    <string name="discount_price">Discount Price</string>
+    <string name="duration">Duration</string>
+    <string name="best_for">Best For</string>
+    <string name="area_near_by">Area Near By</string>
+    <string name="description">Description</string>
+
+    <string name="select_mode">Select Mode</string>
+    <string name="clock_mode">Clock Mode</string>
+    <string name="display_off">Display Off</string>
+    <string name="book_now">Book Now</string>
+    <string name="quicky_link_id_missing">Quick Link is not Configure Properly</string>
+    <string name="tv_remote">TV Remote</string>
+    <string name="mirror_device">Mirror</string>
+
+    <string name="buy_sim">Buy Sim</string>
+    <string name="package_selection">Package Selection</string>
+    <string name="select_number">Select Number</string>
+    <string name="email_verification">Email Verification</string>
+    <string name="cart">Cart</string>
+
+</resources>

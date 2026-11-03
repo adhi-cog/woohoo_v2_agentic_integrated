@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen_bg_gradient"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/fragment_settings_relative_layout_header"
+        layout="@layout/common_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_settings_relative_layout_header"
+        android:paddingLeft="@dimen/padding_30dp"
+        android:paddingRight="@dimen/padding_30dp"
+        android:paddingBottom="@dimen/padding_20dp"
+        android:paddingTop="@dimen/padding_20dp">
+    <RelativeLayout
+        android:id="@+id/layout_snooze_on"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cornered_alarm_item_layout"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="@string/on"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_time_interval_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/interval"
+        android:layout_below="@+id/layout_snooze_on"
+        android:textColor="#5D488F"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:fontFamily="sans-serif-medium"/>
+
+        <RadioGroup
+            android:id="@+id/rg_time_interval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_time_interval_title"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_time_alarm_interval">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="5 minutes"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:buttonTint="@color/white"
+                android:fontFamily="sans-serif-light"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 minutes"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+
+                android:paddingLeft="10dp"
+                android:buttonTint="@color/white"
+                android:fontFamily="sans-serif-light"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15 minutes"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:buttonTint="@color/white"
+                android:fontFamily="sans-serif-light"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:text="30 minutes"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:fontFamily="sans-serif-light"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txt_interval_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interel"
+            android:layout_below="@+id/rg_time_interval"
+            android:textColor="#5D488F"
+            android:textSize="18sp"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_interval_title"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_alarm_interval">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="3 times"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:buttonTint="@color/white"
+                android:fontFamily="sans-serif-light"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 times"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:buttonTint="@color/white"
+                android:fontFamily="sans-serif-light"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forever"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:buttonTint="@color/white"
+                android:fontFamily="sans-serif-light"/>
+
+        </RadioGroup>
+    </RelativeLayout>
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

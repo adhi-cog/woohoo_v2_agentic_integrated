@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary">
+
+    <include
+        android:id="@+id/common_toolbar"
+        layout="@layout/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/dp_20" />
+
+    <ImageView
+        android:id="@+id/iv_all_contacts"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_20"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/dp_10"
+        app:srcCompat="@drawable/ic_all_contacts" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/common_toolbar"
+        android:fillViewport="true">
+
+        <include layout="@layout/content_contacts"
+            android:id="@+id/fragment_content_contacts"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

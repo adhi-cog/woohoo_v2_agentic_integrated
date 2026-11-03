@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/buttonEnroll"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_marginRight="@dimen/dp_3"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:layout_weight="0.5"
+                android:onClick="onButtonEnroll"
+                android:text="@string/enroll"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonStop"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_marginRight="@dimen/dp_3"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:layout_weight="0.5"
+                android:onClick="onButtonStop"
+                android:text="@string/stop"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewState"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:textAlignment="center"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@android:color/white"
+            tools:targetApi="jelly_bean_mr1" />
+
+        <!--<Button-->
+        <!--android:id="@+id/newEnroll"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="64dp"-->
+        <!--android:text="user2" />-->
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.94"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/textViewConsole"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1000"
+                android:singleLine="false"
+                android:textSize="@dimen/sp_18"
+                android:textColor="@android:color/white" />
+        </ScrollView>
+
+        <Button
+            android:id="@+id/done_training"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginLeft="@dimen/padding_normal"
+            android:layout_marginRight="@dimen/padding_normal"
+            android:layout_marginBottom="@dimen/padding_normal"
+            android:background="@drawable/shape_curve_rect"
+            android:text="@string/done_training"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_14"/>
+    </LinearLayout>
+</RelativeLayout>

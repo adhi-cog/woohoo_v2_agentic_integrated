@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?color_secondary">
+
+    <RelativeLayout
+        android:id="@+id/layout_booking"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/img_checked"
+        android:layout_width="@dimen/dp_213"
+        android:layout_height="@dimen/dp_213"
+        android:src="@drawable/ic_checked"/>
+
+    <TextView
+        android:id="@+id/tv_booking_confirm"
+        android:layout_marginTop="@dimen/dp_53"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/img_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="?text_color_primary"
+        android:text="@string/your_booking_is_confirmed"
+        android:textAllCaps="true"
+        android:textSize="@dimen/sp_24"/>
+
+    <TextView
+        android:id="@+id/tv_booking_date"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_booking_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="?text_color_primary"
+        tools:text="09:00 am, 24th February, 2021"
+        android:textSize="@dimen/sp_18"/>
+
+    <TextView
+        android:id="@+id/tv_booking_note"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_booking_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="?text_color_primary"
+        android:visibility="gone"
+        tools:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+        android:textSize="@dimen/sp_12"/>
+
+    <Button
+        android:layout_toLeftOf="@+id/view_center"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_below="@+id/tv_booking_note"
+        android:id="@+id/btn_cancel"
+        android:padding="@dimen/dp_12"
+        android:layout_width="@dimen/dp_220"
+        android:layout_height="@dimen/dp_70"
+        android:layout_centerVertical="true"
+        android:background="@drawable/rounded_corners_white_outline"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_24"
+        android:layout_marginTop="@dimen/dp_60"
+        android:visibility="visible"/>
+
+    <View
+        android:id="@+id/view_center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_booking_note"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="1dp"
+        android:visibility="visible"/>
+
+    <Button
+        android:layout_toRightOf="@+id/view_center"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_below="@+id/tv_booking_note"
+        android:id="@+id/btn_ok"
+        android:padding="@dimen/dp_12"
+        android:layout_width="@dimen/dp_220"
+        android:layout_height="@dimen/dp_70"
+        android:layout_centerVertical="true"
+        android:background="@drawable/button_rounded_corner_bg"
+        android:text="@string/ok"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_24"
+        android:layout_marginTop="@dimen/dp_60"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_dining_reservation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/img_reservation_confirm"
+            android:layout_width="@dimen/dp_250"
+            android:layout_height="@dimen/dp_250"
+            android:src="@drawable/dining_reservation_confirm"/>
+
+        <TextView
+            android:id="@+id/tv_booking_confirm_reservation"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/img_reservation_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="?text_color_primary"
+            android:text="@string/confirm_table_booking"
+            android:textSize="@dimen/sp_24"/>
+
+        <TextView
+            android:id="@+id/tv_booking_name"
+            android:layout_marginTop="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_booking_confirm_reservation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="?text_color_primary"
+            tools:text="Vinod Silaylaan"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:id="@+id/tv_booking_date_reservation"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_booking_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="?text_color_primary"
+            tools:text="09:00 am, 24th February, 2021"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:id="@+id/tv_booking_note_reservation"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_booking_date_reservation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="?text_color_primary"
+            android:text="@string/tablecheck_warning"
+            android:textSize="@dimen/sp_12"/>
+
+        <Button
+            android:layout_toLeftOf="@+id/view_center_reservation"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_below="@+id/tv_booking_note_reservation"
+            android:id="@+id/btn_cancel_reservation"
+            android:padding="@dimen/dp_12"
+            android:layout_width="@dimen/dp_220"
+            android:layout_height="@dimen/dp_70"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rounded_corners_white_outline"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24"
+            android:layout_marginTop="@dimen/dp_60"
+            android:visibility="visible"/>
+
+        <View
+            android:id="@+id/view_center_reservation"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_booking_note_reservation"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="1dp"
+            android:visibility="visible"/>
+
+        <Button
+            android:layout_toRightOf="@+id/view_center_reservation"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_below="@+id/tv_booking_note_reservation"
+            android:id="@+id/btn_confirm"
+            android:padding="@dimen/dp_12"
+            android:layout_width="@dimen/dp_220"
+            android:layout_height="@dimen/dp_70"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_rounded_corner_bg"
+            android:text="@string/confirm"
+            android:textAllCaps="false"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24"
+            android:layout_marginTop="@dimen/dp_60"/>
+    </RelativeLayout>
+
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/common_toolbar_layout"
+        layout="@layout/common_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/smart_flow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_84"
+        android:layout_marginTop="@dimen/dp_46"
+        android:paddingStart="@dimen/dp_40"
+        android:paddingEnd="@dimen/dp_40">
+
+        <TextView
+            android:id="@+id/smartflow_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24" />
+
+        <RadioButton
+            android:id="@+id/smart_flow_radio"
+            style="@style/MyRadioButton"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:buttonTint="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_alignParentBottom="true"
+            android:background="?divider" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dialog_flow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_84">
+
+        <TextView
+            android:id="@+id/dialogflow_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_40"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24" />
+
+        <RadioButton
+            android:id="@+id/dialog_flow_radio"
+            style="@style/MyRadioButton"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:buttonTint="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_alignParentBottom="true"
+            android:background="?divider" />
+
+    </RelativeLayout>
+
+</LinearLayout>

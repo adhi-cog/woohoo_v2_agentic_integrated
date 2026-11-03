@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/morning">
+
+<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:alpha="0.6"
+        android:id="@+id/image"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#66224EB3"
+        android:paddingTop="@dimen/dp_40"
+        android:paddingBottom="@dimen/dp_40"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Hello Alex!"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-regular"
+            android:textSize="@dimen/sp_40"
+            android:textStyle="italic"
+            android:gravity="center"
+
+            />
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Welcome to RITZ"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-regular"
+            android:textSize="@dimen/sp_50"
+            android:layout_marginTop="@dimen/dp_30"
+            android:textStyle="bold"
+            android:gravity="center"
+
+            />
+
+        <TextView
+            android:id="@+id/stay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/have_a_pleasant_stay"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-regular"
+            android:textSize="@dimen/sp_30"
+            android:layout_marginTop="@dimen/dp_20"
+            android:textStyle="bold"
+            android:gravity="center"
+
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/explore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/explore_woohoo"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-regular"
+        android:textSize="@dimen/sp_35"
+        android:layout_toLeftOf="@+id/arrow"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:textStyle="normal"
+        android:gravity="center"
+
+        />
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/dp_20"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp_20"
+        android:src="@drawable/ic_arrow_right" />
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/dp_10"
+        android:layout_margin="@dimen/dp_10"
+        android:src="@drawable/ic_cancel" />
+
+</RelativeLayout>

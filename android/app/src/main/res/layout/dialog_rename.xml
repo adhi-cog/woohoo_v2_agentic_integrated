@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_13pt33"
+    app:cardBackgroundColor="?tile_color_primary"
+    app:cardCornerRadius="@dimen/dp_10pt66">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_40">
+
+        <TextView
+            android:id="@+id/rename_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_53"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/rename"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/rename_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_53"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:background="@drawable/bg_stroke_edit_text"
+            android:fontFamily="sans-serif"
+            android:hint="@string/enter_light_name_here"
+            android:maxLines="1"
+            android:paddingStart="@dimen/dp_26pt66"
+            android:paddingTop="@dimen/dp_18pt6"
+            android:paddingBottom="@dimen/dp_18pt6"
+            android:textColor="@color/white"
+            android:textColorHint="?tile_color_secondary"
+            android:textSize="@dimen/sp_24"
+            app:layout_constraintTop_toBottomOf="@+id/rename_title" />
+
+        <Button
+            android:id="@+id/button_rename"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_26"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:background="@drawable/button_background"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_20"
+            android:text="@string/rename"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_21"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/button_cancel"
+            app:layout_constraintTop_toBottomOf="@+id/rename_edittext" />
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_26"
+            android:background="@drawable/bg_cancel_button"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_20"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_21"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/button_rename"
+            app:layout_constraintTop_toBottomOf="@+id/rename_edittext" />
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_26"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:background="@drawable/button_background"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_20"
+            android:text="@string/delete_light"
+            android:textColor="@color/red"
+            android:textSize="@dimen/sp_21"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_rename" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

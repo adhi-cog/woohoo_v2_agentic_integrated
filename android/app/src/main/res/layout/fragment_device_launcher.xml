@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/fragment_device_launcher_relative_layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/common_toolbar"
+            android:id="@+id/fragment_common_toolbar"/>
+
+        <!--<ImageView-->
+        <!--android:id = "@+id/fragment_device_launcher_image_view_add_device_icon"-->
+        <!--android:layout_width = "@dimen/fragment_device_launcher_image_view_add_device_icon_width_height"-->
+        <!--android:layout_height = "@dimen/fragment_device_launcher_image_view_add_device_icon_width_height"-->
+        <!--android:layout_alignParentEnd = "true"-->
+        <!--android:layout_centerVertical = "true"-->
+        <!--android:layout_marginEnd = "@dimen/fragment_device_launcher_image_view_add_device_icon_margin_end"-->
+        <!--android:contentDescription = "@string/app_name"-->
+        <!--android:padding = "@dimen/fragment_device_launcher_image_view_add_device_icon_padding"-->
+        <!--app:srcCompat = "@drawable/ic_devices_add"/>-->
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_device_launcher_linear_layout_no_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/dp_48"
+        android:layout_marginEnd="@dimen/dp_48"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fragment_device_launcher_image_view_no_device"
+            android:layout_width="@dimen/fragment_device_launcher_image_view_no_device_width_height"
+            android:layout_height="@dimen/fragment_device_launcher_image_view_no_device_width_height"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_devices_empty" />
+
+        <TextView
+            android:id="@+id/fragment_device_launcher_text_view_no_device_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_36"
+            android:gravity="center"
+            android:text="@string/fragment_devices_no_device_txt"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_40" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fragment_device_launcher_text_view_discover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp_48"
+        android:background="@drawable/shape_curve_rect"
+        android:gravity="center"
+        android:padding="@dimen/dp_20"
+        android:text="@string/fragment_devices_discover"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_32"
+        android:textStyle="normal" />
+
+    <ProgressBar
+        android:id="@+id/fragment_devices_progress_bar"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_centerInParent="true" />
+
+    <com.sb.woohoo.custom.RecyclerViewEmptySupport
+        android:id="@+id/fragment_device_launcher_recycler_view_device_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fragment_device_launcher_text_view_discover"
+        android:layout_below="@+id/fragment_device_launcher_relative_layout_toolbar"
+        android:visibility="gone" />
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

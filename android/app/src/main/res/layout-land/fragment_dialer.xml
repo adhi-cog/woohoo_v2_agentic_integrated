@@ -1,0 +1,334 @@
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen_bg_gradient"
+    android:clickable="true"
+    tools:context=".ui.main.fragments.dialer.DialerFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/sip_quick_actions_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:fillViewport="true"
+                android:paddingStart="@dimen/dp_24"
+                android:paddingTop="@dimen/dp_24"
+                android:paddingEnd="@dimen/dp_24"
+                android:paddingBottom="@dimen/dp_240">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/sip_quick_actions_room_label"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:letterSpacing="0.04"
+                            android:maxLines="1"
+                            android:textColor="?text_color_primary"
+                            android:textSize="@dimen/sp_20"
+                            android:textStyle="bold"
+                            tools:text="ROOM1901" />
+
+                        <TextClock
+                            android:id="@+id/sip_quick_actions_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:format12Hour="hh:mm a"
+                            android:format24Hour="HH:mm"
+                            android:letterSpacing="0.06"
+                            android:textColor="@color/sip_header_muted"
+                            android:textSize="@dimen/sp_20"
+                            tools:text="08:42 AM" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_48"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/sip_quick_actions_greeting_prefix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="?text_color_primary"
+                            android:textSize="@dimen/sp_40"
+                            android:textStyle="bold"
+                            tools:text="Good Morning," />
+
+                        <TextView
+                            android:id="@+id/sip_quick_actions_greeting_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:textColor="@color/sip_greeting_accent"
+                            android:textSize="@dimen/sp_40"
+                            android:textStyle="bold"
+                            tools:text="Mr. Smith." />
+
+                        <TextView
+                            android:id="@+id/sip_quick_actions_hero_subtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_12"
+                            android:text="@string/sip_quick_actions_hero_subtitle"
+                            android:textColor="@color/sip_header_muted"
+                            android:textSize="@dimen/sp_18" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/sip_quick_actions_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_32"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never"
+                        android:paddingBottom="@dimen/dp_24"
+                        tools:listitem="@layout/item_sip_quick_action" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fragment_dialer_manual_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp_24"
+                android:paddingTop="@dimen/dp_24"
+                android:paddingEnd="@dimen/dp_24"
+                android:paddingBottom="@dimen/sip_manual_bottom_padding">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/fragment_dialer_image_view_home"
+                            android:layout_width="@dimen/dp_44"
+                            android:layout_height="@dimen/dp_44"
+                            android:contentDescription="@string/back"
+                            android:padding="@dimen/dp_10"
+                            android:src="@drawable/ic_back_arrow" />
+
+                        <TextView
+                            android:id="@+id/sip_manual_room_label"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:letterSpacing="0.04"
+                            android:maxLines="1"
+                            android:textColor="?text_color_primary"
+                            android:textSize="@dimen/sp_20"
+                            android:textStyle="bold"
+                            tools:text="ROOM1901" />
+
+                        <TextClock
+                            android:id="@+id/sip_manual_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:format12Hour="hh:mm a"
+                            android:format24Hour="HH:mm"
+                            android:letterSpacing="0.06"
+                            android:textColor="@color/sip_header_muted"
+                            android:textSize="@dimen/sp_20"
+                            tools:text="08:42 AM" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fragment_dialer_relative_layout_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/sip_manual_output_top_margin"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/fragment_dialer_image_view_log"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/sip_manual_dialer_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:letterSpacing="0.12"
+                            android:text="@string/sip_manual_dialer_title"
+                            android:textAllCaps="true"
+                            android:textColor="@color/sip_dialer_title"
+                            android:textSize="@dimen/sp_24" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/sip_manual_number_top_margin"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/fragment_dialer_edit_text_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:cursorVisible="true"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:inputType="phone"
+                                android:maxLines="1"
+                                android:textColor="@android:color/white"
+                                android:textCursorDrawable="@drawable/bg_sip_dialer_cursor"
+                                android:textIsSelectable="true"
+                                android:textSize="@dimen/sip_manual_number_text_size"
+                                tools:text="508" />
+
+                            <ImageView
+                                android:id="@+id/fragment_dialer_image_view_back"
+                                android:layout_width="@dimen/dp_44"
+                                android:layout_height="@dimen/dp_44"
+                                android:layout_marginStart="@dimen/dp_12"
+                                android:background="@drawable/bg_sip_dialer_icon_circle"
+                                android:contentDescription="@string/back"
+                                android:padding="@dimen/dp_10"
+                                android:src="@drawable/ic_backspace"
+                                android:tint="@android:color/white"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/sip_manual_dialer_subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:text="@string/sip_manual_dialer_subtitle"
+                            android:textColor="@color/sip_dialer_subtitle"
+                            android:textSize="@dimen/sp_30"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <RelativeLayout
+                        android:id="@+id/fragment_dialer_relative_layout_action"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/sip_manual_content_gap">
+
+                        <RelativeLayout
+                            android:id="@+id/fragment_dialer_image_view_call"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_100"
+                            android:layout_marginStart="@dimen/dp_24"
+                            android:layout_marginEnd="@dimen/dp_24"
+                            android:background="@drawable/bg_sip_accept_button"
+                            android:clickable="true"
+                            android:contentDescription="@string/sip_manual_dialer_call_action"
+                            android:focusable="true"
+                            android:paddingStart="@dimen/dp_24"
+                            android:paddingEnd="@dimen/dp_24">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_call"
+                                android:tint="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/sip_manual_dialer_call_action"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/sp_30"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/view_dialer"
+                    layout="@layout/view_dialer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dp_24" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <include
+            android:id="@+id/sip_bottom_nav"
+            layout="@layout/include_sip_bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sip_bottom_nav_height"
+            android:layout_gravity="bottom" />
+
+        <ProgressBar
+            android:id="@+id/fragment_contacts_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateTint="#FFF"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

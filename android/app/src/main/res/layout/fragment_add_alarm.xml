@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen_bg_gradient"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true">
+
+    <include
+        android:id="@+id/fragment_settings_relative_layout_header"
+        layout="@layout/common_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_settings_relative_layout_header"
+        android:layout_marginTop="@dimen/dp_16">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_top_cornered_alarm_layout"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_16">
+
+            <!--<RelativeLayout
+                android:id="@+id/layout_selected_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tue, Wed"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/ic_date_range_black_24dp"/>
+
+            </RelativeLayout>-->
+
+            <!--<LinearLayout
+                android:id="@+id/layout_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_selected_day"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_day_button_unselected"
+                    android:fontFamily="sans-serif"
+                    android:padding="16dp"
+                    android:text="M"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_day_button_unselected"
+                    android:fontFamily="sans-serif"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="16dp"
+                    android:text="T"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_day_button_unselected"
+                    android:fontFamily="sans-serif"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="16dp"
+                    android:text="W"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_day_button_unselected"
+                    android:fontFamily="sans-serif"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="16dp"
+                    android:text="Th"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_day_button_unselected"
+                    android:fontFamily="sans-serif"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="16dp"
+                    android:text="F"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_day_button_unselected"
+                    android:fontFamily="sans-serif"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="16dp"
+                    android:text="Sa"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_day_button_unselected"
+                    android:fontFamily="sans-serif"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="16dp"
+                    android:text="S"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/layout_alarm_sound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_alarm_sound"
+                android:padding="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_50"
+                android:layout_marginBottom="@dimen/dp_50">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/alarm_sound"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_18"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/xyz_melody"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="?text_color_secondary"
+                        android:textSize="@dimen/sp_16"/>
+                </LinearLayout>
+
+                <!--<Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="true"/>-->
+
+            </RelativeLayout>
+
+            <!--<RelativeLayout
+                android:id="@+id/layout_snooze"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_alarm_sound"
+                android:background="@drawable/bg_alarm_sound"
+                android:padding="16dp"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Snooze"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5 mins, 3 times"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="?text_color_secondary"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="true"/>
+
+            </RelativeLayout>
+-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_below="@id/layout_alarm_sound">
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/cancel"
+                    android:gravity="center"
+                    android:textSize="@dimen/sp_20"
+                    android:padding="@dimen/dp_10"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-medium"/>
+
+
+                <View
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"/>
+                <TextView
+                    android:id="@+id/tv_save"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/save"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_10"
+                    android:textSize="@dimen/sp_20"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-medium"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/layout_bottom_view">
+           <!-- <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_alarm_sound"
+                android:layout_centerInParent="true"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="Select Time"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:fontFamily="sans-serif-light"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"/>-->
+
+            <TimePicker
+                android:id="@+id/time_picker"
+                android:theme="@style/TimePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:timePickerMode="spinner" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

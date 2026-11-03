@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_weather_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/fragment_weather_text_view_weather_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_24" />
+
+    <LinearLayout
+        android:id="@+id/fragment_weather_current_temp_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_below="@+id/fragment_weather_text_view_weather_date"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fragment_weather_text_view_current_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="-20dp"
+            android:includeFontPadding="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_160" />
+
+        <TextView
+            android:id="@+id/fragment_weather_text_view_current_temp_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_40" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fragment_weather_text_view_weather_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_weather_current_temp_layout"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_37" />
+
+    <LinearLayout
+        android:id="@+id/fragment_weather_current_temp_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_weather_text_view_weather_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fragment_weather_icon_downward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_2"
+            app:srcCompat="@drawable/ic_arrow_down" />
+
+        <TextView
+            android:id="@+id/fragment_weather_text_view_low_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_21_33" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fragment_weather_icon_upward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_toolbar_parent_margin_top"
+            android:layout_marginTop="@dimen/dp_2"
+            app:srcCompat="@drawable/ic_arrow_up" />
+
+        <TextView
+            android:id="@+id/fragment_weather_text_view_high_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_21_33" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/fragment_weather_divider_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:visibility="gone"
+        android:layout_below="@id/fragment_weather_current_temp_layout1"
+        android:layout_marginTop="@dimen/fragment_qna_top_header_text_view_margin_left"
+        android:background="#33B3B3B3" />
+</RelativeLayout>

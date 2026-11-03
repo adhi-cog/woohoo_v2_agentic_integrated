@@ -1,0 +1,33 @@
+# ── secrets: never commit ───────────────────────────────────────────────
+# A Google service-account key was previously committed to the Android repo and
+# ships inside the APK. It is rotated and kept out of git here. Supply it locally
+# from credential.json.example.
+android/app/src/main/res/raw/credential.json
+**/google-services.json
+.env
+*.env
+!*.env.example
+agentic/deploy.sh
+**/local.properties
+*.keystore
+*.jks
+# Signing keys. Both are referenced by app/build.gradle with the password inline;
+# supply them out of band and move the passwords to local.properties or CI secrets.
+android/app/woohoohub-keystore
+android/app/platform.keystore
+
+# ── build output ────────────────────────────────────────────────────────
+node_modules/
+dist/
+coverage/
+.gradle/
+**/build/
+.idea/
+*.iml
+.jdks/
+*.apk
+*.aab
+
+# ── os ──────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

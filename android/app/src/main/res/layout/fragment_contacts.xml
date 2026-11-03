@@ -1,0 +1,145 @@
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    android:focusable="true"
+    android:clickable="true"
+    tools:context=".ui.main.fragments.contacts.ContactsFragment">
+
+    <RelativeLayout
+        android:id="@+id/fragment_contacts_relative_layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/common_toolbar"
+            android:id="@+id/fragment_common_toolbar"/>
+
+        <ImageView
+            android:id="@+id/fragment_contacts_image_view_group"
+            android:layout_width="@dimen/common_toolbar_back_width_height"
+            android:layout_height="@dimen/common_toolbar_back_width_height"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp_48"
+            android:layout_marginEnd="@dimen/fragment_contacts_image_view_group_margin_end"
+            android:contentDescription="@string/hint_second_name"
+            android:padding="@dimen/fragment_contacts_image_view_group_padding"
+            android:src="@drawable/ic_group_44dp_white"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_contacts_relative_layout_toolbar"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/fragment_contacts_relative_layout_toolbar"
+            android:paddingStart="@dimen/fragment_contacts_relative_layout_content_padding_start_end"
+            android:paddingTop="@dimen/fragment_contacts_relative_layout_content_padding_top"
+            android:paddingEnd="@dimen/fragment_contacts_relative_layout_content_padding_start_end">
+
+            <TextView
+                android:id="@+id/fragment_contacts_text_view_family_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:paddingStart="@dimen/fragment_contacts_text_view_family_title_padding_start_end"
+                android:paddingEnd="@dimen/fragment_contacts_text_view_family_title_padding_start_end"
+                android:text="@string/fragment_contacts_text_view_title_family"
+                android:textColor="@color/white_55_opacity"
+                android:textSize="@dimen/fragment_contacts_text_view_family_title_text_size" />
+
+            <RelativeLayout
+                android:id="@+id/fragment_contacts_relative_layout_recycler_family"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_contacts_relative_layout_recycler_family_height"
+                android:layout_below="@+id/fragment_contacts_text_view_family_title"
+                android:layout_marginTop="@dimen/fragment_contacts_relative_layout_recycler_family_margin_top">
+
+                <com.sb.woohoo.custom.RecyclerViewEmptySupport
+                    android:id="@+id/fragment_contacts_recycler_view_family"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fragment_contacts_recycler_view_family_height"
+                    android:overScrollMode="never" />
+
+                <TextView
+                    android:id="@+id/fragment_contacts_text_view_no_family_members"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/fragment_contacts_text_view_no_family_members_padding_start_end"
+                    android:paddingEnd="@dimen/fragment_contacts_text_view_no_family_members_padding_start_end"
+                    android:text="@string/fragment_contacts_text_view_no_family_members"
+                    android:textColor="@color/white_20_opacity"
+                    android:textSize="@dimen/fragment_contacts_text_view_no_family_members_text_size"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/fragment_contacts_text_view_all_contacts_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fragment_contacts_relative_layout_recycler_family"
+                android:layout_marginTop="@dimen/fragment_contacts_text_view_all_contacts_title_margin_top"
+                android:fontFamily="sans-serif-light"
+                android:paddingStart="@dimen/fragment_contacts_text_view_all_contacts_title_padding_start_end"
+                android:paddingEnd="@dimen/fragment_contacts_text_view_all_contacts_title_padding_start_end"
+                android:text="@string/fragment_contacts_text_view_title_all_contacts"
+                android:textColor="@color/white_55_opacity"
+                android:textSize="@dimen/fragment_contacts_text_view_all_contacts_title_text_size" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fragment_contacts_text_view_all_contacts_title"
+                android:layout_marginTop="@dimen/fragment_contacts_all_contacts_layout_margin_top"
+                android:layout_marginBottom="@dimen/margin_top_05"
+                android:clipToPadding="false">
+
+                <com.sb.woohoo.custom.RecyclerViewEmptySupport
+                    android:id="@+id/fragment_contacts_recycler_view_all_contacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corners_white_transparent"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never" />
+
+                <TextView
+                    android:id="@+id/fragment_contacts_text_view_no_contacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/fragment_contacts_text_view_no_contacts_margin_top_bottom"
+                    android:layout_marginBottom="@dimen/fragment_contacts_text_view_no_contacts_margin_top_bottom"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/fragment_contacts_text_view_no_contacts_padding_start_end"
+                    android:paddingEnd="@dimen/fragment_contacts_text_view_no_contacts_padding_start_end"
+                    android:text="@string/fragment_contacts_text_view_no_contacts"
+                    android:textColor="@color/white_20_opacity"
+                    android:textSize="@dimen/fragment_contacts_text_view_no_contacts_text_size"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/fragment_contacts_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:indeterminateTint="#FFF"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

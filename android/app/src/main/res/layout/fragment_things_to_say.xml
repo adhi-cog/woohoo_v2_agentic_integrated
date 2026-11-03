@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_update_input_interceptor_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    tools:context=".ui.main.fragments.settings.thingstosay.ThingsToSayFragment">
+
+    <include
+        android:id="@+id/fragment_update_common_toolbar_layout"
+        layout="@layout/common_toolbar" />
+
+    <include layout="@layout/data_loading_layout"
+        android:id="@+id/fragment_data_loading"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_things_to_say_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_update_common_toolbar_layout" />
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

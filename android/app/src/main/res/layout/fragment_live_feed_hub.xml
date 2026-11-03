@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_live_feed_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_primary"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Layout that will be visible to user when dropping is under initialising  -->
+    <RelativeLayout
+        android:id="@+id/live_feed_connecting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/person_image"
+            android:layout_width="@dimen/dp_350"
+            android:layout_height="@dimen/dp_350"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_48"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/person_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/person_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_28"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-light"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_42" />
+
+        <TextView
+            android:id="@+id/connecting_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/person_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/live_feed_initializing"
+            android:textColor="?tile_color_secondary"
+            android:textSize="@dimen/dp_26" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_40">
+
+            <ImageView
+                android:id="@+id/img_reject_call"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_live_feed_reject_call" />
+
+            <LinearLayout
+                android:id="@+id/live_feed_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:visibility="gone">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_video_off"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_margin="@dimen/dp_22"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_drop_in_video_off" />
+
+                    <ImageView
+                        android:id="@+id/img_video_on"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_margin="@dimen/dp_22"
+                        app:srcCompat="@drawable/ic_drop_in_video_on" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/img_call_end"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp_10"
+                    app:srcCompat="@drawable/ic_live_feed_reject_call" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_mute_off"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_22"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_drop_in_mic_off" />
+
+                    <ImageView
+                        android:id="@+id/img_mute_on"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_22"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_drop_in_mic_on" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- Layout that will be visible to user when sync countdown ends  -->
+    <RelativeLayout
+        android:id="@+id/live_feed_connected_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/content_live_feed_to_hub"
+            android:id="@+id/fragment_content_live_feed_to_hub"/>
+    </RelativeLayout>
+</RelativeLayout>

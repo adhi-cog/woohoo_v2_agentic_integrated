@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="local_video_size">90dp</dimen>
+    <dimen name="local_video_margin">16dp</dimen>
+    <dimen name="header_size">54dp</dimen>
+
+    <dimen name="info_margin">16dp</dimen>
+    <dimen name="login_button_radius">32dp</dimen>
+    <dimen name="subtitle_text_size">30sp</dimen>
+    <dimen name="title_text_size">32sp</dimen>
+    <dimen name="super_title_text_size">32sp</dimen>
+    <dimen name="card_album_radius">4dp</dimen>
+
+    <dimen name="heading_margin_top">71dp</dimen>
+    <dimen name="sub_heading_margin_top">40dp</dimen>
+    <dimen name="sub_heading_font_size">16sp</dimen>
+    <dimen name="heading_font_size">28sp</dimen>
+    <dimen name="text_font_size">20sp</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding_normal">24dp</dimen>
+    <dimen name="padding_event_home">28dp</dimen>
+    <dimen name="padding_play_button">32dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_small">12dp</dimen>
+    <dimen name="padding_tiny">5dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+    <dimen name="padding_13">13dp</dimen>
+    <dimen name="padding_70dp">70dp</dimen>
+
+    <!-- Margin -->
+    <dimen name="margin_tiny">5dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_normal">15dp</dimen>
+    <dimen name="margin_big">12dp</dimen>
+    <dimen name="margin_devices_home">22dp</dimen>
+    <dimen name="margin_medium">32dp</dimen>
+    <dimen name="margin_large">50dp</dimen>
+    <dimen name="margin_large_80">80dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="text_size_small_15">15sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_normal">18sp</dimen>
+    <dimen name="text_size_big">30sp</dimen>
+    <dimen name="text_size_large">40dp</dimen>
+    <dimen name="text_size_large_50">50dp</dimen>
+    <dimen name="text_size_22sp">22sp</dimen>
+    <dimen name="text_size">16sp</dimen>
+    <dimen name="text_size_20">16sp</dimen>
+    <dimen name="text_size_tiny">12sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_32">32sp</dimen>
+
+    <!-- Strokes -->
+    <dimen name="stroke_medium">5dp</dimen>
+
+    <!-- Corners -->
+    <dimen name="corners_normal">5dp</dimen>
+    <dimen name="corners_small">16dp</dimen>
+    <dimen name="corners_circular">50dp</dimen>
+
+    <!-- Icon sizes -->
+    <dimen name="icon_huge">120dp</dimen>
+    <dimen name="icon_size">90dp</dimen>
+    <dimen name="icon_size_80">80dp</dimen>
+    <dimen name="icon_large">70dp</dimen>
+    <dimen name="icon_big">45dp</dimen>
+    <dimen name="icon_home">60dp</dimen>
+    <dimen name="icon_small">24dp</dimen>
+    <dimen name="icon_medium">36dp</dimen>
+    <dimen name="icon_size_25">25dp</dimen>
+
+
+    <!-- Header resources -->
+    <dimen name="header_height">72dp</dimen>
+    <dimen name="header_icon_width">45dp</dimen>
+    <dimen name="header_icon_padding">10dp</dimen>
+
+    <!-- News fragment-->
+    <dimen name="progress_bar_height">3dp</dimen>
+    <dimen name="buttons_width">70dp</dimen>
+
+    <!-- layout-large/fragment_home_new.xml -->
+    <dimen name="orb_height">180dp</dimen>
+
+
+    <!-- SettingsActivity -->
+    <dimen name="single_card_height">150dp</dimen>
+    <dimen name="single_card_width">150dp</dimen>
+    <dimen name="circle_width">70dp</dimen>
+    <dimen name="circle_height">70dp</dimen>
+    <dimen name="icon_height">30dp</dimen>
+    <dimen name="icon_width">30dp</dimen>
+
+
+    <!-- GifSplashScreen-->
+
+    <dimen name="gif_height">320dp</dimen>
+    <dimen name="gif_width">320dp</dimen>
+
+
+    <!-- WooHoo text pAdding-->
+    <dimen name="woo_hoo_text_padding">25dp</dimen>
+    <dimen name="woo_hoo_text_size">20sp</dimen>
+    <dimen name="woo_hoo_voice_corner">10dp</dimen>
+    <dimen name="woo_hoo_text_height">70dp</dimen>
+
+    <!-- ContactsScreen -->
+    <dimen name="toolbar_height">60dp</dimen>
+    <dimen name="bottom_button_height">60dp</dimen>
+    <dimen name="margin_left">24dp</dimen>
+    <dimen name="margin_right">24dp</dimen>
+    <dimen name="margin_bottom">32dp</dimen>
+    <dimen name="margin_top">20dp</dimen>
+    <dimen name="margin_top_10">10dp</dimen>
+    <dimen name="margin_top_05">05dp</dimen>
+
+    <dimen name="layout_margin">16dp</dimen>
+    <dimen name="contacts_margin">10dp</dimen>
+    <dimen name="toolbar_text_size">24sp</dimen>
+    <dimen name="contacts_image_height">48dp</dimen>
+    <dimen name="contacts_image_width">48dp</dimen>
+    <dimen name="contacts_layout_height">150dp</dimen>
+    <dimen name="contacts_layout_width">130dp</dimen>
+    <dimen name="contacts_list_item_margin_top">18dp</dimen>
+    <dimen name="contacts_list_item_margin_bottom">15dp</dimen>
+
+    <dimen name="dialer_width">250dp</dimen>
+    <dimen name="dialer_height">300dp</dimen>
+
+
+    <!-- RemoteAlertModel : To Do -->
+    <dimen name="item_to_do_linear_layout_margin_start_end">10dp</dimen>
+    <dimen name="item_to_do_linear_layout_margin_top">10dp</dimen>
+    <dimen name="item_to_do_linear_layout_margin_bottom">10dp</dimen>
+    <dimen name="item_to_do_linear_layout_padding_start_end">23dp</dimen>
+    <dimen name="item_to_do_linear_layout_padding_top_bottom">15dp</dimen>
+    <dimen name="item_to_do_relative_layout_count_width_height">30dp</dimen>
+    <dimen name="item_to_do_relative_layout_count_margin_end">15dp</dimen>
+    <dimen name="item_to_do_text_view_count_size">16sp</dimen>
+    <dimen name="item_to_do_text_view_name_size">20sp</dimen>
+
+    <!-- Fragment : Contacts Profile -->
+    <dimen name="fragment_contacts_profile_padding_start_end">16dp</dimen>
+    <dimen name="fragment_contacts_profile_padding_top">32dp</dimen>
+    <dimen name="fragment_contacts_profile_padding_bottom">24dp</dimen>
+    <dimen name="fragment_contacts_profile_image_view_back_size">36dp</dimen>
+    <dimen name="fragment_contacts_profile_image_view_contact_size">240dp</dimen>
+    <dimen name="fragment_contacts_profile_image_view_contact_margin_top">12dp</dimen>
+    <dimen name="fragment_contacts_profile_text_view_contact_name_margin_top">30dp</dimen>
+    <dimen name="fragment_contacts_profile_text_view_contact_name_text_size">36sp</dimen>
+    <dimen name="fragment_contacts_profile_text_view_contact_number_margin_top">10dp</dimen>
+    <dimen name="fragment_contacts_profile_text_view_contact_number_size">18sp</dimen>
+    <dimen name="fragment_contacts_profile_image_view_button_size">64dp</dimen>
+    <dimen name="fragment_contacts_profile_image_view_button_padding">15dp</dimen>
+    <dimen name="fragment_contacts_profile_text_view_drop_in_padding_top_bottom">15dp</dimen>
+    <dimen name="fragment_contacts_profile_text_view_drop_in_text_size">16sp</dimen>
+    <dimen name="fragment_contacts_profile_relative_layout_padding_start_end">10dp</dimen>
+
+    <!-- ITEM : Family -->
+    <dimen name="item_family_image_view_size">48dp</dimen>
+    <dimen name="item_family_text_view_margin_top">10dp</dimen>
+    <dimen name="item_family_text_view_size">16sp</dimen>
+    <dimen name="item_family_linear_layout_margin_start">0dp</dimen>
+    <dimen name="item_family_linear_layout_margin_end">0dp</dimen>
+    <dimen name="fragment_home_horizontal_scroll_view_height">180dp</dimen>
+    <dimen name="fragment_home_horizontal_scroll_item_width">115dp</dimen>
+    <dimen name="fragment_home_horizontal_scroll_item_height">145dp</dimen>
+    <dimen name="fragment_homr_text_view_date_size">20sp</dimen>
+
+    <!-- ITEM : Music -->
+    <dimen name="fragment_music_root_margin_top">30dp</dimen>
+    <dimen name="icon_size_home">60dp</dimen>
+    <dimen name="fragment_music_pager_container_height">230dp</dimen>
+    <dimen name="fragment_music_header_text_size">24sp</dimen>
+    <dimen name="fragment_music_text_view_song_name_text_size">24sp</dimen>
+    <dimen name="fragment_music_text_view_artist_name_text_size">20sp</dimen>
+    <dimen name="fragment_music_text_view_song_name_margin_start">20dp</dimen>
+    <dimen name="fragment_music_text_view_song_name_margin_end">20dp</dimen>
+    <dimen name="fragment_music_text_view_song_name_margin_top">28dp</dimen>
+    <dimen name="fragment_music_text_view_artist_name_margin_top">8dp</dimen>
+    <dimen name="fragment_music_relative_layout_header_padding_top_bottom">16dp</dimen>
+    <dimen name="fragment_music_text_view_no_account_text_size">20sp</dimen>
+    <dimen name="fragment_music_text_view_no_account_drawable_padding">24dp</dimen>
+    <dimen name="fragment_music_relative_layout_seek_bar_margin_start_end">16dp</dimen>
+    <dimen name="fragment_music_relative_layout_seek_bar_margin_top">10dp</dimen>
+    <dimen name="fragment_music_text_view_duration_size">12sp</dimen>
+    <dimen name="fragment_music_text_view_duration_margin">16dp</dimen>
+    <dimen name="fragment_music_relative_layout_music_control_margin_bottom">28dp</dimen>
+    <dimen name="fragment_music_relative_layout_music_control_margin_top">18dp</dimen>
+    <dimen name="fragment_music_image_view_shuffle_repeat_padding">24dp</dimen>
+    <dimen name="fragment_music_image_view_shuffle_repeat_margin">24dp</dimen>
+    <dimen name="fragment_music_image_view_play_padding">16dp</dimen>
+    <dimen name="fragment_music_image_view_back_padding">10dp</dimen>
+    <dimen name="fragment_music_image_vector_width">24dp</dimen>
+    <dimen name="fragment_music_image_vector_height">19dp</dimen>
+
+    <!-- FRAGMENT : Settings -->
+    <dimen name="fragment_settings_linear_layout_first_row_padding_start_end">10dp</dimen>
+    <dimen name="fragment_settings_linear_layout_first_row_padding_top_bottom">5dp</dimen>
+    <dimen name="fragment_settings_relative_layout_setting_item_margin">5dp</dimen>
+    <dimen name="fragment_settings_relative_layout_setting_item_padding">20dp</dimen>
+    <dimen name="fragment_settings_relative_layout_setting_item_height">140dp</dimen>
+    <dimen name="fragment_settings_relative_layout_setting_item_text_size">12sp</dimen>
+    <dimen name="fragment_settings_relative_layout_setting_item_text_drawable_padding">10dp</dimen>
+    <dimen name="fragment_settings_image_view_home_margin_top">25dp</dimen>
+    <dimen name="fragment_settings_image_view_home_width_height">68dp</dimen>
+    <dimen name="fragment_setting_image_view_width_height">50dp</dimen>
+    <dimen name="fragment_setting_image_view_padding">14dp</dimen>
+    <dimen name="fragment_setting_text_view_size">12sp</dimen>
+    <dimen name="fragment_setting_text_view_padding">10dp</dimen>
+    <dimen name="fragment_setting_image_view_home_width_height">70dp</dimen>
+    <dimen name="fragment_setting_view_margin">15dp</dimen>
+
+    <!-- FRAGMENT : News Audio -->
+    <dimen name="fragment_news_audio_parent_layout_padding_top_bottom">24dp</dimen>
+    <dimen name="fragment_news_audio_parent_layout_padding_start_end">18dp</dimen>
+    <dimen name="fragment_news_audio_card_view_news_elevation">5dp</dimen>
+    <dimen name="fragment_news_audio_card_view_news_card_corner_radius">5dp</dimen>
+    <dimen name="fragment_news_audio_card_view_news_image_width_height">120dp</dimen>
+    <dimen name="fragment_news_audio_text_view_banner_margin_top">16dp</dimen>
+    <dimen name="fragment_news_audio_text_view_banner_text_size">24sp</dimen>
+    <dimen name="fragment_news_audio_relative_layout_player_controls_margin_top">14dp</dimen>
+    <dimen name="fragment_news_audio_relative_layout_player_controls_padding_top_bottom">10dp
+    </dimen>
+    <dimen name="fragment_news_audio_seek_bar_margin_bottom">5dp</dimen>
+    <dimen name="fragment_news_audio_text_view_start_duration_text_size">12sp</dimen>
+    <dimen name="fragment_news_audio_text_view_end_duration_text_size">12sp</dimen>
+    <dimen name="fragment_news_audio_image_view_play_margin_bottom">8dp</dimen>
+    <dimen name="fragment_news_audio_image_view_play_padding">16dp</dimen>
+
+    <!-- LAYOUT : Toolbar -->
+    <dimen name="common_toolbar_padding_top_bottom">12dp</dimen>
+    <dimen name="common_toolbar_padding_start_end">12dp</dimen>
+    <dimen name="common_toolbar_back_width_height">48dp</dimen>
+    <dimen name="common_toolbar_title_text_size">24sp</dimen>
+    <dimen name="common_toolbar_parent_margin_top" format="float" type="dimen">26.67dp</dimen>
+    <dimen name="common_toolbar_title_margin_start_end">60dp</dimen>
+
+    <!-- LAYOUT : DrawerHelper -->
+    <dimen name="drawer_height">305dp</dimen>
+    <dimen name="drawer_ic_height">36dp</dimen>
+    <dimen name="drawer_ic_width">36dp</dimen>
+    <dimen name="drawer_ic_padding">10dp</dimen>
+    <dimen name="drawer_text_margin_top">8dp</dimen>
+    <dimen name="drawer_text_size">13sp</dimen>
+    <dimen name="drawer_seek_layout_height">60dp</dimen>
+    <dimen name="drawer_seek_ic_width">32dp</dimen>
+    <dimen name="drawer_seek_ic_height">32dp</dimen>
+    <dimen name="drawer_seek_ic_padding">12dp</dimen>
+
+    <!-- FRAGMENT : Timer -->
+    <dimen name="fragment_timer_relative_layout_timer_width_height">280dp</dimen>
+    <dimen name="fragment_timer_relative_layout_timer_margin_bottom">30dp</dimen>
+    <dimen name="fragment_timer_image_view_circle_padding">32dp</dimen>
+    <dimen name="fragment_timer_text_view_timer_margin_start_end">45dp</dimen>
+    <dimen name="fragment_timer_text_view_timer_text_size">36sp</dimen>
+    <dimen name="fragment_timer_linear_layout_timer_buttons_margin">36dp</dimen>
+
+    <!-- STYLE : FragmentTimerTextView -->
+    <dimen name="fragment_timer_text_view_padding_top_bottom">15dp</dimen>
+    <dimen name="fragment_timer_text_view_text_size">16sp</dimen>
+
+    <!-- DRAWABLE : Circle Shape & Progress Bar -->
+    <dimen name="circle_thickness">2dp</dimen>
+
+    <!-- FRAGMENT : Register Device -->
+    <dimen name="fragment_register_device_text_view_device_type_text_size">36sp</dimen>
+    <dimen name="fragment_register_device_text_view_device_name_text_size">18sp</dimen>
+    <dimen name="fragment_register_device_text_view_register_margin_bottom">24dp</dimen>
+    <dimen name="fragment_register_device_text_view_register_margin_start_end">20dp</dimen>
+    <dimen name="fragment_register_device_text_view_register_padding">15dp</dimen>
+    <dimen name="fragment_register_device_text_view_register_text_size">16sp</dimen>
+
+    <!-- FRAGMENT : Device Launcher -->
+    <dimen name="fragment_device_launcher_image_view_add_device_icon_width_height">48dp</dimen>
+    <dimen name="fragment_device_launcher_image_view_add_device_icon_margin_end">16dp</dimen>
+    <dimen name="fragment_device_launcher_image_view_add_device_icon_padding">10dp</dimen>
+    <dimen name="fragment_device_launcher_image_view_no_device_width_height">80dp</dimen>
+    <dimen name="fragment_device_launcher_text_view_no_device_message">20sp</dimen>
+    <dimen name="fragment_device_launcher_text_view_no_device_message_margin_top">24dp</dimen>
+    <dimen name="fragment_device_launcher_linear_layout_no_device_margin_start_end">32dp</dimen>
+    <dimen name="fragment_device_launcher_text_view_discover_text_size">16sp</dimen>
+    <dimen name="fragment_device_launcher_text_view_discover_padding">10dp</dimen>
+    <dimen name="fragment_philips_switch_margin_end">24dp</dimen>
+
+    <!-- FRAGMENT : News Headline -->
+    <dimen name="fragment_news_headline_text_view_size">18sp</dimen>
+
+    <!-- FRAGMENT : QnA -->
+    <dimen name="fragment_qna_top_header_text_view_margin_top">16dp</dimen>
+    <dimen name="fragment_qna_top_header_text_view_margin_left">65dp</dimen>
+
+    <!-- ITEM : Contact Family -->
+    <dimen name="item_contact_family_parent_size_width_height">110dp</dimen>
+    <dimen name="item_contact_family_parent_margin_end">5dp</dimen>
+    <dimen name="item_contact_family_image_width_height">48dp</dimen>
+    <dimen name="item_contact_family_image_margin_top">18dp</dimen>
+    <dimen name="item_contact_family_name_margin_bottom">15dp</dimen>
+    <dimen name="item_contact_family_name_margin_top">10dp</dimen>
+    <dimen name="item_contact_family_name_text_size">16sp</dimen>
+    <dimen name="item_contact_family_name_margin_start_end">23dp</dimen>
+
+    <!-- FRAGMENT : Contacts -->
+    <dimen name="fragment_contacts_relative_layout_recycler_family_height">110dp</dimen>
+    <dimen name="fragment_contacts_relative_layout_recycler_family_margin_top">15dp</dimen>
+    <dimen name="fragment_contacts_recycler_view_family_height">110dp</dimen>
+    <dimen name="fragment_contacts_image_view_group_padding">5dp</dimen>
+    <dimen name="fragment_contacts_image_view_group_margin_end">12dp</dimen>
+    <dimen name="fragment_contacts_relative_layout_content_padding_start_end" format="float" type="dimen">
+        14.67dp
+    </dimen>
+    <dimen name="fragment_contacts_relative_layout_content_padding_top">15dp</dimen>
+    <dimen name="fragment_contacts_text_view_family_title_padding_start_end">5dp</dimen>
+    <dimen name="fragment_contacts_text_view_family_title_text_size" format="float" type="dimen">
+        15.67dp
+    </dimen>
+    <dimen name="fragment_contacts_text_view_no_family_members_padding_start_end">5dp</dimen>
+    <dimen name="fragment_contacts_text_view_no_family_members_text_size">25sp</dimen>
+    <dimen name="fragment_contacts_text_view_all_contacts_title_margin_top">25dp</dimen>
+    <dimen name="fragment_contacts_text_view_all_contacts_title_padding_start_end">5dp</dimen>
+    <dimen name="fragment_contacts_text_view_all_contacts_title_text_size" format="float" type="dimen">
+        15.67dp
+    </dimen>
+    <dimen name="fragment_contacts_all_contacts_layout_margin_top">15dp</dimen>
+    <dimen name="fragment_contacts_text_view_no_contacts_margin_top_bottom">10dp</dimen>
+    <dimen name="fragment_contacts_text_view_no_contacts_padding_start_end">5dp</dimen>
+    <dimen name="fragment_contacts_text_view_no_contacts_text_size">25sp</dimen>
+
+    <!-- ITEM : Contact -->
+    <dimen name="item_contact_linear_layout_padding_top_bottom">12dp</dimen>
+    <dimen name="item_contact_linear_layout_padding_start_end">16dp</dimen>
+    <dimen name="item_contact_image_width_height">48dp</dimen>
+    <dimen name="item_contact_name_margin_start">16dp</dimen>
+    <dimen name="item_contact_name_text_size">18sp</dimen>
+
+    <!-- FRAGMENT : QNA -->
+    <dimen name="fragment_qna_text_view_question_qna_margin_start">70dp</dimen>
+    <dimen name="fragment_qna_text_view_question_qna_margin_end">16dp</dimen>
+    <dimen name="fragment_qna_text_view_question_qna_margin_top">20dp</dimen>
+    <dimen name="fragment_qna_text_view_question_qna_text_size">24sp</dimen>
+    <dimen name="fragment_qna_relative_layout_toolbar_layout_margin_top">0dp</dimen>
+    <dimen name="fragment_qna_scroll_view_answer_padding_bottom">15dp</dimen>
+    <dimen name="fragment_qna_linear_view_answer_margin">15dp</dimen>
+    <dimen name="fragment_qna_image_view_answer_image_height">300dp</dimen>
+    <dimen name="fragment_qna_text_view_answer_text_margin_bottom">20dp</dimen>
+    <dimen name="fragment_qna_text_view_answer_text_padding">12dp</dimen>
+    <dimen name="fragment_qna_text_view_answer_text_size">24sp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="padding_05dp">5dp</dimen>
+    <dimen name="padding_2x">16dp</dimen>
+    <dimen name="padding_20dp">20dp</dimen>
+
+
+    <!-- ITEM : Video Search -->
+    <dimen name="item_video_list_height">254dp</dimen>
+    <dimen name="item_video_list_margin_start_end">30dp</dimen>
+    <dimen name="item_video_list_margin_top" format="float" type="dimen">16.67dp</dimen>
+    <dimen name="item_video_list_card_corner_radius">5dp</dimen>
+    <dimen name="item_video_list_linear_layout_bottom_height">80dp</dimen>
+    <dimen name="item_video_list_relative_layout_circle_margin_start">16dp</dimen>
+    <dimen name="item_video_list_view_circle_width_height">40dp</dimen>
+    <dimen name="item_video_list_text_view_serial_no_text_size" format="float" type="dimen">
+        21.33sp
+    </dimen>
+    <dimen name="item_video_list_text_view_name_margin_end">15dp</dimen>
+    <dimen name="item_video_list_text_view_name_margin_start">10dp</dimen>
+    <dimen name="item_video_list_text_view_name_text_size">24sp</dimen>
+
+    <!-- FRAGMENT : To Do -->
+    <dimen name="fragment_to_do_recycler_view_margin_start_end" format="float" type="dimen">12dp
+    </dimen>
+    <dimen name="fragment_to_do_text_view_empty_to_do_list_margin_top">25dp</dimen>
+    <dimen name="fragment_to_do_text_view_empty_to_do_list_drawable_padding">32dp</dimen>
+    <dimen name="fragment_to_do_text_view_empty_to_do_list_text_size" format="float" type="dimen">
+        26.67sp
+    </dimen>
+
+    <!-- FRAGMENT : Update -->
+    <dimen name="fragment_update_text_view_update_margin">32dp</dimen>
+    <dimen name="fragment_update_text_view_update_margin_top_bottom">20dp</dimen>
+    <dimen name="fragment_update_relative_layout_new_update_padding">32dp</dimen>
+    <dimen name="fragment_update_text_view_update_text_size" format="float" type="dimen">21.67sp
+    </dimen>
+    <dimen name="fragment_update_relative_layout_new_update_margin_start_end" format="float" type="dimen">
+        16.67dp
+    </dimen>
+    <dimen name="fragment_update_relative_layout_new_update_margin_top" format="float" type="dimen">
+        21.67dp
+    </dimen>
+    <dimen name="fragment_update_text_view_new_update_available_text_size">24sp</dimen>
+    <dimen name="fragment_update_view_line_height">2dp</dimen>
+    <dimen name="fragment_update_view_margin_top_bottom">28dp</dimen>
+    <dimen name="fragment_update_simple_drawee_view_orb_animation_margin_top">16dp</dimen>
+    <dimen name="fragment_update_image_view_logo_margin_top">28dp</dimen>
+    <dimen name="fragment_update_text_view_version_text_size" format="float" type="dimen">21.33sp
+    </dimen>
+    <dimen name="fragment_update_text_view_change_log_text_size" format="float" type="dimen">
+        21.33sp
+    </dimen>
+    <dimen name="fragment_update_text_view_change_log_margin_top" format="float" type="dimen">
+        21.33dp
+    </dimen>
+    <dimen name="fragment_update_text_view_version_number_margin_top" format="float" type="dimen">
+        21.33dp
+    </dimen>
+    <dimen name="fragment_update_text_view_version_number_text_size" format="float" type="dimen">
+        18.67sp
+    </dimen>
+    <dimen name="fragment_update_image_view_logo_width" format="float" type="dimen">266.67dp</dimen>
+    <dimen name="fragment_update_image_view_logo_height" format="float" type="dimen">49.33dp</dimen>
+
+    <dimen name="margin_20dp">20dp</dimen>
+
+    <dimen name="margin_30dp">30dp</dimen>
+
+    <dimen name="margin_40dp">40dp</dimen>
+
+    <!-- ACTIVITY : Enrollment -->
+    <dimen name="activity_enrollment_relative_layout_parent_padding_start_end">40dp</dimen>
+    <dimen name="activity_enrollment_relative_layout_parent_margin_bottom">32dp</dimen>
+    <dimen name="activity_enrollment_text_view_screen_header_text_size">34sp</dimen>
+    <dimen name="activity_enrollment_text_view_screen_header_2_text_size" format="float" type="dimen">
+        21.67sp
+    </dimen>
+    <dimen name="activity_enrollment_linear_layout_training_margin_top">40dp</dimen>
+    <dimen name="activity_enrollment_linear_layout_training_height">84dp</dimen>
+    <dimen name="activity_enrollment_image_view_icon_width_height" format="float" type="dimen">
+        53.33dp
+    </dimen>
+    <dimen name="activity_enrollment_image_view_icon_padding" format="float" type="dimen">12.67dp
+    </dimen>
+    <dimen name="activity_enrollment_text_view_text_size">28sp</dimen>
+    <dimen name="activity_enrollment_text_view_button_height">62dp</dimen>
+    <dimen name="activity_enrollment_text_view_margin_start" format="float" type="dimen">21.67dp
+    </dimen>
+    <dimen name="activity_enrollment_text_view_button_text_size">20sp</dimen>
+    <dimen name="activity_enrollment_image_view_mic_width_height">160dp</dimen>
+    <dimen name="activity_enrollment_image_view_mic_margin_top" format="float" type="dimen">
+        53.33dp
+    </dimen>
+    <dimen name="activity_enrollment_text_view_voice_train_successful_margin_top" format="float" type="dimen">
+        50.67dp
+    </dimen>
+    <dimen name="activity_enrollment_text_view_voice_train_successful_text_size" format="float" type="dimen">
+        21.67sp
+    </dimen>
+    <dimen name="activity_enrollment_view_line_margin_bottom" format="float" type="dimen">26.67dp
+    </dimen>
+    <dimen name="activity_enrollment_view_line_margin_top" format="float" type="dimen">18.67dp
+    </dimen>
+    <dimen name="activity_enrollment_progress_bar_progress_margin_start_end">40dp</dimen>
+    <dimen name="activity_enrollment_relative_layout_say_bar_height" format="float" type="dimen">
+        93.33dp
+    </dimen>
+    <dimen name="activity_enrollment_text_view_say_bar_text_text_size" format="float" type="dimen">
+        21.33sp
+    </dimen>
+    <dimen name="activity_enrollment_text_view_retrain_voice_text_size">28sp</dimen>
+    <dimen name="activity_enrollment_text_view_enrollment_date_time_text_size">28sp</dimen>
+    <dimen name="activity_enrollment_image_view_icon_arrow_right_padding_top_bottom">16dp</dimen>
+    <dimen name="activity_enrollment_image_view_icon_arrow_right_padding_start_end">20dp</dimen>
+    <dimen name="activity_enrollment_image_view_icon_arrow_right_width_height" format="float" type="dimen">
+        53.33dp
+    </dimen>
+
+
+    <!-- Keypad Dimensions -->
+    <dimen name="key_text_size">24.0sp</dimen>
+    <dimen name="drawableDimen">30.0dp</dimen>
+    <dimen name="digit_vertical_padding">40.0dp</dimen>
+    <dimen name="digit_horizontal_padding">15.0dp</dimen>
+    <dimen name="key_pad_min_height">300.0dp</dimen>
+
+    <dimen name="app_bar_height">150dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="padding_28dp">28dp</dimen>
+    <dimen name="padding_30dp">30dp</dimen>
+    <dimen name="padding_32dp">32dp</dimen>
+
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_15">15sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+
+    <dimen name="sp_21">21sp</dimen>
+    <dimen name="sp_21_33" format="float" type="dimen">21.33sp</dimen>
+    <dimen name="sp_22">22sp</dimen>
+    <dimen name="sp_25">25sp</dimen>
+    <dimen name="sp_32">32sp</dimen>
+    <dimen name="sp_37" format="float" type="dimen">37.33sp</dimen>
+    <dimen name="sp_40">40sp</dimen>
+    <dimen name="sp_160">160sp</dimen>
+
+    <dimen name="dp_220">220dp</dimen>
+    <dimen name="dp_250">250dp</dimen>
+
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_3">3dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+
+    <dimen name="dp_7">7dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_14">14dp</dimen>
+    <dimen name="dp_13" format="float" type="dimen">13.33dp</dimen>
+    <dimen name="dp_34_66" format="float" type="dimen">34.66dp</dimen>
+    <dimen name="dp_85_33" format="float" type="dimen">85.33dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_18">18dp</dimen>
+    <dimen name="dp_19">19dp</dimen>
+    <dimen name="dp_93" format="float" type="dimen">93.33dp</dimen>
+
+    <dimen name="dp_130">130dp</dimen>
+    <dimen name="dp_200">200dp</dimen>
+    <dimen name="dp_213">213dp</dimen>
+    <dimen name="dp_380">380dp</dimen>
+
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_minus_20">-20dp</dimen>
+    <dimen name="dp_23">23dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_25">25dp</dimen>
+    <dimen name="dp_28">28dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_32">32dp</dimen>
+    <dimen name="dp_36">36dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_45">45dp</dimen>
+    <dimen name="dp_48">48dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+
+
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_28">28sp</dimen>
+    <dimen name="dp_220_homebanner">220dp</dimen>
+    <dimen name="sp_14_familyname">14sp</dimen>
+
+
+    <!-- Top Drawer Dimensions -->
+    <dimen name="include_top_drawer_top_linear_layout_height_118_66dp" format="float" type="dimen">
+        118.66dp
+    </dimen>
+    <dimen name="include_top_drawer_top_linear_layout_margin_22_66dp" format="float" type="dimen">
+        22.66dp
+    </dimen>
+    <dimen name="dp_0pt2" format="float" type="dimen">0.2dp</dimen>
+    <dimen name="top_drawer_height_480_dp">480dp</dimen>
+
+    <!-- Fragment Setting -->
+    <dimen name="dimen_fragment_settings_AppBarLayout_Height_134_dp">134dp</dimen>
+    <dimen name="dimen_fragment_settings_AppBarLayout_Margin_26_dp">26dp</dimen>
+
+    <!-- Item Settings -->
+    <dimen name="dp_53">53dp</dimen>
+    <dimen name="margin_start_52">52dp</dimen>
+    <dimen name="margin_start_21">21dp</dimen>
+    <dimen name="dp_0">0dp</dimen>
+    <dimen name="dp_26">26dp</dimen>
+    <dimen name="dp_74">74dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
+
+    <dimen name="dp_9">9dp</dimen>
+    <dimen name="dp_400">400dp</dimen>
+    <dimen name="sp_36">36sp</dimen>
+    <dimen name="dp_84">84dp</dimen>
+    <dimen name="dp_46">46dp</dimen>
+    <dimen name="sp_24">24sp</dimen>
+    <dimen name="dp_22">22dp</dimen>
+    <dimen name="dp_minus_30">-30dp</dimen>
+    <dimen name="dp_64">64dp</dimen>
+
+
+    <dimen name="radio_scale">1</dimen>
+    <dimen name="sp_66">66sp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
+    <dimen name="dp_350">350dp</dimen>
+    <dimen name="sp_42">42sp</dimen>
+    <dimen name="dp_136">136dp</dimen>
+    <dimen name="dp_240">240dp</dimen>
+    <dimen name="dp_42">42dp</dimen>
+    <dimen name="dp_34">34dp</dimen>
+    <dimen name="dp_58">58dp</dimen>
+    <dimen name="sp_26">26sp</dimen>
+    <dimen name="dp_70">70dp</dimen>
+    <dimen name="dp_73">73dp</dimen>
+    <dimen name="dp_90">90dp</dimen>
+    <dimen name="dp_172">172dp</dimen>
+    <dimen name="dp_180">180dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
+    <dimen name="dp_21">21dp</dimen>
+    <dimen name="dp_120">120dp</dimen>
+    <dimen name="dp_35">35dp</dimen>
+    <dimen name="sp_50">50sp</dimen>
+    <dimen name="sp_30">30sp</dimen>
+    <dimen name="sp_35">35sp</dimen>
+
+    <dimen name="dp_0pt3" type="dimen" format="float">0.3dp</dimen>
+    <dimen name="dp_13pt33" type="dimen" format="float">13.33dp</dimen>
+    <dimen name="dp_10pt66" type="dimen" format="float">10.66dp</dimen>
+    <dimen name="dp_26pt66" type="dimen" format="float">26.66dp</dimen>
+    <dimen name="dp_18pt6" type="dimen" format="float">18.6dp</dimen>
+
+    <dimen name="dp_minus_2">-2dp</dimen>
+    <dimen name="dp_75">75dp</dimen>
+    <dimen name="dp_160">160dp</dimen>
+    <dimen name="dp_140">140dp</dimen>
+    <dimen name="dp_300">300dp</dimen>
+    <dimen name="dp_44">44dp</dimen>
+    <dimen name="dp_428">428dp</dimen>
+    <dimen name="dp_105">105dp</dimen>
+    <dimen name="sp_27">27sp</dimen>
+    <dimen name="sp_60">60sp</dimen>
+    <dimen name="dp_17">17dp</dimen>
+    <dimen name="sp_76">76sp</dimen>
+    <dimen name="sp_65">65sp</dimen>
+    <dimen name="dp_320">320dp</dimen>
+    <dimen name="dp_480">480dp</dimen>
+    <dimen name="dp_202">202dp</dimen>
+    <dimen name="sp_19">19sp</dimen>
+    <dimen name="dp_106">106dp</dimen>
+    <dimen name="dp_109">109dp</dimen>
+    <dimen name="dp_114">114dp</dimen>
+    <dimen name="dp_minus_12">-12dp</dimen>
+
+    <dimen name="dp_34pt67" type="dimen" format="float">34.67dp</dimen>
+    <dimen name="dp_85pt33" type="dimen" format="float">85.33dp</dimen>
+
+    <dimen name="dp_150">150dp</dimen>
+    <dimen name="dp_201">201dp</dimen>
+    <dimen name="dp_38">38dp</dimen>
+    <dimen name="dp_168">168dp</dimen>
+
+    <dimen name="dp_65">65dp</dimen>
+    <dimen name="sp_34">34sp</dimen>
+    <dimen name="dp_62">62dp</dimen>
+    <dimen name="sp_13">13sp</dimen>
+    <dimen name="dp_134">134dp</dimen>
+    <dimen name="dp_230">230dp</dimen>
+    <dimen name="dp_110">110dp</dimen>
+    <dimen name="dp_115">115dp</dimen>
+    <dimen name="dp_145">145dp</dimen>
+    <dimen name="dp_254">254dp</dimen>
+
+</resources>

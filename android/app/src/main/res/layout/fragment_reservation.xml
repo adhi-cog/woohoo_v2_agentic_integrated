@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?color_secondary">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/common_toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollview_reservation"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_select_service"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reservation_select_service"
+                android:layout_below="@+id/toolbar"
+                android:textColor="?text_color_primary"
+                android:textSize="@dimen/sp_20"/>
+
+            <TextView
+                android:id="@+id/tv_your_bookings"
+                android:layout_marginEnd="@dimen/dp_24"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reservation_your_bookings"
+                android:layout_below="@+id/toolbar"
+                android:textColor="?text_color_primary"
+                android:textSize="@dimen/sp_20"
+                android:layout_alignParentEnd="true"/>
+
+            <LinearLayout
+                android:id="@+id/layout_customer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_24"
+                android:layout_below="@+id/tv_your_bookings">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/first_name"
+                        android:textSize="@dimen/sp_22"
+                        android:textColor="@color/white"/>
+                <EditText
+                    android:id="@+id/et_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:maxLength="20"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@drawable/rounded_corner_purple"
+                    android:backgroundTint="@color/white"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:padding="@dimen/dp_8"
+                    android:textColor="?colorPrimary"
+                    android:textColorHint="?colorPrimary"
+                    android:textSize="@dimen/sp_16"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/last_name"
+                        android:textSize="@dimen/sp_22"
+                        android:textColor="@color/white"/>
+                    <EditText
+                        android:id="@+id/et_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:maxLength="20"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@drawable/rounded_corner_purple"
+                        android:backgroundTint="@color/white"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:padding="@dimen/dp_8"
+                        android:textColor="?colorPrimary"
+                        android:textColorHint="?colorPrimary"
+                        android:textSize="@dimen/sp_16"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:id="@+id/rv_list_service"
+                android:layout_below="@+id/layout_customer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="@dimen/dp_16"
+                android:id="@+id/tv_select_guests"
+                android:layout_marginStart="@dimen/dp_24"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reservation_select_guests"
+                android:layout_below="@+id/rv_list_service"
+                android:textColor="?text_color_primary"
+                android:textSize="@dimen/sp_20"/>
+
+            <LinearLayout
+                android:id="@+id/ll_container_guest"
+                android:layout_below="@+id/tv_select_guests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp_24"
+                android:paddingEnd="@dimen/dp_24"
+                android:paddingTop="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_12">
+
+                <LinearLayout
+                    android:id="@+id/ll_textView_guest_1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/dp_6"
+                    android:background="@drawable/bg_rect_shape_light">
+
+                    <TextView
+                        android:id="@+id/textView_guest_1"
+                        android:padding="@dimen/dp_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/one"
+                        android:textColor="?text_color_primary"
+                        android:textSize="@dimen/sp_18"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_textView_guest_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/dp_6"
+                    android:background="@drawable/bg_rect_shape_light">
+
+                    <TextView
+                        android:id="@+id/textView_guest_2"
+                        android:padding="@dimen/dp_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/two"
+                        android:textColor="?text_color_primary"
+                        android:textSize="@dimen/sp_18"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_textView_guest_3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/dp_6"
+                    android:background="@drawable/bg_rect_shape_light">
+
+                    <TextView
+                        android:id="@+id/textView_guest_3"
+                        android:padding="@dimen/dp_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/three"
+                        android:textColor="?text_color_primary"
+                        android:textSize="@dimen/sp_18"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_textView_guest_4"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/dp_6"
+                    android:background="@drawable/bg_rect_shape_light">
+
+                    <TextView
+                        android:id="@+id/textView_guest_4"
+                        android:padding="@dimen/dp_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/four"
+                        android:textColor="?text_color_primary"
+                        android:textSize="@dimen/sp_18"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_textView_guest_5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/dp_6"
+                    android:background="@drawable/bg_rect_shape_light">
+
+                    <TextView
+                        android:id="@+id/textView_guest_5"
+                        android:padding="@dimen/dp_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/five"
+                        android:textColor="?text_color_primary"
+                        android:textSize="@dimen/sp_18"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_select_date"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_16"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reservation_select_date"
+                android:layout_below="@+id/ll_container_guest"
+                android:textColor="?text_color_primary"
+                android:textSize="@dimen/sp_20"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:id="@+id/rv_select_date"
+                android:layout_below="@+id/tv_select_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_select_time"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_16"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reservation_select_time"
+                android:layout_below="@+id/rv_select_date"
+                android:textColor="?text_color_primary"
+                android:textSize="@dimen/sp_20"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:id="@+id/rv_select_time"
+                android:layout_below="@+id/tv_select_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_load_more"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/load_more"
+                android:layout_below="@+id/rv_select_time"
+                android:textColor="?text_color_primary"
+                android:visibility="gone"
+                android:textSize="@dimen/sp_20"/>
+
+            <Button
+                android:layout_marginBottom="@dimen/dp_20"
+                android:id="@+id/btn_submit"
+                android:padding="@dimen/dp_12"
+                android:layout_width="@dimen/dp_250"
+                android:layout_height="@dimen/dp_70"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/button_rounded_corner_bg"
+                android:text="@string/str_submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_28"
+                android:layout_below="@+id/rv_select_time"
+                android:layout_marginTop="@dimen/dp_24"/>
+
+        </com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>
+
+    </ScrollView>
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_bar_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_drawer_primary"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_15">
+
+    <!--<androidx.core.widget.NestedScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fillViewport="true">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_40"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_fav_apps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:paddingBottom="@dimen/dp_10"
+                android:visibility="gone"
+                android:text="@string/favorite_apps_that_can_be_accessed_from_home_screen"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_14"/>
+
+            <include
+                android:id="@+id/handle"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                layout="@layout/top_fav_resycle" />
+
+            <TextView
+                android:id="@+id/tv_drag_drop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:visibility="gone"
+                android:text="@string/drag_and_drop_apps_to_your_favorite_section"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_14"/>
+
+        </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_bottom_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"/>
+    <!--</androidx.core.widget.NestedScrollView>-->
+
+</RelativeLayout>

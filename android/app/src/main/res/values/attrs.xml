@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="color_accent" format="reference" />
+    <attr name="color_secondary" format="reference" />
+    <attr name="color_primary" format="reference" />
+    <attr name="tile_color_primary" format="reference" />
+    <attr name="tile_color_secondary" format="reference" />
+    <attr name="tile_color_tertiary" format="reference" />
+    <attr name="text_color_primary" format="reference" />
+    <attr name="text_color_secondary" format="reference" />
+    <attr name="text_color_tertiary" format="reference" />
+
+    <attr name="bg_listening" format="reference" />
+    <attr name="overlay_colour" format="reference" />
+    <attr name="bg_hangup_button" format="reference" />
+    <attr name="divider" format="reference" />
+</resources>

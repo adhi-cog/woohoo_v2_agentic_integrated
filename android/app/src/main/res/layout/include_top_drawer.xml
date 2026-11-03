@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/top_bar_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_20dp"
+    android:background="@drawable/bg_top_drawer"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/top_drawer_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/drawer_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/include_top_drawer_top_linear_layout_height_118_66dp"
+            android:layout_marginLeft="@dimen/include_top_drawer_top_linear_layout_margin_22_66dp"
+            android:layout_marginTop="@dimen/include_top_drawer_top_linear_layout_margin_22_66dp"
+            android:layout_marginRight="@dimen/include_top_drawer_top_linear_layout_margin_22_66dp"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/ll_home"
+                style="@style/DrawerSingleLinearLayout">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/DrawerSingleImage"
+                    app:srcCompat="@drawable/ic_home" />
+
+                <TextView
+                    style="@style/DrawerSingleText"
+                    android:text="@string/home" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mute"
+                style="@style/DrawerSingleLinearLayout">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/muteImage"
+                    style="@style/DrawerSingleImage"
+                    app:srcCompat="@drawable/ic_mute" />
+
+                <TextView
+                    android:id="@+id/muteText"
+                    style="@style/DrawerSingleText"
+                    android:text="@string/mute" />
+
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/ll_date_time"-->
+            <!--style="@style/DrawerSingleLinearLayout">-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_time"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:text="04:11 PM"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="@dimen/text_size_22sp"-->
+            <!--android:textStyle="bold" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_date"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:text="Wed, Sep 12"-->
+            <!--android:textColor="#6f5ea7"-->
+            <!--android:textSize="@dimen/text_size_20" />-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/ll_setting"
+                style="@style/DrawerSingleLinearLayout">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/DrawerSingleImage"
+                    app:srcCompat="@drawable/ic_settings" />
+
+                <TextView
+                    style="@style/DrawerSingleText"
+                    android:text="@string/settings" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/drawer_top_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/include_top_drawer_top_linear_layout_height_118_66dp"
+            android:layout_marginLeft="@dimen/include_top_drawer_top_linear_layout_margin_22_66dp"
+            android:layout_marginRight="@dimen/include_top_drawer_top_linear_layout_margin_22_66dp"
+            android:baselineAligned="false"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/ll_call"
+                style="@style/DrawerSingleLinearLayout"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/DrawerSingleImage"
+                    app:srcCompat="@drawable/ic_call" />
+
+                <TextView
+                    style="@style/DrawerSingleText"
+                    android:text="@string/call" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_drop_in"
+                style="@style/DrawerSingleLinearLayout"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/DrawerSingleImage"
+                    app:srcCompat="@drawable/ic_camera" />
+
+                <TextView
+                    style="@style/DrawerSingleText"
+                    android:gravity="center"
+                    android:text="@string/live_feed" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_surveillance"
+                style="@style/DrawerSingleLinearLayout">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ll_darkmode_img"
+                    style="@style/DrawerSingleImage"
+                    android:src="@drawable/ic_drawable_night_mode_on" />
+
+                <TextView
+                    android:id="@+id/ll_darkmode_text"
+                    style="@style/DrawerSingleText"
+                    android:text="@string/night_mode" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Blutooth"
+
+                style="@style/DrawerSingleLinearLayout">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ll_bluetooth_img"
+                    style="@style/DrawerSingleImage"
+                    app:srcCompat="@drawable/ic_bluetooth" />
+
+                <TextView
+                    android:id="@+id/ll_bluetooth_text"
+                    style="@style/DrawerSingleText"
+                    android:text="@string/blutooth" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0pt2"
+            android:layout_marginTop="@dimen/margin_top_10"
+            android:background="#19000000" />
+
+        <RelativeLayout
+            android:id="@+id/drawer_brightness_layout"
+            style="@style/DrawerSingleSeekLayout"
+            android:layout_marginTop="@dimen/margin_top_10">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/low_brightness"
+                style="@style/DrawerSingleSeekIcon"
+                android:layout_marginStart="@dimen/margin_medium"
+                app:srcCompat="@drawable/ic_low_brightness" />
+
+            <SeekBar
+                android:id="@+id/seek_bar_brightness"
+                style="@style/DrawerSingleSeekBar"
+                android:layout_toStartOf="@+id/high_brightness"
+                android:layout_toEndOf="@+id/low_brightness" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/high_brightness"
+                style="@style/DrawerSingleSeekIcon"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_medium"
+                app:srcCompat="@drawable/ic_high_brightness" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout style="@style/DrawerSingleSeekLayout">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/vol_less_icon_three"
+            style="@style/DrawerSingleSeekIcon"
+            android:layout_marginStart="@dimen/margin_medium"
+            app:srcCompat="@drawable/ic_music_placeholder_black" />
+
+        <SeekBar
+            android:id="@+id/seek_bar_volume_three"
+            style="@style/DrawerSingleSeekBar"
+            android:layout_toStartOf="@+id/vol_max_icon_three"
+            android:layout_toEndOf="@+id/vol_less_icon_three" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/vol_max_icon_three"
+            style="@style/DrawerSingleSeekIcon"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_medium"
+            app:srcCompat="@drawable/ic_music_placeholder_black" />
+
+        <ImageView
+            android:id="@+id/vol_setting"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_6"
+            app:srcCompat="@drawable/ic_vol_up" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/top_drawer_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <RelativeLayout style="@style/DrawerSingleSeekLayout">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/vol_less_icon_two"
+                style="@style/DrawerSingleSeekIcon"
+                android:layout_marginStart="@dimen/margin_medium"
+                app:srcCompat="@drawable/ic_drawer_volume_low" />
+
+            <SeekBar
+                android:id="@+id/seek_bar_volume_two"
+                style="@style/DrawerSingleSeekBar"
+                android:layout_toStartOf="@+id/vol_max_icon_two"
+                android:layout_toEndOf="@+id/vol_less_icon_two" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/vol_max_icon_two"
+                style="@style/DrawerSingleSeekIcon"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_medium"
+                app:srcCompat="@drawable/ic_drawer_volume_high" />
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/DrawerSingleSeekLayout">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/vol_less_icon"
+                style="@style/DrawerSingleSeekIcon"
+                android:layout_marginStart="@dimen/margin_medium"
+                app:srcCompat="@drawable/ic_settings" />
+
+            <SeekBar
+                android:id="@+id/seek_bar_volume"
+                style="@style/DrawerSingleSeekBar"
+                android:layout_toStartOf="@+id/vol_max_icon"
+                android:layout_toEndOf="@+id/vol_less_icon" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/vol_max_icon"
+                style="@style/DrawerSingleSeekIcon"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_medium"
+                app:srcCompat="@drawable/ic_settings" />
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/DrawerSingleSeekLayout">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/vol_less_icon_four"
+                style="@style/DrawerSingleSeekIcon"
+                android:layout_marginStart="@dimen/margin_medium"
+                app:srcCompat="@drawable/ic_notification_black" />
+
+            <SeekBar
+                android:id="@+id/seek_bar_volume_four"
+                style="@style/DrawerSingleSeekBar"
+                android:layout_toStartOf="@+id/vol_max_icon_four"
+                android:layout_toEndOf="@+id/vol_less_icon_four" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/vol_max_icon_four"
+                style="@style/DrawerSingleSeekIcon"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_medium"
+                app:srcCompat="@drawable/ic_notification_black" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

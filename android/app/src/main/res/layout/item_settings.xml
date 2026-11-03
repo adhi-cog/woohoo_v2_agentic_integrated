@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_settings"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dp_28">
+
+    <ImageView
+        android:id="@+id/setting_icon"
+        android:layout_width="@dimen/dp_53"
+        android:layout_height="@dimen/dp_53"
+        android:layout_marginStart="@dimen/margin_start_52"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/setting_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_21"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_21_33"
+        app:layout_constraintStart_toEndOf="@+id/setting_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/dp_18"
+        android:layout_height="@dimen/dp_18"
+        android:layout_marginStart="@dimen/dp_18"
+        android:layout_marginTop="@dimen/dp_6"
+        android:backgroundTint="@color/settings_item_color"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/setting_icon"
+        app:layout_constraintTop_toBottomOf="@+id/setting_name" />
+
+    <TextView
+        android:id="@+id/progress_content"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_28"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_4"
+        android:textColor="@color/settings_item_color"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/progress_bar"
+        app:layout_constraintTop_toBottomOf="@+id/setting_name" />
+
+    <TextView
+        android:id="@+id/setting_content"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_28"
+        android:layout_marginStart="@dimen/dp_21"
+        android:textColor="?text_color_secondary"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintStart_toEndOf="@+id/setting_icon"
+        app:layout_constraintTop_toBottomOf="@+id/setting_name" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_74"
+        android:layout_marginTop="@dimen/dp_26"
+        android:layout_marginEnd="@dimen/dp_13"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setting_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

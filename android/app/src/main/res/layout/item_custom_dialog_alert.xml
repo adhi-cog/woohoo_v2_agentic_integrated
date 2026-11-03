@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_10"
+    app:cardCornerRadius="@dimen/dp_10">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/item_custom_dialog_alert_view_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_row_background">
+
+                <ImageView
+                    android:id="@+id/delete_icon"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:src="@drawable/ic_delete_white_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_toLeftOf="@id/delete_icon"
+                    android:text="@string/delete"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_20" />
+
+                <ImageView
+                    android:id="@+id/delete_icon1"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:src="@drawable/ic_delete_white_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@id/delete_icon1"
+                    android:text="@string/delete"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_20" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/item_custom_dialog_alert_view_foreground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?color_primary"
+                android:padding="@dimen/dp_10">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/item_custom_dialog_alert_image"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_80"
+                    android:layout_margin="@dimen/dp_10"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/item_custom_dialog_alert_right_arrow"
+                    android:layout_toRightOf="@id/item_custom_dialog_alert_image"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/item_custom_dialog_alert_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_20" />
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16" />
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/item_custom_dialog_alert_right_arrow"
+                    android:layout_width="@dimen/activity_enrollment_image_view_icon_arrow_right_width_height"
+                    android:layout_height="@dimen/activity_enrollment_image_view_icon_arrow_right_width_height"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="@dimen/activity_enrollment_image_view_icon_arrow_right_padding_start_end"
+                    android:paddingTop="@dimen/activity_enrollment_image_view_icon_arrow_right_padding_top_bottom"
+                    android:paddingEnd="@dimen/activity_enrollment_image_view_icon_arrow_right_padding_start_end"
+                    android:paddingBottom="@dimen/activity_enrollment_image_view_icon_arrow_right_padding_top_bottom"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_arrow_right" />
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/custom_dialog_big_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_200"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

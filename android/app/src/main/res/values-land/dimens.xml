@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sip_dialer_key_size">@dimen/dp_106</dimen>
+    <dimen name="sip_dialer_key_gap">@dimen/dp_16</dimen>
+    <dimen name="sip_dialer_key_text_size">30sp</dimen>
+    <dimen name="sip_bottom_nav_height">@dimen/dp_140</dimen>
+    <dimen name="sip_manual_bottom_padding">@dimen/sip_bottom_nav_height</dimen>
+    <dimen name="sip_manual_content_gap">@dimen/dp_0</dimen>
+    <dimen name="sip_manual_number_text_size">@dimen/sp_66</dimen>
+    <dimen name="sip_manual_number_top_margin">@dimen/dp_0</dimen>
+    <dimen name="sip_manual_output_top_margin">@dimen/dp_12</dimen>
+</resources>

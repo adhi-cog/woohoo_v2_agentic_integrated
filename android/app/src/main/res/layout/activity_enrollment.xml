@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    tools:context=".ui.enrollment.EnrollmentActivity">
+
+    <include
+        android:id="@+id/activity_enrollment_toolbar"
+        layout="@layout/common_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/activity_enrollment_relative_layout_say_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_enrollment_relative_layout_say_bar_height"
+        android:layout_alignParentBottom="true"
+        android:background="?color_secondary">
+
+        <TextView
+            android:id="@+id/activity_enrollment_text_view_say_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/activity_enrollment_text_voice_training_mode"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/activity_enrollment_text_view_say_bar_text_text_size" />
+
+        <ProgressBar
+            android:id="@+id/activity_enrollment_progress_bar_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/activity_enrollment_progress_bar_progress_margin_start_end"
+            android:layout_marginEnd="@dimen/activity_enrollment_progress_bar_progress_margin_start_end" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/activity_enrollment_relative_layout_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/activity_enrollment_relative_layout_say_bar"
+        android:layout_below="@id/activity_enrollment_toolbar"
+        android:layout_marginBottom="@dimen/activity_enrollment_relative_layout_parent_margin_bottom"
+        android:paddingStart="@dimen/activity_enrollment_relative_layout_parent_padding_start_end"
+        android:paddingEnd="@dimen/activity_enrollment_relative_layout_parent_padding_start_end">
+
+        <RelativeLayout
+            android:id="@+id/activity_enrollment_relative_layout_enrollment_start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/activity_enrollment_text_view_screen_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/activity_enrollment_text_voice_model"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/activity_enrollment_text_view_screen_header_text_size" />
+
+            <TextView
+                android:id="@+id/activity_enrollment_text_view_screen_header_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_enrollment_text_view_screen_header"
+                android:layout_marginTop="1dp"
+                android:text="@string/activity_enrollment_text_teach"
+                android:textColor="?text_color_tertiary"
+                android:textSize="@dimen/activity_enrollment_text_view_screen_header_2_text_size" />
+
+            <LinearLayout
+                android:id="@+id/activity_enrollment_linear_layout_training"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_enrollment_text_view_screen_header_2"
+                android:layout_marginTop="@dimen/activity_enrollment_linear_layout_training_margin_top"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/activity_enrollment_linear_layout_training_stage_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_enrollment_linear_layout_training_height"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/activity_enrollment_image_view_icon_stage_one"
+                        android:layout_width="@dimen/activity_enrollment_image_view_icon_width_height"
+                        android:layout_height="@dimen/activity_enrollment_image_view_icon_width_height"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/activity_enrollment_image_view_icon_padding"
+                        app:srcCompat="@drawable/ic_spinner_white" />
+
+                    <TextView
+                        android:id="@+id/activity_enrollment_text_view_stage_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/activity_enrollment_text_view_margin_start"
+                        android:text="@string/activity_enrollment_text_voice_training_stage_one"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/activity_enrollment_text_view_text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_enrollment_linear_layout_training_stage_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_enrollment_linear_layout_training_height"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/activity_enrollment_image_view_icon_stage_two"
+                        android:layout_width="@dimen/activity_enrollment_image_view_icon_width_height"
+                        android:layout_height="@dimen/activity_enrollment_image_view_icon_width_height"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/activity_enrollment_image_view_icon_padding"
+                        app:srcCompat="@drawable/ic_circle_peach_16dp" />
+
+                    <TextView
+                        android:id="@+id/activity_enrollment_text_view_stage_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/activity_enrollment_text_view_margin_start"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/activity_enrollment_text_view_text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_enrollment_linear_layout_training_stage_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_enrollment_linear_layout_training_height"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/activity_enrollment_image_view_icon_stage_three"
+                        android:layout_width="@dimen/activity_enrollment_image_view_icon_width_height"
+                        android:layout_height="@dimen/activity_enrollment_image_view_icon_width_height"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/activity_enrollment_image_view_icon_padding"
+                        app:srcCompat="@drawable/ic_circle_peach_16dp" />
+
+                    <TextView
+                        android:id="@+id/activity_enrollment_text_view_stage_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/activity_enrollment_text_view_margin_start"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/activity_enrollment_text_view_text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_enrollment_linear_layout_training_stage_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_enrollment_linear_layout_training_height"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/activity_enrollment_image_view_icon_stage_four"
+                        android:layout_width="@dimen/activity_enrollment_image_view_icon_width_height"
+                        android:layout_height="@dimen/activity_enrollment_image_view_icon_width_height"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/activity_enrollment_image_view_icon_padding"
+                        app:srcCompat="@drawable/ic_circle_peach_16dp" />
+
+                    <TextView
+                        android:id="@+id/activity_enrollment_text_view_stage_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/activity_enrollment_text_view_margin_start"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/activity_enrollment_text_view_text_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/activity_enrollment_linear_layout_registered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_enrollment_text_view_screen_header_2"
+                android:layout_marginTop="@dimen/activity_enrollment_linear_layout_training_margin_top"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/activity_enrollment_linear_layout_registered_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical"
+                    tools:ignore="RelativeOverlap">
+
+                    <TextView
+                        android:id="@+id/activity_enrollment_text_view_retrain_voice_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activity_enrollment_text_retrain_voice"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/activity_enrollment_text_view_retrain_voice_text_size" />
+
+                    <TextView
+                        android:id="@+id/activity_enrollment_text_view_enrollment_date_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trained on 24 July 2018"
+                        android:textColor="#B3B3B3"
+                        android:textSize="@dimen/activity_enrollment_text_view_enrollment_date_time_text_size"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/activity_enrollment_image_view_icon_arrow_right"
+                    android:layout_width="@dimen/activity_enrollment_image_view_icon_arrow_right_width_height"
+                    android:layout_height="@dimen/activity_enrollment_image_view_icon_arrow_right_width_height"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="@dimen/activity_enrollment_image_view_icon_arrow_right_padding_start_end"
+                    android:paddingTop="@dimen/activity_enrollment_image_view_icon_arrow_right_padding_top_bottom"
+                    android:paddingEnd="@dimen/activity_enrollment_image_view_icon_arrow_right_padding_start_end"
+                    android:paddingBottom="@dimen/activity_enrollment_image_view_icon_arrow_right_padding_top_bottom"
+                    app:srcCompat="@drawable/ic_arrow_right" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/activity_enrollment_linear_layout_registered_detail"
+                    android:layout_marginTop="26.67dp"
+                    android:background="#19FFFFFF" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/activity_enrollment_text_view_start_voice_training"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_enrollment_text_view_button_height"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/rounder_corners_purple_10dp"
+                android:gravity="center"
+                android:text="@string/activity_enrollment_text_start_voice_training"
+                android:textColor="@color/white"
+                android:textSize="@dimen/activity_enrollment_text_view_button_text_size" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/activity_enrollment_relative_layout_enrollment_completed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/activity_enrollment_text_view_finish_voice_training"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_enrollment_text_view_button_height"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/rounder_corners_purple_10dp"
+                android:gravity="center"
+                android:text="@string/activity_enrollment_text_finish_voice_training"
+                android:textColor="@color/white"
+                android:textSize="@dimen/activity_enrollment_text_view_button_text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/activity_enrollment_text_view_finish_voice_training"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/activity_enrollment_image_view_mic_width_height"
+                    android:layout_height="@dimen/activity_enrollment_image_view_mic_width_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_enrollment_image_view_mic_margin_top"
+                    app:srcCompat="@drawable/ic_mic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_enrollment_text_view_voice_train_successful_margin_top"
+                    android:gravity="center"
+                    android:text="@string/activity_enrollment_text_completed_voice_training"
+                    android:textColor="#ffadb7"
+                    android:textSize="@dimen/activity_enrollment_text_view_voice_train_successful_text_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/activity_enrollment_view_line_margin_top"
+                    android:layout_marginBottom="@dimen/activity_enrollment_view_line_margin_bottom"
+                    android:background="@color/white_md19" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_enrollment_text_voice_training_completed_description"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/activity_enrollment_text_view_voice_train_successful_text_size" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/activity_enrollment_relative_layout_enrollment_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/activity_enrollment_text_view_retry_voice_training"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_enrollment_text_view_button_height"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/rounder_corners_purple_10dp"
+                android:gravity="center"
+                android:text="@string/activity_enrollment_text_try_again"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/activity_enrollment_text_view_button_text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/activity_enrollment_text_view_retry_voice_training"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/activity_enrollment_image_view_mic_width_height"
+                    android:layout_height="@dimen/activity_enrollment_image_view_mic_width_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_enrollment_image_view_mic_margin_top"
+                    app:srcCompat="@drawable/ic_exclamation_mark_orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_enrollment_text_view_voice_train_successful_margin_top"
+                    android:gravity="center"
+                    android:text="@string/activity_enrollment_text_failed_voice_training"
+                    android:textColor="#ffadb7"
+                    android:textSize="@dimen/activity_enrollment_text_view_voice_train_successful_text_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/activity_enrollment_view_line_margin_top"
+                    android:layout_marginBottom="@dimen/activity_enrollment_view_line_margin_bottom"
+                    android:background="@color/white_md19" />
+
+                <TextView
+                    android:id="@+id/training_fix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/activity_enrollment_text_please_try_again"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/activity_enrollment_text_view_voice_train_successful_text_size" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

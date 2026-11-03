@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?color_secondary"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_23">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/security_icon"
+            android:layout_width="@dimen/dp_53"
+            android:layout_height="@dimen/dp_53"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:paddingStart="@dimen/dp_12"
+            android:paddingTop="@dimen/padding_15"
+            android:paddingEnd="@dimen/dp_12"
+            android:paddingBottom="@dimen/padding_15"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_26"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_200"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:layout_toStartOf="@id/security_icon"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:text="@string/fragment_settings_text_view_wifi"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_21"
+            app:layout_constraintBottom_toTopOf="@+id/wifi_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/wifi_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginStart="@dimen/dp_40"
+            android:fontFamily="sans-serif"
+            android:text="@string/connected"
+            android:textColor="?text_color_secondary"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/list_separator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_23"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:background="@color/white_md19" />
+</LinearLayout>

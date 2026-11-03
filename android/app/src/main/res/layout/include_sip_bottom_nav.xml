@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/sip_bottom_nav_height"
+    android:background="@drawable/bg_sip_bottom_nav"
+    android:clickable="true"
+    android:focusable="false"
+    android:paddingStart="@dimen/dp_40"
+    android:paddingEnd="@dimen/dp_40">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/sip_bottom_nav_home_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <FrameLayout
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_sip_bottom_nav_active">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/home"
+                    android:src="@drawable/ic_home"
+                    android:tint="@color/sip_bottom_nav_active_icon" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/sip_bottom_nav_spa_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_gravity="center"
+                android:contentDescription="@string/spa"
+                android:src="@drawable/ic_sip_nav_leaf"
+                android:tint="@color/sip_bottom_nav_icon" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/sip_bottom_nav_dining_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_gravity="center"
+                android:contentDescription="@string/dining"
+                android:src="@drawable/ic_sip_nav_dining"
+                android:tint="@color/sip_bottom_nav_icon" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/sip_bottom_nav_settings_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_gravity="center"
+                android:contentDescription="@string/settings"
+                android:src="@drawable/ic_settings"
+                android:tint="@color/sip_bottom_nav_icon" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

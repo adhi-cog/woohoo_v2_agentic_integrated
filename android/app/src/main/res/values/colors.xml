@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">?color_accent</color>
+    <color name="colorPrimaryDark">?color_secondary</color>
+    <color name="colorAccent">?color_accent</color>
+
+    <!-- Gray & Black color shades -->
+    <color name="bottom_hint_background">#35000000</color>
+    <color name="grey_bg_edit_text">#4c000000</color>
+    <color name="black_99_opacity">#99000000</color>
+    <color name="black_cc_opacity">#CC000000</color>
+    <color name="black_60_opacity">#60000000</color>
+    <color name="overlay_colour">#e6000000</color>
+    <color name="transparent_background_color">#BF000000</color>
+    <color name="black">#000000</color>
+    <color name="colorGrey">#dddddd</color>
+    <color name="light_grey_color">#e7e7e7</color>
+    <color name="description">#a9a9a9</color>
+
+    <color name="neutral_lighter">#F5F4F3</color>
+    <color name="neutral_light">#DDDDDE</color>
+    <color name="neutral">#908F8F</color>
+    <color name="neutral_dark">#717171</color>
+    <color name="neutral_darker">#292929</color>
+
+    <!-- White color shades -->
+    <color name="color_circle_transparent">#00ffffff</color>
+    <color name="divider">#19ffffff</color>
+    <color name="white_md19">#19ffffff</color>
+    <color name="white_10_opacity">#10FFFFFF</color>
+    <color name="white_16_opacity">#16FFFFFF</color>
+    <color name="white_20_opacity">#20FFFFFF</color>
+    <color name="rounded_corners_white_transparency">#20FFFFFF</color>
+    <color name="white_28_opacity">#28FFFFFF</color>
+    <color name="white_30_opacity">#30FFFFFF</color>
+    <color name="white_40_opacity">#40FFFFFF</color>
+    <color name="white_55_opacity">#55FFFFFF</color>
+    <color name="white_150_opacity">#60FFFFFF</color>
+    <color name="white_80_opacity">#80FFFFFF</color>
+    <color name="hintTextColor">#96ffffff</color>
+    <color name="white_b3_opacity">#B3FFFFFF</color>
+    <color name="white_a1_opacity">#1AFFFFFF</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Cyan color shades -->
+    <color name="cyan_light">#D732F3EC</color>
+    <color name="settings_item_color">#50e3c2</color>
+    <color name="color_circle_blue">#53c0ea</color>
+
+    <!-- Red & pink color shades -->
+    <color name="bg_hangup_button">#e9456b</color>
+    <color name="bg_row_background">#fa315b</color>
+    <color name="red">#D54646</color>
+    <color name="red_brick">#DD3131</color>
+
+    <!-- Purple & Blue color shades -->
+    <color name="purple_color">#A100AC</color>
+    <color name="bg_listening">#5b69d7</color>
+    <color name="selected_dot_color">#0061B5</color>
+    <color name="selected_dot_color_2">#1E4B7E</color>
+
+    <!-- Light Theme -->
+    <color name="tile_color_primary_light">@color/white</color>
+    <color name="tile_color_secondary_light">#F1F1F1</color>
+    <color name="tile_color_tertiary_light">#EFEFEF</color>
+
+    <!-- Theme colors (Purple) -->
+    <color name="purple_theme_color_accent">#FFFFFF</color>
+    <color name="purple_theme_color_secondary">#120b29</color>
+    <color name="purple_theme_color_primary">#281c55</color>
+    <color name="purple_theme_tile_color_primary">#34226c</color>
+    <color name="purple_theme_tile_color_secondary">#422c88</color>
+    <color name="purple_theme_tile_color_tertiary">#3D2C8C</color>
+    <color name="purple_theme_text_color_primary">#FFFFFF</color>
+    <color name="purple_theme_text_color_secondary">#B3B3B3</color>
+    <color name="purple_theme_text_color_tertiary">#ffadb7</color>
+    <color name="sip_greeting_accent">#F3C86B</color>
+    <color name="sip_header_muted">#B4AEC9</color>
+    <color name="sip_icon_circle_bg">#543B96</color>
+    <color name="sip_card_surface_primary">#3D2B7C</color>
+    <color name="sip_card_surface_secondary">#43317F</color>
+    <color name="sip_card_surface_tertiary">#352A6D</color>
+    <color name="sip_card_surface_quaternary">#3A316A</color>
+    <color name="sip_card_surface_internal">#4B357E</color>
+    <color name="sip_card_title">#F7F5FF</color>
+    <color name="sip_card_subtitle">#C9C2DE</color>
+    <color name="sip_glow_primary">#6C47D4</color>
+    <color name="sip_glow_secondary">#5736AF</color>
+    <color name="sip_incoming_avatar_bg">#A987F0</color>
+    <color name="sip_accept_button_start">#B18BFA</color>
+    <color name="sip_accept_button_end">#8B5CF7</color>
+    <color name="sip_accept_icon_circle">#B796FA</color>
+    <color name="sip_decline_button_bg">#31245F</color>
+    <color name="sip_decline_icon_circle">#F04978</color>
+    <color name="sip_status_dot">#A883FF</color>
+    <color name="sip_call_avatar_outer">#513F84</color>
+    <color name="sip_call_avatar_inner">#5F4A98</color>
+    <color name="sip_call_avatar_frame">#A682FF</color>
+    <color name="sip_call_wave">#A782FF</color>
+    <color name="sip_call_info_card_bg">#3B2C67</color>
+    <color name="sip_call_controls_bg">#170D32</color>
+    <color name="sip_call_volume_track">#3B2D66</color>
+    <color name="sip_call_volume_start">#B28DFB</color>
+    <color name="sip_call_volume_end">#996AFF</color>
+    <color name="sip_call_volume_thumb">#DDE5F5</color>
+    <color name="sip_dialer_title">#9790B0</color>
+    <color name="sip_dialer_subtitle">#B697FF</color>
+    <color name="sip_dialer_key_bg">#3B2D69</color>
+    <color name="sip_dialer_icon_circle">#2C214F</color>
+    <color name="sip_bottom_nav_bg">#130C2B</color>
+    <color name="sip_bottom_nav_active_bg">#32265E</color>
+    <color name="sip_bottom_nav_active_icon">#58FF8A</color>
+    <color name="sip_bottom_nav_icon">#8E88A4</color>
+
+
+    <!-- Theme colors (Cyan) -->
+    <color name="cyan_theme_color_accent">#FFFFFF</color>
+    <color name="cyan_theme_color_secondary">#7CA8DF</color>
+    <color name="cyan_theme_color_primary">#8CB3E3</color>
+    <color name="cyan_theme_tile_color_primary">#9CBEE7</color>
+    <color name="cyan_theme_tile_color_secondary">#B9D1EE</color>
+    <color name="cyan_theme_tile_color_tertiary">#CEDFF3</color>
+    <color name="cyan_theme_text_color_primary">#FFFFFF</color>
+    <color name="cyan_theme_text_color_secondary">#B3B3B3</color>
+    <color name="cyan_theme_text_color_tertiary">#ffadb7</color>
+    <color name="blue_unselected">#AB34226c</color>
+    <color name="blue_book_table">#515BDE</color>
+    <color name="blue_dining_restaurant_bg">#4734A3</color>
+    <color name="grey_restaurant_timing">#E2E2E2</color>
+    <color name="grey_restaurant_divider">#EAECEF</color>
+    <color name="color_btn_blue">#515BDE</color>
+    <color name="light_purple">#D9D9D9</color>
+
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dining_restaurant"
+    android:clickable="true"
+    android:focusable="true">
+
+    <FrameLayout
+        android:id="@+id/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/fragment_settings_relative_layout_header"
+            layout="@layout/common_toolbar" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_below="@id/layout_toolbar"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_email"
+            style="@style/EditTextCentered"
+            android:layout_marginBottom="@dimen/dp_32"
+            android:background="@drawable/bg_stroke_edit_text"
+            android:hint="@string/hint_enter_email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="@dimen/dp_26" />
+
+        <EditText
+            android:id="@+id/re_edit_email"
+            style="@style/EditTextCentered"
+            android:layout_marginBottom="@dimen/dp_32"
+            android:background="@drawable/bg_stroke_edit_text"
+            android:hint="@string/hint_re_enter_email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="@dimen/dp_26"
+            app:layout_constraintBottom_toTopOf="@+id/edit_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/sp_18"
+            android:layout_marginTop="@dimen/dp_100"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:textColor="@color/grey_restaurant_timing"
+            android:text="Email verification is needed to verify you identity" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_53"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_60"
+            android:layout_marginEnd="@dimen/dp_60"
+            android:layout_marginBottom="@dimen/dp_60"
+            android:background="@drawable/btn_colored_bg"
+            android:text="Get OTP"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_26"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

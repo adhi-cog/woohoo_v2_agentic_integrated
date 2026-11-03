@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    android:focusable="true"
+    android:clickable="true"
+    >
+
+    <include
+        android:id="@+id/fragment_settings_relative_layout_header"
+        layout="@layout/common_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_settings_relative_layout_header">
+
+        <com.sb.woohoo.custom.RecyclerViewEmptySupport
+            android:id="@+id/reminder_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_25"
+            android:drawableTop="@drawable/ic_empty_reminder"
+            android:drawablePadding="@dimen/dp_25"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/no_reminder_set"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_24"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/empty_view_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/empty_view"
+            android:gravity="center"
+            android:text="@string/add_anything_just_by_saying_hey_woohoo"
+            android:textColor="?text_color_secondary"
+            android:textSize="@dimen/sp_18"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/fragment_to_do_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateTint="@android:color/white"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

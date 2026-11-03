@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/fragment_music_image_vector_width"
+    android:height="@dimen/fragment_music_image_vector_height"
+    android:viewportWidth="48"
+    android:viewportHeight="38">
+    <path
+        android:fillColor="#FFF"
+        android:fillType="evenOdd"
+        android:pathData="M39.29,23.71l5.3,5.29H34.07a6.9,6.9 0,0 1,-5.66 -2.84L23.24,19l5.18,-7.14A6.889,6.889 0,0 1,34.07 9h10.52l-5.29,5.31 1.41,1.4L48,8l-7.3,-8 -1.41,1.53L44.59,7H34.07a8.89,8.89 0,0 0,-7.28 3.68L22,17.34l-4.8,-6.64A8.909,8.909 0,0 0,9.93 7H0v2h9.93a6.909,6.909 0,0 1,5.66 2.86l5.18,7.2 -5.18,7.13A6.877,6.877 0,0 1,9.93 29H0v2h9.93a8.87,8.87 0,0 0,7.28 -3.66L22,20.69l4.8,6.62A8.901,8.901 0,0 0,34.07 31h10.52l-5.29,5.5 1.41,1.5L48,30l-7.29,-7.72 -1.42,1.43z" />
+</vector>

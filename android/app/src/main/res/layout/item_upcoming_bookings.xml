@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:background="?color_secondary">
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/img_service"
+        android:layout_width="@dimen/dp_213"
+        android:layout_height="@dimen/dp_213"
+        android:src="@drawable/ic_checked"/>
+
+    <TextView
+        android:id="@+id/tv_booking_confirm"
+        android:layout_marginTop="@dimen/dp_53"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/img_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="?text_color_primary"
+        tools:text="Your Booking is Confirmed"
+        android:textAllCaps="true"
+        android:textSize="@dimen/sp_24"/>
+
+    <TextView
+        android:id="@+id/tv_booking_date"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_booking_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="?text_color_primary"
+        tools:text="09:00 am, 24th February, 2021"
+        android:textSize="@dimen/sp_18"/>
+
+    <TextView
+        android:id="@+id/tv_booking_note"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_booking_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="?text_color_primary"
+        android:visibility="gone"
+        tools:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+        android:textSize="@dimen/sp_12"/>
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>

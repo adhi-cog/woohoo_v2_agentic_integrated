@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/common_toolbar_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/common_toolbar_parent_margin_top"
+    android:paddingStart="@dimen/common_toolbar_padding_start_end"
+    android:paddingTop="@dimen/common_toolbar_padding_top_bottom"
+    android:paddingEnd="@dimen/common_toolbar_padding_start_end"
+    android:paddingBottom="@dimen/common_toolbar_padding_top_bottom">
+
+    <ImageView
+        android:id="@+id/common_toolbar_back"
+        android:layout_width="@dimen/common_toolbar_back_width_height"
+        android:layout_height="@dimen/common_toolbar_back_width_height"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/app_name"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:src="@drawable/ic_back_arrow_new" />
+
+    <TextView
+        android:id="@+id/common_toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/common_toolbar_title_margin_start_end"
+        android:layout_marginEnd="@dimen/common_toolbar_title_margin_start_end"
+        android:fontFamily="sans-serif-light"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/common_toolbar_title_text_size" />
+
+    <ImageView
+        android:id="@+id/common_toolbar_right_icon"
+        android:layout_width="@dimen/common_toolbar_back_width_height"
+        android:layout_height="@dimen/common_toolbar_back_width_height"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/app_name"
+        android:paddingStart="12dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="16dp"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true" />
+
+    <RelativeLayout
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_toStartOf="@+id/layout_cart_container"
+        android:layout_centerVertical="true"
+        android:id="@+id/layout_history"
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_history"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_cart_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/layout_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_shopping_cart"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtCartCount"
+            android:layout_width="@dimen/dp_15"
+            android:layout_height="@dimen/dp_15"
+            android:textSize="@dimen/sp_10"
+            tools:text="2"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_alignEnd="@+id/layout_cart"
+            android:visibility="gone"
+            android:background="@drawable/ellipse_bg"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

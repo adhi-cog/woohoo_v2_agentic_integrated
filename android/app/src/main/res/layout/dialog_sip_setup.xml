@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_13pt33"
+    app:cardBackgroundColor="?tile_color_primary"
+    app:cardCornerRadius="@dimen/dp_10pt66">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_40">
+
+        <TextView
+            android:id="@+id/sip_dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_53"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/sip_configuration"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edt_sip_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:background="@drawable/bg_stroke_edit_text"
+            android:fontFamily="sans-serif"
+            android:hint="Room No. (e.g. 1011)"
+            android:maxLines="1"
+            android:paddingStart="@dimen/dp_26pt66"
+            android:paddingTop="@dimen/dp_18pt6"
+            android:paddingBottom="@dimen/dp_18pt6"
+            android:textColor="@color/white"
+            android:textColorHint="?tile_color_secondary"
+            android:textSize="@dimen/sp_24" />
+
+        <EditText
+            android:id="@+id/edt_sip_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:background="@drawable/bg_stroke_edit_text"
+            android:fontFamily="sans-serif"
+            android:hint="Password"
+            android:maxLines="1"
+            android:paddingStart="@dimen/dp_26pt66"
+            android:paddingTop="@dimen/dp_18pt6"
+            android:paddingBottom="@dimen/dp_18pt6"
+            android:textColor="@color/white"
+            android:textColorHint="?tile_color_secondary"
+            android:textSize="@dimen/sp_24" />
+
+        <EditText
+            android:id="@+id/edt_sip_domain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:background="@drawable/bg_stroke_edit_text"
+            android:fontFamily="sans-serif"
+            android:hint="Domain"
+            android:maxLines="1"
+            android:paddingStart="@dimen/dp_26pt66"
+            android:paddingTop="@dimen/dp_18pt6"
+            android:paddingBottom="@dimen/dp_18pt6"
+            android:textColor="@color/white"
+            android:textColorHint="?tile_color_secondary"
+            android:textSize="@dimen/sp_24" />
+
+        <EditText
+            android:id="@+id/edt_sip_proxy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:background="@drawable/bg_stroke_edit_text"
+            android:fontFamily="sans-serif"
+            android:hint="Proxy"
+            android:maxLines="1"
+            android:paddingStart="@dimen/dp_26pt66"
+            android:paddingTop="@dimen/dp_18pt6"
+            android:paddingBottom="@dimen/dp_18pt6"
+            android:textColor="@color/white"
+            android:textColorHint="?tile_color_secondary"
+            android:textSize="@dimen/sp_24" />
+
+        <TextView
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_20"
+            android:id="@+id/dialogflow_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/transport"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_26" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_transport"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_40"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:paddingTop="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_24"
+                android:id="@+id/radio_udp"
+                style="@style/MyRadioButton2"
+                android:text="@string/udp"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/white"
+                android:buttonTint="@color/white" />
+
+            <RadioButton
+                android:layout_marginStart="@dimen/dp_60"
+                android:id="@+id/radio_tcp"
+                style="@style/MyRadioButton2"
+                android:text="@string/tcp"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/white"
+                android:buttonTint="@color/white" />
+
+            <RadioButton
+                android:layout_marginStart="@dimen/dp_60"
+                android:id="@+id/radio_tls"
+                style="@style/MyRadioButton2"
+                android:text="@string/tls"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/white"
+                android:buttonTint="@color/white" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_26"
+                android:background="@drawable/bg_cancel_button"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_20"
+                android:paddingBottom="@dimen/dp_20"
+                android:text="@string/cancel_text"
+                android:textAllCaps="true"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_21"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rename_edittext" />
+
+            <Button
+                android:layout_marginStart="@dimen/dp_24"
+                android:id="@+id/button_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_26"
+                android:layout_marginEnd="@dimen/dp_40"
+                android:background="@drawable/button_background"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_20"
+                android:paddingBottom="@dimen/dp_20"
+                android:text="@string/submit"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_21"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/permission_dialog_message" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_event"
+    android:layout_marginRight="@dimen/dp_16"
+    android:layout_marginLeft="@dimen/dp_16"
+    android:layout_marginBottom="@dimen/dp_30"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_30"
+    android:background="@drawable/rounded_corners_navy_transparent">
+
+    <ImageView
+        android:id="@+id/img_event"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:background="#30FFFFFF"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_toEndOf="@+id/img_event"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/spotify"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:layout_marginEnd="@dimen/common_toolbar_back_width_height"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_18" />
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/spotify"
+            android:layout_marginEnd="@dimen/dp_32"
+            android:layout_below="@+id/txt_title"
+            android:maxLines="2"
+            android:maxLength="100"
+            android:layout_marginTop="@dimen/dp_4"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_16" />
+
+        <ImageView
+            android:id="@+id/img_next"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back_arrow_new"
+            android:layout_alignParentEnd="true"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8"
+            android:rotation="180"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_weather_forecast_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_18" />
+
+    <ImageView
+        android:id="@+id/item_weather_forecast_icon"
+        android:layout_width="@dimen/margin_large_80"
+        android:layout_height="@dimen/margin_large_80"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_40"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/item_weather_forecast_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/padding_32dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/heading_font_size" />
+
+</LinearLayout>

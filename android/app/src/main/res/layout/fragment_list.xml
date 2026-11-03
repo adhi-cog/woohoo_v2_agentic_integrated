@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/interceptor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_secondary"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/fragment_list_template_relative_layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_toolbar_parent_margin_top"
+        android:paddingStart="@dimen/common_toolbar_padding_start_end"
+        android:paddingTop="@dimen/common_toolbar_padding_top_bottom"
+        android:paddingEnd="@dimen/common_toolbar_padding_start_end"
+        android:paddingBottom="@dimen/common_toolbar_padding_top_bottom">
+
+        <ImageView
+            android:id="@+id/fragment_list_template_image_view_back"
+            android:layout_width="@dimen/common_toolbar_back_width_height"
+            android:layout_height="@dimen/common_toolbar_back_width_height"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/fragment_list_template_text_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_toolbar_title_margin_start_end"
+            android:layout_marginEnd="@dimen/common_toolbar_title_margin_start_end"
+            android:fontFamily="sans-serif-light"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/common_toolbar_title_text_size" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_list_template_relative_layout_toolbar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fragment_list_template_text_view_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:textColor="?text_color_tertiary"
+            android:textSize="@dimen/sp_25" />
+
+        <com.sb.woohoo.custom.RecyclerViewEmptySupport
+            android:id="@+id/item_lists"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/fragment_list_template_text_view_list_title"
+            android:layout_marginTop="@dimen/margin_top_10" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_list_template_linear_layout_no_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/fragment_device_launcher_linear_layout_no_device_margin_start_end"
+        android:layout_marginEnd="@dimen/fragment_device_launcher_linear_layout_no_device_margin_start_end"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/fragment_list_template_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

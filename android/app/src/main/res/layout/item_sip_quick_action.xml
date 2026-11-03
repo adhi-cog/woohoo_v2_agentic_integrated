@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_8"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/sip_card_surface_primary"
+    app:cardCornerRadius="@dimen/dp_28"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="false">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:padding="@dimen/dp_24">
+
+        <ImageView
+            android:id="@+id/item_sip_quick_action_icon"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_64"
+            android:background="@drawable/bg_sip_icon_circle"
+            android:contentDescription="@string/call"
+            android:padding="@dimen/dp_12"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_contact_default_48dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_sip_quick_action_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/sip_card_title"
+                android:textSize="@dimen/sp_24"
+                android:textStyle="bold"
+                tools:text="Reception" />
+
+            <TextView
+                android:id="@+id/item_sip_quick_action_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/sip_card_subtitle"
+                android:textSize="@dimen/sp_16"
+                tools:text="Front Desk Support" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>

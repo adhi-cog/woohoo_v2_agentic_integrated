@@ -1,0 +1,8 @@
+ext {
+    sentry_version                              = '6.34.0'
+    chucker_version                             = '3.2.0'
+    app_center_version                          = '3.3.1'
+
+    //play-services & analytics
+    firebase_analytics                          = '17.4.1'
+}

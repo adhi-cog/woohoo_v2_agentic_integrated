@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/timer_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.main.fragments.timer.TimerFragment">
+
+    <ImageView
+        android:id="@+id/wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?color_secondary"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY" />
+
+    <include layout="@layout/common_toolbar"
+        android:id="@+id/fragment_common_toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/layout_timer_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_320"
+            android:layout_height="@dimen/dp_213"
+            app:srcCompat="@drawable/ic_no_timer" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_40"
+            android:maxLines="1"
+            android:text="@string/no_timer"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:maxLines="1"
+            android:text="@string/set_timers_text"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_18" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/fragment_timer_text_view_timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_66"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fragment_timer_text_view_timer_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_32" />
+
+    </LinearLayout>
+
+</com.sb.woohoo.utils.ui.InputInterceptorRelativeLayout>
