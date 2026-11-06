@@ -1,0 +1,80 @@
+# Pilot stack for a single public host. Narrower than docker-compose.yml on purpose.
+#
+# Two differences from the development stack, both deliberate:
+#
+#  - Postgres, Redis, NATS, MinIO and Jaeger are absent. Nothing reads them yet (the
+#    repositories are in-memory), and on a 2-core box they are five containers of pure
+#    overhead. The development stack provisions them so the Postgres-backed
+#    implementations can be swapped in without a topology change; a pilot does not need
+#    that option, it needs to start.
+#
+#  - The gateway publishes to 127.0.0.1 only. The container is not on the internet;
+#    nginx is, and it only forwards the three routes a hub actually calls. Published as
+#    0.0.0.0:8443 this would be an unauthenticated room-control API on a public IP:
+#    device auth is off by default, so /v1/turn accepts anyone who knows a deviceId, and
+#    the console at / hands out the deviceIds.
+
+name: woohoo-pilot
+
+services:
+  device-gateway:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+      args:
+        SERVICE: device-gateway
+    command: ["npm", "run", "gateway"]
+    # No env_file. Compose reads deploy/pilot/.env for substitution below, which means
+    # each variable reaching the container is named here. env_file would forward the whole
+    # file, putting PILOT_KEY - which only nginx needs - inside the application container.
+    environment:
+      PORT: "8443"
+      WOOHOO_ADAPTER: "${WOOHOO_ADAPTER:-honeywell}"
+      HONEYWELL_URL: "http://mock-honeywell:8091"
+      WOOHOO_PROPERTY_ID: "${WOOHOO_PROPERTY_ID:-p_blr_whitefield}"
+      # Pinned rather than generated, so a restart does not invalidate the provisioning
+      # commands in the runbook. Fails the deploy if absent instead of quietly running
+      # with a fresh token nobody has.
+      WOOHOO_ADMIN_TOKEN: "${WOOHOO_ADMIN_TOKEN:?set WOOHOO_ADMIN_TOKEN in deploy/pilot/.env}"
+      WOOHOO_EVENT_TOKEN: "${WOOHOO_EVENT_TOKEN:-}"
+      WOOHOO_REQUIRE_DEVICE_AUTH: "${WOOHOO_REQUIRE_DEVICE_AUTH:-}"
+      # Both spellings forwarded. Forwarding one produced a confusing failure: the key was
+      # present, compose substituted empty, and the service started on the mock provider
+      # with nothing in the log to chase.
+      GOOGLE_API_KEY: "${GOOGLE_API_KEY:-}"
+      GEMINI_API_KEY: "${GEMINI_API_KEY:-}"
+      GEMINI_MODEL: "${GEMINI_MODEL:-}"
+      GEMINI_TIMEOUT: "${GEMINI_TIMEOUT:-}"
+      WOOHOO_LLM_MODEL: "${WOOHOO_LLM_MODEL:-}"
+    ports:
+      - "127.0.0.1:8080:8443"
+    depends_on:
+      mock-honeywell: { condition: service_started }
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "5" }
+
+  # The property controller stand-in. Kept in the pilot because it is in the actuation
+  # path: with WOOHOO_ADAPTER=honeywell a lighting turn is only honestly answered if
+  # something is there to accept the write.
+  #
+  # No published port. It is reached over the compose network by name, and a mock head-end
+  # that accepts writes from the internet is not something to leave running on a public box.
+  mock-honeywell:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+      args:
+        SERVICE: mock-honeywell
+    command: ["npm", "run", "mock-honeywell"]
+    environment:
+      PORT: "8091"
+      MOCK_LATENCY_MS: "${MOCK_LATENCY_MS:-120}"
+      MOCK_FAILURE_RATE: "${MOCK_FAILURE_RATE:-0}"
+      MOCK_SILENT_FAILURE_RATE: "${MOCK_SILENT_FAILURE_RATE:-0}"
+      MOCK_DRIFT_RATE: "${MOCK_DRIFT_RATE:-0}"
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }

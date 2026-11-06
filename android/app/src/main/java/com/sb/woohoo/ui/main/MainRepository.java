@@ -263,7 +263,7 @@ MainRepository extends BaseRepository<MainPresenter> implements LightControl.Lig
 
         AgenticTurnRequest request = new AgenticTurnRequest(getDeviceID(), query, 0.95d);
         compositeDisposable.add(
-                wooHooApiCall.agenticTurn(url, request)
+                wooHooApiCall.agenticTurn(url, AgenticEngine.accessKey(), request)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribeWith(new DisposableSingleObserver<AgenticTurnResponse>() {
@@ -454,6 +454,7 @@ MainRepository extends BaseRepository<MainPresenter> implements LightControl.Lig
         compositeDisposable.add(
                 wooHooApiCall.agenticCommandAck(
                                 AgenticEngine.ackUrl(commandId),
+                                AgenticEngine.accessKey(),
                                 new AgenticAckRequest(status, detail, null))
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())

@@ -1,0 +1,108 @@
+# Public edge for the pilot gateway. __PILOT_KEY__ is substituted by bootstrap.sh.
+#
+# The gateway serves two surfaces on one port: the device surface a hub calls, and an
+# operator surface (test console, device list, room list, admin provisioning, event
+# stream). Only the first belongs on a public IP. This file is an allowlist: three routes
+# are forwarded and everything else is a 404, including the console that would otherwise
+# enumerate every deviceId on the property.
+#
+# The operator surface is reached over an SSH tunnel straight to the container port:
+#   ssh -i woohoo-dev.pem -L 9443:127.0.0.1:8080 ubuntu@65.1.106.31
+#   then open http://localhost:9443/
+# That is also how the console expects to be reached, so its origin handling already
+# copes with being served from localhost.
+
+limit_req_zone $binary_remote_addr zone=woohoo_turns:10m rate=120r/m;
+
+upstream woohoo_gateway {
+    server 127.0.0.1:8080;
+    keepalive 8;
+}
+
+server {
+    listen 8443 default_server;
+    server_name _;
+
+    server_tokens off;
+    default_type application/json;
+
+    # A transcript is a sentence. The gateway caps the body at 16KB itself; this stops a
+    # large body being read into the box at all.
+    client_max_body_size 32k;
+    client_body_timeout 15s;
+
+    access_log /var/log/nginx/woohoo.access.log;
+    error_log  /var/log/nginx/woohoo.error.log warn;
+
+    # --- device surface -------------------------------------------------------------
+    # Open to any source address, because a hub's egress IP is whatever the property's
+    # ISP hands it that morning. The shared key below is what stands in for an IP
+    # allowlist; see README for exactly how much that is worth.
+
+    location = /health {
+        proxy_pass http://woohoo_gateway;
+        proxy_http_version 1.1;
+        # Required with an upstream keepalive pool: without it the client's own
+        # Connection header is forwarded and every request opens a new socket.
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        # See the note on this header below. Stripped here too: /health reports whether
+        # device auth is enforced, and nothing client-supplied should reach that logic.
+        proxy_set_header X-Client-Cert-Serial "";
+        proxy_read_timeout 10s;
+    }
+
+    location = /v1/turn {
+        if ($http_x_pilot_key != "__PILOT_KEY__") {
+            return 403 '{"error":"FORBIDDEN","detail":"Missing or wrong x-pilot-key."}';
+        }
+        limit_req zone=woohoo_turns burst=30 nodelay;
+
+        proxy_pass http://woohoo_gateway;
+        proxy_http_version 1.1;
+        # Required with an upstream keepalive pool: without it the client's own
+        # Connection header is forwarded and every request opens a new socket.
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+        # The gateway TRUSTS this header: it is how a TLS terminator reports a verified
+        # client-certificate serial, and a value that matches the device record is taken
+        # as a proven identity (device-identity.ts). nginx is not doing mTLS, so any
+        # value arriving here came from the client and is worthless as proof. Clearing it
+        # is not optional - forwarding it would let a caller who knows a serial claim to
+        # be that device the moment WOOHOO_REQUIRE_DEVICE_AUTH is turned on.
+        proxy_set_header X-Client-Cert-Serial "";
+
+        # A turn can include a model call; GEMINI_TIMEOUT is 20s. Below that and nginx
+        # reports a 504 for a turn that was about to succeed.
+        proxy_read_timeout 45s;
+        proxy_send_timeout 45s;
+    }
+
+    location ~ ^/v1/device-commands/[A-Za-z0-9_.:-]+/ack$ {
+        if ($http_x_pilot_key != "__PILOT_KEY__") {
+            return 403 '{"error":"FORBIDDEN","detail":"Missing or wrong x-pilot-key."}';
+        }
+        # Acks are one per dispatched command and arrive in small bursts after a turn.
+        limit_req zone=woohoo_turns burst=40 nodelay;
+
+        proxy_pass http://woohoo_gateway;
+        proxy_http_version 1.1;
+        # Required with an upstream keepalive pool: without it the client's own
+        # Connection header is forwarded and every request opens a new socket.
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Client-Cert-Serial "";
+        proxy_read_timeout 15s;
+    }
+
+    # --- everything else ------------------------------------------------------------
+    # 404 rather than 403: there is no reason to confirm to a scanner that an operator
+    # surface exists here at all.
+    location / {
+        return 404 '{"error":"NOT_FOUND"}';
+    }
+}

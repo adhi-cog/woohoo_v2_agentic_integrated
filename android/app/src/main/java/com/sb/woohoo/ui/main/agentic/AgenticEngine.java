@@ -71,6 +71,21 @@ public final class AgenticEngine {
                 .put(SharedPrefsKey.PREF_KEY_AGENTIC_BASE_URL, url == null ? "" : url.trim());
     }
 
+    /**
+     * Shared key the hosted gateway's edge requires on a turn.
+     *
+     * Compiled in rather than stored, because unlike the URL there is no reason for an
+     * operator standing at a hub to change it, and a settable one is a settable one for
+     * whoever else reaches the device. Empty when the build targets a gateway that does
+     * not ask for a key, which is the normal case for a laptop on the same LAN.
+     *
+     * Not a substitute for device identity - see {@code WooHooApiCall#agenticTurn}.
+     */
+    public static String accessKey() {
+        String key = BuildConfig.AGENTIC_ACCESS_KEY;
+        return key == null ? "" : key.trim();
+    }
+
     public static boolean isConfigured() {
         return !baseUrl().isEmpty();
     }

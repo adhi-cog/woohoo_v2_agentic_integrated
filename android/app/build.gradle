@@ -81,6 +81,15 @@ def agenticBaseUrl = (project.findProperty("AGENTIC_BASE_URL")
         ?: "")
         .toString()
 
+// Shared key the hosted gateway's edge requires on a turn. Same resolution order. Empty
+// for a build aimed at a laptop, which asks for no key. This is not device identity: see
+// WooHooApiCall#agenticTurn for why, and what it is actually for.
+def agenticAccessKey = (project.findProperty("AGENTIC_ACCESS_KEY")
+        ?: System.getenv("AGENTIC_ACCESS_KEY")
+        ?: localProperties.getProperty("agenticAccessKey")
+        ?: "")
+        .toString()
+
 static def buildConfigString(String value) {
     return "\"" + value.replace("\\", "\\\\").replace("\"", "\\\"") + "\""
 }
@@ -131,8 +140,8 @@ android {
         // 233, not a larger jump: it is one above the 232 currently on test devices, so this
         // pilot installs over them AND the next official build still supersedes this one.
         // A vanity number like 1240 would quietly strand every device it was installed on.
-        versionCode 233
-        versionName "v2.3.3-agentic-pilot"
+        versionCode 234
+        versionName "v2.3.4-agentic-hosted"
         compileOptions.incremental = false
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled = true
@@ -140,6 +149,7 @@ android {
         buildConfigField "boolean", "USE_CHIRP3_ASR", useChirp3Asr.toString()
         buildConfigField "String", "GEMINI_INTENT_BASE_URL", buildConfigString(geminiIntentBaseUrl)
         buildConfigField "String", "AGENTIC_BASE_URL", buildConfigString(agenticBaseUrl)
+        buildConfigField "String", "AGENTIC_ACCESS_KEY", buildConfigString(agenticAccessKey)
        /* ndk {
             abiFilters "armeabi", "arm64-v8a", "armeabi-v7a", "x86", "x86_64", "mips"
         }*/
@@ -147,6 +157,18 @@ android {
 
     buildFeatures {
         viewBinding = true
+    }
+
+    testOptions {
+        unitTests.all {
+            // Gradle does not forward -D to the test JVM, so without this the gateway
+            // contract test can only ever reach its localhost default. With it:
+            //   ./gradlew testDebugUnitTest -Dagentic.baseUrl=http://65.1.106.31:8443             //                               -Dagentic.pilotKey=...
+            // An unset property arrives as empty, which the test treats as absent.
+            systemProperty 'agentic.baseUrl', System.getProperty('agentic.baseUrl', '')
+            systemProperty 'agentic.deviceId', System.getProperty('agentic.deviceId', '')
+            systemProperty 'agentic.pilotKey', System.getProperty('agentic.pilotKey', '')
+        }
     }
     viewBinding {
         enabled = true

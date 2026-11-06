@@ -39,10 +39,23 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class AgenticGatewayContractTest {
 
-    private static final String BASE_URL = System.getProperty(
-            "agentic.baseUrl", "http://localhost:8443");
+    private static final String BASE_URL = prop("agentic.baseUrl", "http://localhost:8443");
     /** Seeded by the gateway's default property. */
-    private static final String DEVICE_ID = System.getProperty("agentic.deviceId", "d_412a");
+    private static final String DEVICE_ID = prop("agentic.deviceId", "d_412a");
+    /**
+     * Required by the hosted gateway's edge, ignored by a local one. Empty by default so a
+     * developer running `npm run gateway` needs no extra argument.
+     */
+    private static final String PILOT_KEY = prop("agentic.pilotKey", "");
+
+    /**
+     * Gradle forwards unset properties as the empty string, so absent and blank have to
+     * mean the same thing here or every default is silently lost.
+     */
+    private static String prop(String name, String fallback) {
+        String value = System.getProperty(name);
+        return value == null || value.trim().isEmpty() ? fallback : value.trim();
+    }
 
     private static boolean gatewayUp;
 
@@ -82,6 +95,7 @@ public class AgenticGatewayContractTest {
     private AgenticTurnResponse turn(String transcript) {
         return api.agenticTurn(
                         BASE_URL + "/v1/turn",
+                        PILOT_KEY,
                         new AgenticTurnRequest(DEVICE_ID, transcript, 0.97d))
                 .blockingGet();
     }
@@ -162,6 +176,7 @@ public class AgenticGatewayContractTest {
         try {
             api.agenticTurn(
                             BASE_URL + "/v1/turn",
+                            PILOT_KEY,
                             new AgenticTurnRequest("d_not_enrolled", "turn on the lights", 0.9d))
                     .blockingGet();
             org.junit.Assert.fail("a device the catalog does not know must not get a turn");

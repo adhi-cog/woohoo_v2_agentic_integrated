@@ -129,6 +129,7 @@ import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -305,12 +306,18 @@ public interface WooHooApiCall {
      * already executed server-side, `deviceCommands` is work for this device. See
      * {@link AgenticTurnResponse}.
      *
-     * No credential is attached here on purpose. Device identity is the verified client
-     * certificate, which the TLS terminator turns into a header the gateway trusts; a token
-     * the app could set would be a token an attacker could set.
+     * `pilotKey` is not device identity and must not be read as it. Device identity is a
+     * verified client certificate, which a TLS terminator turns into a header the gateway
+     * trusts; a key compiled into an APK is extractable by anyone holding the APK. Its one
+     * job is to stop a gateway on a public IP from answering port scanners, which matters
+     * because device auth cannot be enforced until certificates are provisioned into the
+     * hubs and /v1/turn otherwise accepts anyone who knows a deviceId. Pass the empty
+     * string against a gateway that does not ask for it; an unexpected header is ignored.
      */
     @POST
-    Single<AgenticTurnResponse> agenticTurn(@Url String url, @Body AgenticTurnRequest request);
+    Single<AgenticTurnResponse> agenticTurn(@Url String url,
+                                            @Header("x-pilot-key") String pilotKey,
+                                            @Body AgenticTurnRequest request);
 
     /**
      * Report what this device did with a dispatched command.
@@ -319,7 +326,9 @@ public interface WooHooApiCall {
      * is to make a device that silently failed visible to operations.
      */
     @POST
-    Completable agenticCommandAck(@Url String url, @Body AgenticAckRequest request);
+    Completable agenticCommandAck(@Url String url,
+                                  @Header("x-pilot-key") String pilotKey,
+                                  @Body AgenticAckRequest request);
 
     @FormUrlEncoded
     @POST("dialogFlow/reset")
