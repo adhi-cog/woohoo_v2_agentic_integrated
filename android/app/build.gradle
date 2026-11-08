@@ -140,8 +140,8 @@ android {
         // 233, not a larger jump: it is one above the 232 currently on test devices, so this
         // pilot installs over them AND the next official build still supersedes this one.
         // A vanity number like 1240 would quietly strand every device it was installed on.
-        versionCode 234
-        versionName "v2.3.4-agentic-hosted"
+        versionCode 235
+        versionName "v2.3.5-agentic-hosted"
         compileOptions.incremental = false
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled = true
@@ -163,7 +163,8 @@ android {
         unitTests.all {
             // Gradle does not forward -D to the test JVM, so without this the gateway
             // contract test can only ever reach its localhost default. With it:
-            //   ./gradlew testDebugUnitTest -Dagentic.baseUrl=http://65.1.106.31:8443             //                               -Dagentic.pilotKey=...
+            //   ./gradlew testDebugUnitTest
+            //       -Dagentic.baseUrl=http://3.110.223.9:8443 -Dagentic.pilotKey=...
             // An unset property arrives as empty, which the test treats as absent.
             systemProperty 'agentic.baseUrl', System.getProperty('agentic.baseUrl', '')
             systemProperty 'agentic.deviceId', System.getProperty('agentic.deviceId', '')

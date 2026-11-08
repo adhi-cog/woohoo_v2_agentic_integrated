@@ -3,7 +3,7 @@
 # Local side of the deploy: bundle, copy, run bootstrap on the host. Run from anywhere.
 #
 #   bash agentic/deploy/pilot/push-to-host.sh \
-#        /c/Users/adhit/Documents/woohoo_key/woohoo-dev.pem 65.1.106.31
+#        /c/Users/adhit/Documents/woohoo_key/woohoo-dev.pem 3.110.223.9
 #
 # On Windows run this in Git Bash, not PowerShell. PowerShell does not have tar's exclude
 # syntax or scp's argument handling, and a half-executed deploy is worse than none.
@@ -11,7 +11,7 @@
 set -euo pipefail
 
 KEY="${1:?usage: push-to-host.sh <path-to-pem> [host]}"
-HOST="${2:-65.1.106.31}"
+HOST="${2:-3.110.223.9}"
 USER_AT="ubuntu@${HOST}"
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

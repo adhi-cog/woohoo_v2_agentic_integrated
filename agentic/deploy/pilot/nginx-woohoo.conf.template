@@ -7,7 +7,7 @@
 # enumerate every deviceId on the property.
 #
 # The operator surface is reached over an SSH tunnel straight to the container port:
-#   ssh -i woohoo-dev.pem -L 9443:127.0.0.1:8080 ubuntu@65.1.106.31
+#   ssh -i woohoo-dev.pem -L 9443:127.0.0.1:8080 ubuntu@3.110.223.9
 #   then open http://localhost:9443/
 # That is also how the console expects to be reached, so its origin handling already
 # copes with being served from localhost.

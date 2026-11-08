@@ -1,0 +1,16 @@
+# Files executed on the Linux host must keep LF. A CRLF bootstrap.sh fails on its own
+# `set -o pipefail` line with "$'\r': command not found", which reads like a corrupt
+# upload rather than a line-ending problem and costs an afternoon.
+*.sh                text eol=lf
+*.template          text eol=lf
+*.yml               text eol=lf
+*.yaml              text eol=lf
+Dockerfile          text eol=lf
+Makefile            text eol=lf
+gradlew             text eol=lf
+
+# .env.example gets copied to .env and parsed by bootstrap.sh. With CRLF, PILOT_KEY picks
+# up a trailing carriage return, which lands inside the nginx string comparison and makes
+# every keyed request 403 while looking perfectly correct in the file.
+.env*               text eol=lf
+.gitattributes      text eol=lf

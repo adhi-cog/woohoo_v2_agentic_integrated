@@ -1,6 +1,6 @@
 # Deploying to the AWS dev server
 
-Target: `ubuntu@65.1.106.31` (ap-south-1, woohoo-dev)
+Target: `ubuntu@3.110.223.9` (ap-south-1, woohoo-dev)
 
 The Docker image has been built and smoke-tested locally — it starts healthy and serves turns.
 These steps are the transfer and run, not a debugging exercise.
@@ -25,7 +25,7 @@ icacls $KEY /grant:r "$($env:USERNAME):(R)"
 Test the connection:
 
 ```powershell
-ssh -i cloud_deployment\woohoo-dev.pem ubuntu@65.1.106.31
+ssh -i cloud_deployment\woohoo-dev.pem ubuntu@3.110.223.9
 ```
 
 | What you see | Means |
@@ -144,7 +144,7 @@ tar --exclude=node_modules \
     --exclude='*.pdf' \
     -czf /tmp/woohoo.tar.gz .
 
-scp -i ~/.ssh/woohoo-dev.pem /tmp/woohoo.tar.gz ubuntu@65.1.106.31:/opt/woohoo/
+scp -i ~/.ssh/woohoo-dev.pem /tmp/woohoo.tar.gz ubuntu@3.110.223.9:/opt/woohoo/
 ```
 
 Excluding `node_modules` matters: it is 69 MB of **Windows-built binaries** that would break inside
@@ -238,7 +238,7 @@ Expected:
 **From your machine** (confirms the security group):
 
 ```bash
-curl -s http://65.1.106.31:8443/health
+curl -s http://3.110.223.9:8443/health
 ```
 
 If the server responds locally but not remotely, it's the security group, not the app.
@@ -253,7 +253,7 @@ plain HTTP — this step is mandatory before any real device testing.
 Point an A record at the server:
 
 ```
-gateway.<yourdomain>   A   65.1.106.31
+gateway.<yourdomain>   A   3.110.223.9
 ```
 
 Then add Caddy, which obtains and renews a Let's Encrypt certificate automatically.

@@ -9,17 +9,17 @@ recognition are unchanged. What changed is what happens to the transcript: inste
 intent classifier, it goes to the agentic gateway, which decides what was meant, applies
 policy, drives the room itself, and sends back speech plus anything only the device can do.
 
-`v2.3.4-agentic-hosted`, versionCode 234. It installs over the 232 on current test devices
-and over the earlier 233 pilot build, and the next official build still supersedes it.
+`v2.3.5-agentic-hosted`, versionCode 235. It installs over the 232 on current test devices
+and over the earlier 233 and 234 pilot builds, and the next official build still supersedes it.
 
 **There is nothing to run.** This build points at a hosted gateway at
-`http://65.1.106.31:8443`, compiled in. The earlier 233 build needed you to start a
+`http://3.110.223.9:8443`, compiled in. The earlier 233 build needed you to start a
 gateway on your own machine; this one does not.
 
 ## 1. Install
 
 ```bash
-adb install -r wh-release_234.apk
+adb install -r wh-release_235.apk
 ```
 
 If that fails with `INSTALL_FAILED_UPDATE_INCOMPATIBLE`, the device has a build signed with
@@ -27,7 +27,7 @@ a different key. Uninstall first, which also clears onboarding:
 
 ```bash
 adb uninstall com.sb.woohoo
-adb install wh-release_234.apk
+adb install wh-release_235.apk
 ```
 
 ## 2. Check the device can reach the gateway
@@ -35,7 +35,7 @@ adb install wh-release_234.apk
 From the device's network:
 
 ```bash
-curl http://65.1.106.31:8443/health
+curl http://3.110.223.9:8443/health
 ```
 
 If that does not answer, the device's network blocks outbound 8443 — some hotel and office
@@ -84,7 +84,7 @@ honest wait.
 it.
 
 **"I could not reach the assistant just then."** The device could not reach
-`65.1.106.31:8443`. Check step 2 before anything else.
+`3.110.223.9:8443`. Check step 2 before anything else.
 
 ## Switching back
 

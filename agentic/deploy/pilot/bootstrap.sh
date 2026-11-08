@@ -56,6 +56,18 @@ else
 fi
 echo "    compose: ${COMPOSE[*]}"
 
+# An earlier deploy published the gateway on 0.0.0.0:8443 with no front end. nginx needs
+# that port, and leaving it up would put the operator surface - test console, device list,
+# admin routes - straight onto the internet the moment the security group opens 8443.
+#
+# Stopped by its own compose project rather than by killing whatever holds the port, so
+# this cannot take down something unrelated. Done before the extract below, which
+# overwrites the very compose file it would otherwise be stopped with.
+if [[ -f "$APP_DIR/docker-compose.yml" ]]; then
+  echo "==> retiring the previous unfronted stack"
+  ( cd "$APP_DIR" && "${COMPOSE[@]}" -f docker-compose.yml down --remove-orphans ) || true
+fi
+
 echo "==> source"
 sudo mkdir -p "$APP_DIR"
 sudo chown "$USER":"$USER" "$APP_DIR"

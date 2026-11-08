@@ -14,7 +14,7 @@ agent decided, which guardrails ran, and the calls that reached the room hardwar
 
 ## A — Use the shared instance
 
-The service runs on an AWS box at `65.1.106.31`, port `8443`.
+The service runs on an AWS box at `3.110.223.9`, port `8443`.
 
 **That port is closed by default.** You need one of these before anything below works:
 
@@ -25,7 +25,7 @@ The service runs on an AWS box at `65.1.106.31`, port `8443`.
 2. **Or an SSH tunnel**, if you have been given SSH access to the box:
 
    ```bash
-   ssh -i woohoo-dev.pem -L 8443:localhost:8443 ubuntu@65.1.106.31
+   ssh -i woohoo-dev.pem -L 8443:localhost:8443 ubuntu@3.110.223.9
    ```
 
    Leave that terminal open; the tunnel dies with it. The service is then at
@@ -34,7 +34,7 @@ The service runs on an AWS box at `65.1.106.31`, port `8443`.
 ### Check it works
 
 ```bash
-curl http://65.1.106.31:8443/health
+curl http://3.110.223.9:8443/health
 ```
 
 ```json
@@ -48,7 +48,7 @@ Those two look identical from a terminal, which is why the console has a
 ### Send a turn
 
 ```bash
-curl -X POST http://65.1.106.31:8443/v1/turn \
+curl -X POST http://3.110.223.9:8443/v1/turn \
   -H "content-type: application/json" \
   -d '{"deviceId":"d_511a","transcript":"turn on the lights"}'
 ```
@@ -58,7 +58,7 @@ and reads like the service is broken.
 
 ### Open the console
 
-<http://65.1.106.31:8443/> (or `http://localhost:8443/` if you tunnelled).
+<http://3.110.223.9:8443/> (or `http://localhost:8443/` if you tunnelled).
 
 Everything you need is in there, and it stays current with the code:
 

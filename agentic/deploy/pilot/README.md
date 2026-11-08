@@ -1,4 +1,4 @@
-# Pilot deployment — 65.1.106.31
+# Pilot deployment — 3.110.223.9
 
 Runs the agentic platform alone on one public host, so hubs and testers reach a gateway
 that is always up instead of someone's laptop.
@@ -40,10 +40,10 @@ From `agentic/` on your machine:
 ```bash
 tar --exclude=node_modules --exclude=.git --exclude='*.tar.gz' --exclude='*.pem' \
     -czf /tmp/woohoo-pilot.tar.gz .
-scp -i KEY /tmp/woohoo-pilot.tar.gz          ubuntu@65.1.106.31:/tmp/
-scp -i KEY deploy/pilot/.env                 ubuntu@65.1.106.31:/tmp/woohoo.env
-scp -i KEY deploy/pilot/bootstrap.sh         ubuntu@65.1.106.31:/tmp/
-ssh -i KEY ubuntu@65.1.106.31 'bash /tmp/bootstrap.sh'
+scp -i KEY /tmp/woohoo-pilot.tar.gz          ubuntu@3.110.223.9:/tmp/
+scp -i KEY deploy/pilot/.env                 ubuntu@3.110.223.9:/tmp/woohoo.env
+scp -i KEY deploy/pilot/bootstrap.sh         ubuntu@3.110.223.9:/tmp/
+ssh -i KEY ubuntu@3.110.223.9 'bash /tmp/bootstrap.sh'
 ```
 
 `bootstrap.sh` is idempotent — it is the deploy command, not a one-time setup script. It
@@ -56,9 +56,9 @@ fails those checks rather than going unnoticed.
 ## Verify from outside
 
 ```bash
-curl -s http://65.1.106.31:8443/health
-curl -s -o /dev/null -w '%{http_code}\n' http://65.1.106.31:8443/        # want 404
-curl -s -X POST http://65.1.106.31:8443/v1/turn \
+curl -s http://3.110.223.9:8443/health
+curl -s -o /dev/null -w '%{http_code}\n' http://3.110.223.9:8443/        # want 404
+curl -s -X POST http://3.110.223.9:8443/v1/turn \
      -H 'content-type: application/json' \
      -H "x-pilot-key: $PILOT_KEY" \
      -d '{"deviceId":"d_412a","transcript":"turn up the volume"}'
@@ -71,7 +71,7 @@ A device the catalog does not know gets a 404 and no turn runs. Admin routes are
 the internet, so provision over the tunnel:
 
 ```bash
-ssh -i KEY -L 9443:127.0.0.1:8080 ubuntu@65.1.106.31
+ssh -i KEY -L 9443:127.0.0.1:8080 ubuntu@3.110.223.9
 # then, locally:
 curl -X POST http://localhost:9443/v1/admin/rooms \
   -H "x-admin-token: $WOOHOO_ADMIN_TOKEN" -H 'content-type: application/json' \

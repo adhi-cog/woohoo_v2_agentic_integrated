@@ -5,26 +5,42 @@
 # Installing with --omit=dev while tsx sat in devDependencies produced an image that
 # built cleanly and then crashed on start with "tsx: not found".
 
+# Workspace manifests, collected rather than listed.
+#
+# The previous version named ten of them by hand. Five more workspaces were added later,
+# nobody updated this file, and npm ci resolved the lockfile without them - so the image
+# built clean and then died on start with "Cannot find package 'pg'", a dependency of a
+# workspace Docker had never copied. mock-honeywell sat unhealthy for 39 hours on the
+# same cause. A hand-maintained list of workspaces goes stale in silence.
+#
+# Each RUN is one line on purpose. This file gets edited through tooling that has eaten
+# backslash-continuations more than once, and a half-joined RUN is a baffling build error.
+FROM node:22-alpine AS manifests
+WORKDIR /src
+COPY . .
+RUN mkdir -p /manifests
+RUN find . -name package.json -not -path '*/node_modules/*' -print > /tmp/manifests.txt
+RUN while read -r f; do mkdir -p "/manifests/$(dirname "$f")"; cp "$f" "/manifests/$f"; done < /tmp/manifests.txt
+RUN cp package-lock.json /manifests/
+RUN echo "manifests collected: $(find /manifests -name package.json | wc -l)"
+
 FROM node:22-alpine AS deps
 WORKDIR /app
 
-# Copy only manifests first so this layer caches until dependencies actually change.
-COPY package.json package-lock.json ./
-COPY packages/contracts/package.json          packages/contracts/
-COPY packages/otel/package.json               packages/otel/
-COPY services/policy-service/package.json     services/policy-service/
-COPY services/woohoo-core/package.json        services/woohoo-core/
-COPY services/adapter-simulator/package.json  services/adapter-simulator/
-COPY services/adapter-honeywell/package.json  services/adapter-honeywell/
-COPY services/device-gateway/package.json     services/device-gateway/
-COPY services/edge-gateway/package.json       services/edge-gateway/
-COPY tools/device-simulator/package.json      tools/device-simulator/
-COPY eval/package.json                        eval/
+# Only the manifests, so this layer and the npm ci below stay cached until a dependency
+# actually changes rather than on every source edit.
+COPY --from=manifests /manifests/ ./
 
-# `npm ci` is reproducible and fails loudly on a lockfile mismatch — which is what you
+# `npm ci` is reproducible and fails loudly on a lockfile mismatch - which is what you
 # want in a build. Do not add a `|| npm install` fallback: it converts a real problem
 # into a silently different dependency tree.
 RUN npm ci --omit=dev --no-audit --no-fund
+
+# Fail the build here rather than at container start. The runtime imports these through
+# tsx, where a missing workspace dependency surfaces as a crash loop that reads like a
+# code fault instead of a packaging one.
+RUN node --input-type=module -e "await Promise.all(['pg','ws','zod','tsx'].map(m => import(m)))"
+RUN echo "runtime dependencies resolve"
 
 FROM node:22-alpine AS runtime
 WORKDIR /app
@@ -40,8 +56,14 @@ COPY . .
 USER node
 EXPOSE 8443
 
-HEALTHCHECK --interval=30s --timeout=3s --start-period=20s --retries=3 \
-  CMD curl -fsS http://127.0.0.1:8443/health || exit 1
+# $PORT, not a hardcoded 8443. One image runs several services: mock-honeywell listens
+# on 8091 and was reported unhealthy for 39 hours while serving 200s, because the probe
+# was pinned to the gateway's port. A health signal that is wrong is worse than none -
+# it trains you to ignore it.
+#
+# One line, and comments above rather than inside it: a comment between a continued
+# instruction's lines is not something to rely on a parser to handle.
+HEALTHCHECK --interval=30s --timeout=3s --start-period=20s --retries=3 CMD curl -fsS "http://127.0.0.1:${PORT:-8443}/health" || exit 1
 
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["npm", "run", "gateway"]
